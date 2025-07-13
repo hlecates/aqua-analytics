@@ -23,7 +23,7 @@ name: McBratney, Ben A
 yr: SR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 27.54
 prelim_time: 25.56
 finals_time: 25.84
 prelim_rank: 1
@@ -34,7 +34,7 @@ name: McElroy, Greg S
 yr: SR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 28.26
 prelim_time: 26.30
 finals_time: 26.05
 prelim_rank: 3
@@ -45,7 +45,7 @@ name: Roberts, Mason D
 yr: SR
 school: Colby-ME
 exhibition: False
-seed_time: None
+seed_time: 28.00
 prelim_time: 26.08
 finals_time: 26.07
 prelim_rank: 2
@@ -56,7 +56,7 @@ name: Mecray, Nathan E
 yr: SR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 25.99
 prelim_time: 26.51
 finals_time: 26.23
 prelim_rank: 5
@@ -67,7 +67,7 @@ name: Jorento, Daeus J
 yr: JR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 28.56
 prelim_time: 26.47
 finals_time: 26.45
 prelim_rank: 4
@@ -78,7 +78,7 @@ name: Czelewicz, Kirk J
 yr: FR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 28.23
 prelim_time: 27.10
 finals_time: 26.86
 prelim_rank: 8
@@ -89,7 +89,7 @@ name: Wennberg, Paul E
 yr: FR
 school: Colby-ME
 exhibition: False
-seed_time: None
+seed_time: 30.06
 prelim_time: 26.93
 finals_time: 27.07
 prelim_rank: 7
@@ -100,7 +100,7 @@ name: Johnson, Cam W
 yr: FR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 28.32
 prelim_time: 26.90
 finals_time: 27.16
 prelim_rank: 6
@@ -111,7 +111,7 @@ name: Vandiford, Christopher W
 yr: FR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 28.16
 prelim_time: 27.51
 finals_time: 27.14
 prelim_rank: 15
@@ -122,7 +122,7 @@ name: Kang, Alex S
 yr: FR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 27.72
 prelim_time: 27.43
 finals_time: 27.20
 prelim_rank: 13
@@ -133,7 +133,7 @@ name: Greeno, Christopher H
 yr: SO
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 28.65
 prelim_time: 27.23
 finals_time: 27.46
 prelim_rank: 9
@@ -144,7 +144,7 @@ name: Nichols, Ian C
 yr: JR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
+seed_time: 28.20
 prelim_time: 27.36
 finals_time: 27.51
 prelim_rank: 11
@@ -155,7 +155,7 @@ name: O'Connor, Mike
 yr: SR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 29.34
 prelim_time: 27.40
 finals_time: 27.52
 prelim_rank: 12
@@ -166,7 +166,7 @@ name: Griffin, Will N
 yr: SR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 28.61
 prelim_time: 27.31
 finals_time: 27.59
 prelim_rank: 10
@@ -177,7 +177,7 @@ name: Turk, Andrew D
 yr: SO
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 29.13
 prelim_time: 27.49
 finals_time: 27.69
 prelim_rank: 14
@@ -188,7 +188,7 @@ name: McKeown, Alex C
 yr: SR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 29.08
 prelim_time: 27.67
 finals_time: 28.10
 prelim_rank: 16
@@ -199,7 +199,7 @@ name: Youngblood, Tom
 yr: JR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
+seed_time: 28.60
 prelim_time: 27.85
 finals_time: 27.53
 prelim_rank: 17
@@ -210,7 +210,7 @@ name: Debbaut, Peter S
 yr: SR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 29.54
 prelim_time: 27.91
 finals_time: 27.69
 prelim_rank: 19
@@ -221,7 +221,7 @@ name: Ma, Max
 yr: SO
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
+seed_time: 28.74
 prelim_time: 27.87
 finals_time: 27.80
 prelim_rank: 18
@@ -232,7 +232,7 @@ name: Hirsch, Peter C
 yr: SR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 30.50
 prelim_time: 27.99
 finals_time: 27.88
 prelim_rank: 20
@@ -243,7 +243,7 @@ name: Spierer, Adam N
 yr: JR
 school: Colby-ME
 exhibition: False
-seed_time: None
+seed_time: 30.76
 prelim_time: 28.07
 finals_time: 28.21
 prelim_rank: 21
@@ -254,7 +254,7 @@ name: Colasurdo, Joseph
 yr: FR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 29.11
 prelim_time: 28.20
 finals_time: 28.40
 prelim_rank: 23
@@ -265,7 +265,7 @@ name: Li, Patrick G
 yr: FR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 29.51
 prelim_time: 28.10
 finals_time: 28.54
 prelim_rank: 22
@@ -276,7 +276,7 @@ name: Choi, Justin
 yr: FR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 30.84
 prelim_time: 28.79
 finals_time: 29.77
 prelim_rank: 24
@@ -287,8 +287,8 @@ name: Cho, Thomas
 yr: JR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
-prelim_time: 29.81
+seed_time: 29.81
+prelim_time: 28.93
 finals_time: None
 prelim_rank: 25
 final_rank: None
@@ -298,8 +298,8 @@ name: Knight, Lucas M
 yr: SO
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
-prelim_time: 31.17
+seed_time: 31.17
+prelim_time: 28.97
 finals_time: None
 prelim_rank: 26
 final_rank: None
@@ -309,8 +309,8 @@ name: Seaton, Andrew J
 yr: FR
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 30.15
+seed_time: 30.15
+prelim_time: 28.98
 finals_time: None
 prelim_rank: 27
 final_rank: None
@@ -320,8 +320,8 @@ name: Zhang, Alex
 yr: SO
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
-prelim_time: 30.41
+seed_time: 30.41
+prelim_time: 29.04
 finals_time: None
 prelim_rank: 28
 final_rank: None
@@ -331,8 +331,8 @@ name: Lee, Andrew
 yr: FR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 30.16
+seed_time: 30.16
+prelim_time: 29.11
 finals_time: None
 prelim_rank: 29
 final_rank: None
@@ -342,8 +342,8 @@ name: Crafa, James R
 yr: SR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 29.84
+seed_time: 29.84
+prelim_time: 29.38
 finals_time: None
 prelim_rank: 30
 final_rank: None
@@ -353,8 +353,8 @@ name: O'Neill, Shelby F
 yr: FR
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 30.77
+seed_time: 30.77
+prelim_time: 29.43
 finals_time: None
 prelim_rank: 31
 final_rank: None
@@ -374,7 +374,7 @@ name: Routh, Mac M
 yr: SR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 23.14
 prelim_time: 22.67
 finals_time: 22.27
 prelim_rank: 1
@@ -385,7 +385,7 @@ name: Gill, Sam P
 yr: SO
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 23.45
 prelim_time: 23.02
 finals_time: 22.45
 prelim_rank: 2
@@ -396,7 +396,7 @@ name: Scott, Ned E
 yr: SR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 23.61
 prelim_time: 23.02
 finals_time: 22.81
 prelim_rank: 2
@@ -407,7 +407,7 @@ name: Ricotta, Thad J
 yr: FR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 24.21
 prelim_time: 23.19
 finals_time: 23.08
 prelim_rank: 5
@@ -418,7 +418,7 @@ name: Daly, Nick N
 yr: SR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 23.52
 prelim_time: 23.25
 finals_time: 23.13
 prelim_rank: 7
@@ -429,7 +429,7 @@ name: McGinnis, Patrick R
 yr: FR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 24.70
 prelim_time: 23.25
 finals_time: 23.22
 prelim_rank: 7
@@ -440,7 +440,7 @@ name: Douglas, Eric A
 yr: SO
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 24.16
 prelim_time: 23.12
 finals_time: 23.25
 prelim_rank: 4
@@ -451,7 +451,7 @@ name: Trafton, Ryan D
 yr: SR
 school: Colby-ME
 exhibition: False
-seed_time: None
+seed_time: 24.18
 prelim_time: 23.23
 finals_time: 23.30
 prelim_rank: 6
@@ -462,7 +462,7 @@ name: Bulakul, Tyler
 yr: SO
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 24.01
 prelim_time: 23.59
 finals_time: 23.22
 prelim_rank: 13
@@ -473,7 +473,7 @@ name: Horgan, Stuart C
 yr: SR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 24.48
 prelim_time: 23.45
 finals_time: 23.28
 prelim_rank: 11
@@ -484,7 +484,7 @@ name: Duvvuri, Venkatesh
 yr: SO
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 24.25
 prelim_time: 23.64
 finals_time: 23.35
 prelim_rank: 16
@@ -495,7 +495,7 @@ name: Hampton, Tyler J
 yr: FR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 23.90
 prelim_time: 23.28
 finals_time: 23.44
 prelim_rank: 9
@@ -506,7 +506,7 @@ name: Kafina, Martin D
 yr: JR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
+seed_time: 24.94
 prelim_time: 23.60
 finals_time: 23.44
 prelim_rank: 14
@@ -517,7 +517,7 @@ name: Marrano, Ryan C
 yr: SR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 24.78
 prelim_time: 23.58
 finals_time: 23.52
 prelim_rank: 12
@@ -528,7 +528,7 @@ name: Mauel, Jack P
 yr: JR
 school: Colby-ME
 exhibition: False
-seed_time: None
+seed_time: 24.47
 prelim_time: 23.34
 finals_time: 23.65
 prelim_rank: 10
@@ -539,7 +539,7 @@ name: Ching, Brandon L
 yr: SR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 24.02
 prelim_time: 23.61
 finals_time: 23.69
 prelim_rank: 15
@@ -550,7 +550,7 @@ name: Yan, Erik S
 yr: FR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
+seed_time: 24.21
 prelim_time: 24.01
 finals_time: 23.60
 prelim_rank: 20
@@ -561,7 +561,7 @@ name: Patton, William R
 yr: FR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 24.53
 prelim_time: 23.68
 finals_time: 23.74
 prelim_rank: 17
@@ -572,7 +572,7 @@ name: Schaffer, Adam J
 yr: SR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 24.50
 prelim_time: 23.80
 finals_time: 24.06
 prelim_rank: 18
@@ -583,7 +583,7 @@ name: Granata, Chris J
 yr: SO
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 24.51
 prelim_time: 23.92
 finals_time: 24.16
 prelim_rank: 19
@@ -594,7 +594,7 @@ name: Shi, William Y
 yr: FR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 24.77
 prelim_time: 24.05
 finals_time: 24.19
 prelim_rank: 22
@@ -605,7 +605,7 @@ name: Gilman, Brian J
 yr: SO
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 25.11
 prelim_time: 24.18
 finals_time: 24.22
 prelim_rank: 24
@@ -616,7 +616,7 @@ name: Smachlo, Alex A
 yr: FR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 25.00
 prelim_time: 24.03
 finals_time: 24.23
 prelim_rank: 21
@@ -627,7 +627,7 @@ name: Teumer, Fred G
 yr: JR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 25.24
 prelim_time: 24.12
 finals_time: 24.31
 prelim_rank: 23
@@ -638,8 +638,8 @@ name: Pielock, Christopher M
 yr: JR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
-prelim_time: 26.26
+seed_time: 26.26
+prelim_time: 24.27
 finals_time: None
 prelim_rank: 25
 final_rank: None
@@ -649,8 +649,8 @@ name: Brown, Stefan
 yr: FR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
-prelim_time: 25.02
+seed_time: 25.02
+prelim_time: 24.54
 finals_time: None
 prelim_rank: 26
 final_rank: None
@@ -660,8 +660,8 @@ name: Markusen, Jack W
 yr: SO
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 25.21
+seed_time: 25.21
+prelim_time: 24.58
 finals_time: None
 prelim_rank: 27
 final_rank: None
@@ -671,8 +671,8 @@ name: Sandoval, Tyler Q
 yr: JR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 24.81
+seed_time: 24.81
+prelim_time: 24.60
 finals_time: None
 prelim_rank: 28
 final_rank: None
@@ -682,8 +682,8 @@ name: Googins, Ej J
 yr: JR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
-prelim_time: 25.45
+seed_time: 25.45
+prelim_time: 24.74
 finals_time: None
 prelim_rank: 29
 final_rank: None
@@ -693,8 +693,8 @@ name: Gerard, Paul
 yr: SO
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 25.89
+seed_time: 25.89
+prelim_time: 24.78
 finals_time: None
 prelim_rank: 30
 final_rank: None
@@ -704,8 +704,8 @@ name: Kurose, Alex A
 yr: FR
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
-prelim_time: 25.72
+seed_time: 25.72
+prelim_time: 24.80
 finals_time: None
 prelim_rank: 31
 final_rank: None
@@ -715,8 +715,8 @@ name: Makrides, Chris J
 yr: SO
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 26.57
+seed_time: 26.57
+prelim_time: 25.34
 finals_time: None
 prelim_rank: 32
 final_rank: None
@@ -726,8 +726,8 @@ name: Kozikowski, Kevin M
 yr: FR
 school: Tufts-NE
 exhibition: False
-seed_time: None
-prelim_time: NT
+seed_time: NT
+prelim_time: 25.51
 finals_time: None
 prelim_rank: 33
 final_rank: None
@@ -737,8 +737,8 @@ name: Rosenbloom, Jake
 yr: FR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
-prelim_time: 26.64
+seed_time: 26.64
+prelim_time: 25.53
 finals_time: None
 prelim_rank: 34
 final_rank: None
@@ -748,8 +748,8 @@ name: Hootsmans, James A
 yr: JR
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 26.66
+seed_time: 26.66
+prelim_time: 25.76
 finals_time: None
 prelim_rank: 35
 final_rank: None
@@ -759,8 +759,8 @@ name: Dix, Zach
 yr: FR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 26.18
+seed_time: 26.18
+prelim_time: 25.77
 finals_time: None
 prelim_rank: 36
 final_rank: None
@@ -770,8 +770,8 @@ name: Feminella, John M
 yr: JR
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
-prelim_time: 27.46
+seed_time: 27.46
+prelim_time: 26.01
 finals_time: None
 prelim_rank: 37
 final_rank: None
@@ -781,8 +781,8 @@ name: Andler, Sam B
 yr: SR
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 26.72
+seed_time: 26.72
+prelim_time: 26.05
 finals_time: None
 prelim_rank: 38
 final_rank: None
@@ -792,8 +792,8 @@ name: Lewis, Ben
 yr: SO
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 27.48
+seed_time: 27.48
+prelim_time: 26.08
 finals_time: None
 prelim_rank: 39
 final_rank: None
@@ -803,8 +803,8 @@ name: Sohail, Omar A
 yr: FR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
-prelim_time: 27.65
+seed_time: 27.65
+prelim_time: 26.81
 finals_time: None
 prelim_rank: 40
 final_rank: None
@@ -824,7 +824,7 @@ name: Lichtenfels, Ryan R
 yr: SR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 4:37.53
 prelim_time: 4:31.43
 finals_time: 4:31.12!
 prelim_rank: 2
@@ -835,7 +835,7 @@ name: Vieth, Tom C
 yr: JR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 4:39.89
 prelim_time: 4:33.27
 finals_time: 4:32.70!
 prelim_rank: 3
@@ -846,7 +846,7 @@ name: White, Tim
 yr: SR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 4:36.12
 prelim_time: 4:31.01
 finals_time: 4:33.09!
 prelim_rank: 1
@@ -857,7 +857,7 @@ name: Gronbeck, Christian J
 yr: FR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 4:40.59
 prelim_time: 4:35.42
 finals_time: 4:34.70!
 prelim_rank: 6
@@ -868,7 +868,7 @@ name: McAuliffe, Conor T
 yr: SO
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 4:47.25
 prelim_time: 4:35.19
 finals_time: 4:34.78!
 prelim_rank: 5
@@ -879,7 +879,7 @@ name: Armstrong, John R
 yr: JR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 4:42.13
 prelim_time: 4:33.64
 finals_time: 4:36.22!
 prelim_rank: 4
@@ -890,7 +890,7 @@ name: Grimes, Ben M
 yr: FR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 4:50.44
 prelim_time: 4:38.40
 finals_time: 4:37.27!
 prelim_rank: 8
@@ -901,7 +901,7 @@ name: Moody, Parker W
 yr: SO
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 4:40.82
 prelim_time: 4:36.47
 finals_time: 4:37.64
 prelim_rank: 7
@@ -912,7 +912,7 @@ name: Martin, Bo D
 yr: FR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 4:47.69
 prelim_time: 4:38.61
 finals_time: 4:39.04
 prelim_rank: 9
@@ -923,7 +923,7 @@ name: Cagenello, Sam J
 yr: FR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 4:49.11
 prelim_time: 4:43.16
 finals_time: 4:39.32
 prelim_rank: 11
@@ -934,7 +934,7 @@ name: Sutherland, Sean M
 yr: SO
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 4:55.71
 prelim_time: 4:45.19
 finals_time: 4:43.25
 prelim_rank: 15
@@ -945,7 +945,7 @@ name: Downey, Adrien P
 yr: FR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 4:51.28
 prelim_time: 4:43.76
 finals_time: 4:43.82
 prelim_rank: 12
@@ -956,7 +956,7 @@ name: Strittmatter, Alex A
 yr: SR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 4:56.56
 prelim_time: 4:44.85
 finals_time: 4:43.84
 prelim_rank: 14
@@ -967,7 +967,7 @@ name: Weihs, Chris G
 yr: FR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 4:48.49
 prelim_time: 4:42.40
 finals_time: 4:43.92
 prelim_rank: 10
@@ -978,7 +978,7 @@ name: Savidge, Kyle E
 yr: SO
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 4:52.42
 prelim_time: 4:45.24
 finals_time: 4:47.19
 prelim_rank: 16
@@ -989,7 +989,7 @@ name: Napolitano, Mike T
 yr: FR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 5:01.59
 prelim_time: 4:44.39
 finals_time: 4:49.50
 prelim_rank: 13
@@ -1000,7 +1000,7 @@ name: Egan, Nick Q
 yr: SO
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 4:49.90
 prelim_time: 4:47.34
 finals_time: 4:39.02
 prelim_rank: 20
@@ -1011,7 +1011,7 @@ name: Fabian, Max L
 yr: FR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 4:47.87
 prelim_time: 4:46.92
 finals_time: 4:44.53
 prelim_rank: 19
@@ -1022,7 +1022,7 @@ name: Avidan, Lucas J
 yr: FR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 4:59.61
 prelim_time: 4:48.31
 finals_time: 4:45.23
 prelim_rank: 22
@@ -1033,7 +1033,7 @@ name: Eramo, Adam V
 yr: SR
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
+seed_time: 4:57.71
 prelim_time: 4:46.54
 finals_time: 4:45.43
 prelim_rank: 18
@@ -1044,7 +1044,7 @@ name: Swartz, Reid M
 yr: FR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
+seed_time: 4:50.98
 prelim_time: 4:45.29
 finals_time: 4:48.18
 prelim_rank: 17
@@ -1055,7 +1055,7 @@ name: Jones, Christian M
 yr: SO
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 4:49.00
 prelim_time: 4:47.35
 finals_time: 4:51.62
 prelim_rank: 21
@@ -1066,7 +1066,7 @@ name: Peterson, Andy
 yr: SO
 school: Colby-ME
 exhibition: False
-seed_time: None
+seed_time: 5:04.11
 prelim_time: 4:50.25
 finals_time: 4:55.38
 prelim_rank: 24
@@ -1077,7 +1077,7 @@ name: Tougas, Alex J
 yr: SO
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 5:00.86
 prelim_time: 4:49.59
 finals_time: 4:56.19
 prelim_rank: 23
@@ -1088,8 +1088,8 @@ name: Collins, Conor M
 yr: SO
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 5:05.01
+seed_time: 5:05.01
+prelim_time: 4:50.61
 finals_time: None
 prelim_rank: 25
 final_rank: None
@@ -1099,8 +1099,8 @@ name: Rieling, Ray R
 yr: SR
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 4:59.51
+seed_time: 4:59.51
+prelim_time: 4:50.62
 finals_time: None
 prelim_rank: 26
 final_rank: None
@@ -1110,8 +1110,8 @@ name: Wiens, Matthew R
 yr: SO
 school: Tufts-NE
 exhibition: False
-seed_time: None
-prelim_time: 4:59.23
+seed_time: 4:59.23
+prelim_time: 4:51.13
 finals_time: None
 prelim_rank: 27
 final_rank: None
@@ -1121,8 +1121,8 @@ name: Peabody, Ryan J
 yr: SO
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
-prelim_time: 4:55.52
+seed_time: 4:55.52
+prelim_time: 4:51.40
 finals_time: None
 prelim_rank: 28
 final_rank: None
@@ -1132,8 +1132,8 @@ name: Cyran, Tom
 yr: SR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 5:05.50
+seed_time: 5:05.50
+prelim_time: 4:51.61
 finals_time: None
 prelim_rank: 29
 final_rank: None
@@ -1143,8 +1143,8 @@ name: Greer, Sean M
 yr: SO
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
-prelim_time: 5:12.39
+seed_time: 5:12.39
+prelim_time: 4:51.91
 finals_time: None
 prelim_rank: 30
 final_rank: None
@@ -1154,8 +1154,8 @@ name: Sullivan, Rick K
 yr: SR
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 5:09.64
+seed_time: 5:09.64
+prelim_time: 4:52.12
 finals_time: None
 prelim_rank: 31
 final_rank: None
@@ -1165,8 +1165,8 @@ name: Litman, Ethan A
 yr: JR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 4:56.62
+seed_time: 4:56.62
+prelim_time: 4:54.90
 finals_time: None
 prelim_rank: 32
 final_rank: None
@@ -1176,8 +1176,8 @@ name: Martin, Colin L
 yr: FR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 5:03.48
+seed_time: 5:03.48
+prelim_time: 4:54.94
 finals_time: None
 prelim_rank: 33
 final_rank: None
@@ -1187,8 +1187,8 @@ name: Saunders, Kevin P
 yr: FR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
-prelim_time: 4:58.97
+seed_time: 4:58.97
+prelim_time: 4:55.86
 finals_time: None
 prelim_rank: 34
 final_rank: None
@@ -1198,8 +1198,8 @@ name: Levine, Daniel J
 yr: JR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 5:08.82
+seed_time: 5:08.82
+prelim_time: 4:56.30
 finals_time: None
 prelim_rank: 35
 final_rank: None
@@ -1209,8 +1209,8 @@ name: Kuo, Teddy
 yr: FR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 4:59.28
+seed_time: 4:59.28
+prelim_time: 4:57.21
 finals_time: None
 prelim_rank: 36
 final_rank: None
@@ -1220,8 +1220,8 @@ name: Deardorff, Peter G
 yr: FR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
-prelim_time: 4:57.93
+seed_time: 4:57.93
+prelim_time: 4:57.41
 finals_time: None
 prelim_rank: 37
 final_rank: None
@@ -1231,8 +1231,8 @@ name: Janson, Jeremy M
 yr: SO
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 5:19.54
+seed_time: 5:19.54
+prelim_time: 4:58.19
 finals_time: None
 prelim_rank: 38
 final_rank: None
@@ -1242,8 +1242,8 @@ name: McConnell, Ryan
 yr: FR
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
-prelim_time: 5:11.26
+seed_time: 5:11.26
+prelim_time: 5:00.35
 finals_time: None
 prelim_rank: 39
 final_rank: None
@@ -1253,8 +1253,8 @@ name: Briggs, Andrew F
 yr: FR
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 5:00.39
+seed_time: 5:00.39
+prelim_time: 5:00.77
 finals_time: None
 prelim_rank: 40
 final_rank: None
@@ -1264,8 +1264,8 @@ name: Bachur, Ryan G
 yr: FR
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 5:15.38
+seed_time: 5:15.38
+prelim_time: 5:00.90
 finals_time: None
 prelim_rank: 41
 final_rank: None
@@ -1275,8 +1275,8 @@ name: Hillsberg, Matthew K
 yr: FR
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 5:04.95
+seed_time: 5:04.95
+prelim_time: 5:01.14
 finals_time: None
 prelim_rank: 42
 final_rank: None
@@ -1286,8 +1286,8 @@ name: Mihalcik, Peter J
 yr: FR
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 5:12.29
+seed_time: 5:12.29
+prelim_time: 5:05.79
 finals_time: None
 prelim_rank: 43
 final_rank: None
@@ -1297,8 +1297,8 @@ name: Celestin, Joe P
 yr: FR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
-prelim_time: 5:09.95
+seed_time: 5:09.95
+prelim_time: 5:06.22
 finals_time: None
 prelim_rank: 44
 final_rank: None
@@ -1308,8 +1308,8 @@ name: Brockway, Henry J
 yr: JR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
-prelim_time: 5:32.60
+seed_time: 5:32.60
+prelim_time: 5:24.50
 finals_time: None
 prelim_rank: 45
 final_rank: None
@@ -1319,8 +1319,8 @@ name: Conkling, Philip R
 yr: SO
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 5:50.88
+seed_time: 5:50.88
+prelim_time: 5:25.72
 finals_time: None
 prelim_rank: 46
 final_rank: None
@@ -1330,8 +1330,8 @@ name: Dizengoff, Reuben
 yr: FR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 5:45.34
+seed_time: 5:45.34
+prelim_time: 5:30.25
 finals_time: None
 prelim_rank: 47
 final_rank: None
@@ -1351,7 +1351,7 @@ name: Walsh, Timothy M
 yr: SR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 23.67
 prelim_time: 22.77
 finals_time: 22.88
 prelim_rank: 1
@@ -1362,7 +1362,7 @@ name: Routh, Mac M
 yr: SR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 25.03
 prelim_time: 24.11
 finals_time: 23.79
 prelim_rank: 3
@@ -1373,7 +1373,7 @@ name: Deveney, Conor J
 yr: FR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 24.69
 prelim_time: 24.07
 finals_time: 23.91
 prelim_rank: 2
@@ -1384,7 +1384,7 @@ name: Paquette, Sean E
 yr: FR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 25.16
 prelim_time: 24.15
 finals_time: 24.14
 prelim_rank: 5
@@ -1395,7 +1395,7 @@ name: Brown, Brandon
 yr: FR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 25.31
 prelim_time: 24.50
 finals_time: 24.27
 prelim_rank: 7
@@ -1406,7 +1406,7 @@ name: Treesh, Philip R
 yr: JR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 25.38
 prelim_time: 24.25
 finals_time: 24.37
 prelim_rank: 6
@@ -1417,7 +1417,7 @@ name: Aupi, Dan A
 yr: SR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 25.24
 prelim_time: 24.13
 finals_time: 24.46
 prelim_rank: 4
@@ -1428,7 +1428,7 @@ name: Reynolds, Aron C
 yr: SO
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 26.18
 prelim_time: 24.52
 finals_time: 24.87
 prelim_rank: 9
@@ -1439,7 +1439,7 @@ name: Schwab, Daniel A
 yr: JR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 25.79
 prelim_time: 24.69
 finals_time: 24.44
 prelim_rank: 11
@@ -1450,7 +1450,7 @@ name: Johns, Matt
 yr: JR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 26.87
 prelim_time: 24.74
 finals_time: 24.52
 prelim_rank: 12
@@ -1461,7 +1461,7 @@ name: Stuyvesant, Basyl L
 yr: JR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 25.46
 prelim_time: 24.57
 finals_time: 24.53
 prelim_rank: 10
@@ -1472,7 +1472,7 @@ name: Asaga, Kazu
 yr: SR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 25.49
 prelim_time: 24.82
 finals_time: 24.62
 prelim_rank: 13
@@ -1483,7 +1483,7 @@ name: Depew, Nathaniel H
 yr: SR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 26.24
 prelim_time: 25.02
 finals_time: 24.84
 prelim_rank: 14
@@ -1494,7 +1494,7 @@ name: Olynyk, Craig O
 yr: SO
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 26.11
 prelim_time: 25.22
 finals_time: 24.93
 prelim_rank: 15
@@ -1505,7 +1505,7 @@ name: Matson, Kyle M
 yr: SO
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 26.48
 prelim_time: 25.26
 finals_time: 25.20
 prelim_rank: 17
@@ -1516,7 +1516,7 @@ name: Druckman, Daniel R
 yr: FR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 26.44
 prelim_time: 25.24
 finals_time: 25.28
 prelim_rank: 16
@@ -1527,7 +1527,7 @@ name: Park, Andrew S
 yr: FR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 26.05
 prelim_time: 25.93
 finals_time: 26.20
 prelim_rank: 20
@@ -1538,7 +1538,7 @@ name: Newton, Matthew S
 yr: JR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 27.94
 prelim_time: 26.39
 finals_time: 26.36
 prelim_rank: 21
@@ -1549,7 +1549,7 @@ name: Schultz, Nico F
 yr: FR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 26.10
 prelim_time: 25.33
 finals_time: 26.41
 prelim_rank: 18
@@ -1560,7 +1560,7 @@ name: Teumer, Fred G
 yr: JR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 27.43
 prelim_time: 25.69
 finals_time: 26.53
 prelim_rank: 19
@@ -1571,7 +1571,7 @@ name: Tamposi, Joe A
 yr: SO
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 27.81
 prelim_time: 26.54
 finals_time: 26.69
 prelim_rank: 22
@@ -1582,7 +1582,7 @@ name: Grodkiewicz, Travis J
 yr: SR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 27.43
 prelim_time: 26.73
 finals_time: 27.02
 prelim_rank: 25
@@ -1593,7 +1593,7 @@ name: McCann, Ryan R
 yr: SO
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
+seed_time: 28.15
 prelim_time: 26.67
 finals_time: 27.13
 prelim_rank: 24
@@ -1604,8 +1604,8 @@ name: Gilligan, Brian J
 yr: SR
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 25.54
+seed_time: 25.54
+prelim_time: 24.50
 finals_time: None
 prelim_rank: 7
 final_rank: None
@@ -1615,8 +1615,8 @@ name: Tschaen, Brendan P
 yr: SO
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 27.48
+seed_time: 27.48
+prelim_time: 26.76
 finals_time: None
 prelim_rank: 26
 final_rank: None
@@ -1626,8 +1626,8 @@ name: Trombetta, Jeremy T
 yr: FR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 26.90
+seed_time: 26.90
+prelim_time: 26.83
 finals_time: None
 prelim_rank: 27
 final_rank: None
@@ -1637,8 +1637,8 @@ name: Castelluccio, Brian C
 yr: SR
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
-prelim_time: 28.00
+seed_time: 28.00
+prelim_time: 26.96
 finals_time: None
 prelim_rank: 28
 final_rank: None
@@ -1648,8 +1648,8 @@ name: Huston, Dan E
 yr: SO
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 28.30
+seed_time: 28.30
+prelim_time: 27.01
 finals_time: None
 prelim_rank: 29
 final_rank: None
@@ -1659,8 +1659,8 @@ name: Forde, James H
 yr: SO
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
-prelim_time: 27.90
+seed_time: 27.90
+prelim_time: 27.03
 finals_time: None
 prelim_rank: 30
 final_rank: None
@@ -1670,8 +1670,8 @@ name: Norton, Adam T
 yr: SR
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
-prelim_time: 29.09
+seed_time: 29.09
+prelim_time: 28.16
 finals_time: None
 prelim_rank: 31
 final_rank: None
@@ -1681,8 +1681,8 @@ name: Lerner, Lane R
 yr: SO
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 30.41
+seed_time: 30.41
+prelim_time: 29.85
 finals_time: None
 prelim_rank: 32
 final_rank: None
@@ -1692,8 +1692,8 @@ name: Holmsen, Erik K
 yr: FR
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 34.00
+seed_time: 34.00
+prelim_time: 30.73
 finals_time: None
 prelim_rank: 33
 final_rank: None
@@ -1713,7 +1713,7 @@ name: Dyrkacz, Paul M
 yr: JR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 1:53.27
 prelim_time: 1:50.93
 finals_time: 1:50.02
 prelim_rank: 1
@@ -1724,7 +1724,7 @@ name: Beaulieu, Connor W
 yr: SO
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 1:54.96
 prelim_time: 1:53.71
 finals_time: 1:52.54!
 prelim_rank: 2
@@ -1735,7 +1735,7 @@ name: Rochford, Michael D
 yr: FR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 1:55.99
 prelim_time: 1:55.26
 finals_time: 1:53.12!
 prelim_rank: 7
@@ -1746,7 +1746,7 @@ name: Corbett, Christopher J
 yr: JR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 1:57.99
 prelim_time: 1:54.12
 finals_time: 1:54.42!
 prelim_rank: 3
@@ -1757,7 +1757,7 @@ name: Lattimer, Timothy R
 yr: FR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 2:00.69
 prelim_time: 1:55.07
 finals_time: 1:54.47
 prelim_rank: 5
@@ -1768,7 +1768,7 @@ name: Nemeth, Andrew J
 yr: FR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 1:56.80
 prelim_time: 1:54.62
 finals_time: 1:54.50
 prelim_rank: 4
@@ -1779,7 +1779,7 @@ name: Taylor, David
 yr: JR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 1:58.69
 prelim_time: 1:55.21
 finals_time: 1:54.76
 prelim_rank: 6
@@ -1790,7 +1790,7 @@ name: Federak, Bart
 yr: SR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 2:01.49
 prelim_time: 1:55.38
 finals_time: 1:55.23
 prelim_rank: 8
@@ -1801,7 +1801,7 @@ name: Gagne', Matthew L
 yr: FR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 2:00.79
 prelim_time: 1:56.33
 finals_time: 1:55.19
 prelim_rank: 12
@@ -1812,7 +1812,7 @@ name: Keenan, Nick S
 yr: SO
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 2:02.67
 prelim_time: 1:56.91
 finals_time: 1:55.73
 prelim_rank: 13
@@ -1823,7 +1823,7 @@ name: Boniface, Tom J
 yr: SR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 2:01.01
 prelim_time: 1:55.66
 finals_time: 1:55.90
 prelim_rank: 10
@@ -1834,7 +1834,7 @@ name: Liao, Eric Y
 yr: SO
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 2:00.57
 prelim_time: 1:56.91
 finals_time: 1:55.94
 prelim_rank: 13
@@ -1845,7 +1845,7 @@ name: Guiffre, John J
 yr: SR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 2:03.37
 prelim_time: 1:56.18
 finals_time: 1:57.78
 prelim_rank: 11
@@ -1856,7 +1856,7 @@ name: Berman, Drew J
 yr: SO
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 2:00.70
 prelim_time: 1:57.35
 finals_time: 1:57.84
 prelim_rank: 15
@@ -1867,7 +1867,7 @@ name: Kulesza, Ryan J
 yr: FR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 1:59.31
 prelim_time: 1:55.39
 finals_time: 1:57.95
 prelim_rank: 9
@@ -1878,7 +1878,7 @@ name: Rhodes, Linc L
 yr: SO
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 1:59.55
 prelim_time: 1:57.79
 finals_time: 1:58.82
 prelim_rank: 16
@@ -1889,7 +1889,7 @@ name: Saleh, Momo A
 yr: SR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
+seed_time: 2:03.17
 prelim_time: 1:58.75
 finals_time: 1:57.16
 prelim_rank: 19
@@ -1900,7 +1900,7 @@ name: Kang, Alex S
 yr: FR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 1:57.67
 prelim_time: 1:59.14
 finals_time: 1:58.27
 prelim_rank: 22
@@ -1911,7 +1911,7 @@ name: Fortin, Brendan P
 yr: JR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
+seed_time: 2:01.61
 prelim_time: 1:58.60
 finals_time: 1:58.35
 prelim_rank: 18
@@ -1922,7 +1922,7 @@ name: Pritzker, Sam
 yr: SO
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 2:03.34
 prelim_time: 1:58.77
 finals_time: 1:58.54
 prelim_rank: 20
@@ -1933,7 +1933,7 @@ name: Tamposi, Lou O
 yr: SR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 2:04.24
 prelim_time: 1:57.91
 finals_time: 2:00.18
 prelim_rank: 17
@@ -1944,7 +1944,7 @@ name: Weinzierl, Michael S
 yr: FR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
+seed_time: 2:03.50
 prelim_time: 1:59.03
 finals_time: 2:00.45
 prelim_rank: 21
@@ -1955,7 +1955,7 @@ name: Sivulich, Ethan M
 yr: FR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 2:07.95
 prelim_time: 2:00.86
 finals_time: 2:00.92
 prelim_rank: 23
@@ -1966,7 +1966,7 @@ name: Buehler, Andrew W
 yr: JR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 2:09.24
 prelim_time: 2:00.86
 finals_time: 2:02.40
 prelim_rank: 23
@@ -1977,8 +1977,8 @@ name: McLaughlin, Colin H
 yr: SO
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 2:09.13
+seed_time: 2:09.13
+prelim_time: 2:00.96
 finals_time: None
 prelim_rank: 25
 final_rank: None
@@ -1988,8 +1988,8 @@ name: Huston, Nick C
 yr: JR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
-prelim_time: 2:05.54
+seed_time: 2:05.54
+prelim_time: 2:01.02
 finals_time: None
 prelim_rank: 26
 final_rank: None
@@ -1999,8 +1999,8 @@ name: Madeira, John
 yr: SO
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 2:06.81
+seed_time: 2:06.81
+prelim_time: 2:01.52
 finals_time: None
 prelim_rank: 27
 final_rank: None
@@ -2010,8 +2010,8 @@ name: Oster, Mike J
 yr: SO
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 2:07.57
+seed_time: 2:07.57
+prelim_time: 2:01.68
 finals_time: None
 prelim_rank: 28
 final_rank: None
@@ -2021,8 +2021,8 @@ name: Beauregard, Harry B
 yr: SR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
-prelim_time: 2:08.59
+seed_time: 2:08.59
+prelim_time: 2:01.91
 finals_time: None
 prelim_rank: 29
 final_rank: None
@@ -2032,8 +2032,8 @@ name: Boyd, Graham H
 yr: SO
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 2:08.54
+seed_time: 2:08.54
+prelim_time: 2:02.24
 finals_time: None
 prelim_rank: 30
 final_rank: None
@@ -2043,8 +2043,8 @@ name: Li, Patrick G
 yr: FR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 2:03.75
+seed_time: 2:03.75
+prelim_time: 2:02.25
 finals_time: None
 prelim_rank: 31
 final_rank: None
@@ -2054,8 +2054,8 @@ name: Knight, Lucas M
 yr: SO
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
-prelim_time: 2:09.24
+seed_time: 2:09.24
+prelim_time: 2:02.42
 finals_time: None
 prelim_rank: 32
 final_rank: None
@@ -2065,8 +2065,8 @@ name: Yanagisawa, Mark K
 yr: SO
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
-prelim_time: 2:05.55
+seed_time: 2:05.55
+prelim_time: 2:02.65
 finals_time: None
 prelim_rank: 33
 final_rank: None
@@ -2076,8 +2076,8 @@ name: Watson, Luke S
 yr: FR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
-prelim_time: 2:06.67
+seed_time: 2:06.67
+prelim_time: 2:02.80
 finals_time: None
 prelim_rank: 34
 final_rank: None
@@ -2087,8 +2087,8 @@ name: Kaminow, Nico I
 yr: FR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 2:11.08
+seed_time: 2:11.08
+prelim_time: 2:03.65
 finals_time: None
 prelim_rank: 35
 final_rank: None
@@ -2098,8 +2098,8 @@ name: Vandiford, Christopher W
 yr: FR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 2:01.22
+seed_time: 2:01.22
+prelim_time: 2:03.97
 finals_time: None
 prelim_rank: 36
 final_rank: None
@@ -2109,8 +2109,8 @@ name: Gavin, Tripp
 yr: SR
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
-prelim_time: 2:09.13
+seed_time: 2:09.13
+prelim_time: 2:04.97
 finals_time: None
 prelim_rank: 37
 final_rank: None
@@ -2120,8 +2120,8 @@ name: Jenkins, Cody M
 yr: SO
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 2:10.49
+seed_time: 2:10.49
+prelim_time: 2:05.47
 finals_time: None
 prelim_rank: 38
 final_rank: None
@@ -2131,8 +2131,8 @@ name: Ho, Wesley Y
 yr: FR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
-prelim_time: 2:08.88
+seed_time: 2:08.88
+prelim_time: 2:05.71
 finals_time: None
 prelim_rank: 39
 final_rank: None
@@ -2142,8 +2142,8 @@ name: Sohail, Omar A
 yr: FR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
-prelim_time: 2:20.73
+seed_time: 2:20.73
+prelim_time: 2:13.65
 finals_time: None
 prelim_rank: 40
 final_rank: None
@@ -2153,8 +2153,8 @@ name: Milam, Trey R
 yr: SO
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 2:25.36
+seed_time: 2:25.36
+prelim_time: 2:14.74
 finals_time: None
 prelim_rank: 41
 final_rank: None
@@ -2174,7 +2174,7 @@ name: Rood, Owen R
 yr: SR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 21.41
 prelim_time: 20.93
 finals_time: 20.73!
 prelim_rank: 3
@@ -2185,7 +2185,7 @@ name: Mecray, Nathan E
 yr: SR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 20.88
 prelim_time: 20.83
 finals_time: 20.88!
 prelim_rank: 1
@@ -2196,7 +2196,7 @@ name: Jorento, Daeus J
 yr: JR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 22.14
 prelim_time: 21.01
 finals_time: 20.91!
 prelim_rank: 4
@@ -2207,7 +2207,7 @@ name: Daly, Nick N
 yr: SR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 21.40
 prelim_time: 20.91
 finals_time: 20.96
 prelim_rank: 2
@@ -2218,7 +2218,7 @@ name: Sholtis, Connor J
 yr: FR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 21.71
 prelim_time: 21.24
 finals_time: 21.03
 prelim_rank: 5
@@ -2229,7 +2229,7 @@ name: Nanda, Alexander K
 yr: FR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 22.37
 prelim_time: 21.34
 finals_time: 21.36
 prelim_rank: 7
@@ -2240,7 +2240,7 @@ name: Hampton, Tyler J
 yr: FR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 22.08
 prelim_time: 21.25
 finals_time: 21.42
 prelim_rank: 6
@@ -2251,7 +2251,7 @@ name: McGinnis, Patrick R
 yr: FR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 22.09
 prelim_time: 21.35
 finals_time: 21.51
 prelim_rank: 8
@@ -2262,7 +2262,7 @@ name: Hogenkamp, Taylor P
 yr: JR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
+seed_time: 21.98
 prelim_time: 21.44
 finals_time: 21.45
 prelim_rank: 10
@@ -2273,7 +2273,7 @@ name: Brown, Will A
 yr: FR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 22.13
 prelim_time: 21.66
 finals_time: 21.62
 prelim_rank: 13
@@ -2284,7 +2284,7 @@ name: Shi, William Y
 yr: FR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 21.99
 prelim_time: 21.45
 finals_time: 21.67
 prelim_rank: 11
@@ -2295,7 +2295,7 @@ name: Wood, Austin B
 yr: SO
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 22.35
 prelim_time: 21.53
 finals_time: 21.71
 prelim_rank: 12
@@ -2306,7 +2306,7 @@ name: Parker, Will P
 yr: FR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 21.82
 prelim_time: 21.40
 finals_time: 21.82
 prelim_rank: 9
@@ -2317,7 +2317,7 @@ name: Karlson, Nick
 yr: JR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 22.76
 prelim_time: 21.79
 finals_time: 21.85
 prelim_rank: 15
@@ -2328,7 +2328,7 @@ name: Schaffer, Adam J
 yr: SR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 22.39
 prelim_time: 21.80
 finals_time: 22.19
 prelim_rank: 16
@@ -2339,7 +2339,7 @@ name: Devine, John R
 yr: FR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 22.03
 prelim_time: 21.77
 finals_time: 22.21
 prelim_rank: 14
@@ -2350,7 +2350,7 @@ name: Elias, Fred M
 yr: SO
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 22.72
 prelim_time: 22.29
 finals_time: 21.83
 prelim_rank: 23
@@ -2361,7 +2361,7 @@ name: Wing, James M
 yr: FR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 22.13
 prelim_time: 21.94
 finals_time: 22.02
 prelim_rank: 17
@@ -2372,7 +2372,7 @@ name: Googins, Ej J
 yr: JR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 22.55
 prelim_time: 21.98
 finals_time: 22.02
 prelim_rank: 19
@@ -2383,7 +2383,7 @@ name: Galea, Vincent
 yr: FR
 school: Colby-ME
 exhibition: False
-seed_time: None
+seed_time: 22.44
 prelim_time: 21.99
 finals_time: 22.06
 prelim_rank: 20
@@ -2394,7 +2394,7 @@ name: Nichols, Ian C
 yr: JR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
+seed_time: 22.90
 prelim_time: 22.13
 finals_time: 22.13
 prelim_rank: 21
@@ -2405,7 +2405,7 @@ name: Ainley, Nathaniel M
 yr: FR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 22.42
 prelim_time: 21.97
 finals_time: 22.17
 prelim_rank: 18
@@ -2416,7 +2416,7 @@ name: Yan, Erik S
 yr: FR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
+seed_time: 22.51
 prelim_time: 22.38
 finals_time: 22.43
 prelim_rank: 24
@@ -2427,7 +2427,7 @@ name: Hurley, Tom H
 yr: SR
 school: Colby-ME
 exhibition: False
-seed_time: None
+seed_time: 22.95
 prelim_time: 22.22
 finals_time: 22.46
 prelim_rank: 22
@@ -2438,8 +2438,8 @@ name: Kurose, Alex A
 yr: FR
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
-prelim_time: 23.31
+seed_time: 23.31
+prelim_time: 22.39
 finals_time: None
 prelim_rank: 25
 final_rank: None
@@ -2449,8 +2449,8 @@ name: Markusen, Jack W
 yr: SO
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 24.11
+seed_time: 24.11
+prelim_time: 22.41
 finals_time: None
 prelim_rank: 26
 final_rank: None
@@ -2460,8 +2460,8 @@ name: Fung, Jonathan J
 yr: SR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 22.53
+seed_time: 22.53
+prelim_time: 22.50
 finals_time: None
 prelim_rank: 27
 final_rank: None
@@ -2471,8 +2471,8 @@ name: Reinhardt, Karl B
 yr: FR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
-prelim_time: 23.65
+seed_time: 23.65
+prelim_time: 22.64
 finals_time: None
 prelim_rank: 28
 final_rank: None
@@ -2482,8 +2482,8 @@ name: Lipoff, Matt G
 yr: SR
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 23.06
+seed_time: 23.06
+prelim_time: 22.65
 finals_time: None
 prelim_rank: 29
 final_rank: None
@@ -2493,8 +2493,8 @@ name: Bernstein, Rex L
 yr: FR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
-prelim_time: 23.47
+seed_time: 23.47
+prelim_time: 22.77
 finals_time: None
 prelim_rank: 30
 final_rank: None
@@ -2504,8 +2504,8 @@ name: Hootsmans, James A
 yr: JR
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 23.30
+seed_time: 23.30
+prelim_time: 22.79
 finals_time: None
 prelim_rank: 31
 final_rank: None
@@ -2515,8 +2515,8 @@ name: Hanley, Mike R
 yr: JR
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 23.10
+seed_time: 23.10
+prelim_time: 22.81
 finals_time: None
 prelim_rank: 32
 final_rank: None
@@ -2526,8 +2526,8 @@ name: Brown, Stefan
 yr: FR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
-prelim_time: 23.21
+seed_time: 23.21
+prelim_time: 22.93
 finals_time: None
 prelim_rank: 33
 final_rank: None
@@ -2537,8 +2537,8 @@ name: Supple, Jack H
 yr: SO
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 23.70
+seed_time: 23.70
+prelim_time: 22.95
 finals_time: None
 prelim_rank: 34
 final_rank: None
@@ -2548,8 +2548,8 @@ name: Newton, Matthew S
 yr: JR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
-prelim_time: 23.68
+seed_time: 23.68
+prelim_time: 22.95
 finals_time: None
 prelim_rank: 34
 final_rank: None
@@ -2559,8 +2559,8 @@ name: McWhirter, Andrew
 yr: FR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 23.41
+seed_time: 23.41
+prelim_time: 23.00
 finals_time: None
 prelim_rank: 36
 final_rank: None
@@ -2570,8 +2570,8 @@ name: Feminella, John M
 yr: JR
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
-prelim_time: 23.67
+seed_time: 23.67
+prelim_time: 23.19
 finals_time: None
 prelim_rank: 37
 final_rank: None
@@ -2581,8 +2581,8 @@ name: Sandoval, Tyler Q
 yr: JR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 23.08
+seed_time: 23.08
+prelim_time: 23.52
 finals_time: None
 prelim_rank: 38
 final_rank: None
@@ -2592,8 +2592,8 @@ name: Asaga, Fumi
 yr: SO
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 23.50
+seed_time: 23.50
+prelim_time: 23.73
 finals_time: None
 prelim_rank: 39
 final_rank: None
@@ -2603,8 +2603,8 @@ name: Zhang, Alex
 yr: SO
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
-prelim_time: 24.13
+seed_time: 24.13
+prelim_time: 23.75
 finals_time: None
 prelim_rank: 40
 final_rank: None
@@ -2614,8 +2614,8 @@ name: Rosenbloom, Jake
 yr: FR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
-prelim_time: 24.70
+seed_time: 24.70
+prelim_time: 24.07
 finals_time: None
 prelim_rank: 41
 final_rank: None
@@ -2625,8 +2625,8 @@ name: Tran, Hugo
 yr: JR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
-prelim_time: 24.05
+seed_time: 24.05
+prelim_time: 24.09
 finals_time: None
 prelim_rank: 42
 final_rank: None
@@ -2636,8 +2636,8 @@ name: Lewis, Ben
 yr: SO
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 24.77
+seed_time: 24.77
+prelim_time: 24.11
 finals_time: None
 prelim_rank: 43
 final_rank: None
@@ -2647,8 +2647,8 @@ name: Fragoso, Chris A
 yr: SR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
-prelim_time: 24.04
+seed_time: 24.04
+prelim_time: 24.14
 finals_time: None
 prelim_rank: 44
 final_rank: None
@@ -2658,8 +2658,8 @@ name: Fields, Ben C
 yr: FR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 24.74
+seed_time: 24.74
+prelim_time: 24.18
 finals_time: None
 prelim_rank: 45
 final_rank: None
@@ -2669,8 +2669,8 @@ name: Andler, Sam B
 yr: SR
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 24.81
+seed_time: 24.81
+prelim_time: 24.21
 finals_time: None
 prelim_rank: 46
 final_rank: None
@@ -2680,8 +2680,8 @@ name: Holmsen, Erik K
 yr: FR
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 26.02
+seed_time: 26.02
+prelim_time: 24.39
 finals_time: None
 prelim_rank: 47
 final_rank: None
@@ -2731,7 +2731,7 @@ name: Dyrkacz, Paul M
 yr: JR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 4:05.97
 prelim_time: 4:00.68
 finals_time: 3:55.44
 prelim_rank: 1
@@ -2742,7 +2742,7 @@ name: Lattimer, Timothy R
 yr: FR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 4:11.48
 prelim_time: 4:03.17
 finals_time: 4:00.85!
 prelim_rank: 4
@@ -2753,7 +2753,7 @@ name: Rochford, Michael D
 yr: FR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 4:08.64
 prelim_time: 4:04.81
 finals_time: 4:01.75!
 prelim_rank: 5
@@ -2764,7 +2764,7 @@ name: Beaulieu, Connor W
 yr: SO
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 4:09.41
 prelim_time: 4:02.57
 finals_time: 4:01.81!
 prelim_rank: 3
@@ -2775,7 +2775,7 @@ name: Corbett, Christopher J
 yr: JR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 4:10.45
 prelim_time: 4:01.89
 finals_time: 4:05.04!
 prelim_rank: 2
@@ -2786,7 +2786,7 @@ name: Nemeth, Andrew J
 yr: FR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 4:17.29
 prelim_time: 4:09.61
 finals_time: 4:06.22!
 prelim_rank: 7
@@ -2797,7 +2797,7 @@ name: Peabody, Ryan J
 yr: SO
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 4:15.25
 prelim_time: 4:08.19
 finals_time: 4:10.14
 prelim_rank: 6
@@ -2808,7 +2808,7 @@ name: Tamposi, Lou O
 yr: SR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 4:24.19
 prelim_time: 4:12.29
 finals_time: 4:16.17
 prelim_rank: 9
@@ -2819,7 +2819,7 @@ name: Saleh, Momo A
 yr: SR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
+seed_time: 4:26.84
 prelim_time: 4:12.75
 finals_time: 4:10.70
 prelim_rank: 10
@@ -2830,7 +2830,7 @@ name: Liao, Eric Y
 yr: SO
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 4:25.47
 prelim_time: 4:12.81
 finals_time: 4:11.15
 prelim_rank: 11
@@ -2841,7 +2841,7 @@ name: Perley, Albert S
 yr: SR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 4:24.71
 prelim_time: 4:15.96
 finals_time: 4:13.84
 prelim_rank: 12
@@ -2852,7 +2852,7 @@ name: Jones, Christian M
 yr: SO
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 4:19.42
 prelim_time: 4:16.46
 finals_time: 4:14.08
 prelim_rank: 13
@@ -2863,7 +2863,7 @@ name: Keenan, Nick S
 yr: SO
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 4:15.26
 prelim_time: 4:19.43
 finals_time: 4:14.50
 prelim_rank: 15
@@ -2874,7 +2874,7 @@ name: Pritzker, Sam
 yr: SO
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 4:25.39
 prelim_time: 4:16.63
 finals_time: 4:17.06
 prelim_rank: 14
@@ -2885,7 +2885,7 @@ name: Buehler, Andrew W
 yr: JR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 4:27.26
 prelim_time: 4:22.05
 finals_time: 4:21.30
 prelim_rank: 17
@@ -2896,7 +2896,7 @@ name: Gavin, Tripp
 yr: SR
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
+seed_time: 4:35.72
 prelim_time: 4:21.30
 finals_time: 4:26.84
 prelim_rank: 16
@@ -2907,7 +2907,7 @@ name: Gibson, Joe W
 yr: SO
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 4:28.71
 prelim_time: 4:22.10
 finals_time: 4:18.57
 prelim_rank: 18
@@ -2918,7 +2918,7 @@ name: Yanagisawa, Mark K
 yr: SO
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
+seed_time: 4:28.78
 prelim_time: 4:23.45
 finals_time: 4:21.13
 prelim_rank: 20
@@ -2929,7 +2929,7 @@ name: Knight, Lucas M
 yr: SO
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
+seed_time: 4:44.16
 prelim_time: 4:22.68
 finals_time: 4:21.31
 prelim_rank: 19
@@ -2940,7 +2940,7 @@ name: Crafa, James R
 yr: SR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
+seed_time: 4:32.07
 prelim_time: 4:28.48
 finals_time: 4:22.07
 prelim_rank: 23
@@ -2951,7 +2951,7 @@ name: Portelance, Dylan
 yr: JR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 4:32.16
 prelim_time: 4:24.60
 finals_time: 4:22.50
 prelim_rank: 21
@@ -2962,7 +2962,7 @@ name: Watson, Luke S
 yr: FR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 4:34.40
 prelim_time: 4:26.71
 finals_time: 4:23.66
 prelim_rank: 22
@@ -2973,7 +2973,7 @@ name: Grodkiewicz, Travis J
 yr: SR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 4:23.47
 prelim_time: 4:28.69
 finals_time: 4:28.76
 prelim_rank: 24
@@ -2984,7 +2984,7 @@ name: Beauregard, Harry B
 yr: SR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 4:34.50
 prelim_time: 4:29.81
 finals_time: 4:33.35
 prelim_rank: 25
@@ -2995,8 +2995,8 @@ name: Fortin, Brendan P
 yr: JR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
-prelim_time: 4:14.86
+seed_time: 4:14.86
+prelim_time: 4:11.78
 finals_time: None
 prelim_rank: 8
 final_rank: None
@@ -3006,8 +3006,8 @@ name: Jenkins, Cody M
 yr: SO
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 4:36.78
+seed_time: 4:36.78
+prelim_time: 4:31.66
 finals_time: None
 prelim_rank: 26
 final_rank: None
@@ -3027,7 +3027,7 @@ name: Gill, Sam P
 yr: SO
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 50.91
 prelim_time: 49.41
 finals_time: 48.73M
 prelim_rank: 1
@@ -3038,7 +3038,7 @@ name: McBratney, Ben A
 yr: SR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 53.14
 prelim_time: 50.37
 finals_time: 50.05!
 prelim_rank: 2
@@ -3049,7 +3049,7 @@ name: Ricotta, Thad J
 yr: FR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 52.62
 prelim_time: 50.39
 finals_time: 50.25!
 prelim_rank: 3
@@ -3060,7 +3060,7 @@ name: Routh, Mac M
 yr: SR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 52.08
 prelim_time: 50.48
 finals_time: 50.36!
 prelim_rank: 4
@@ -3071,7 +3071,7 @@ name: Bulakul, Tyler
 yr: SO
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 52.10
 prelim_time: 50.70
 finals_time: 50.65!
 prelim_rank: 6
@@ -3082,7 +3082,7 @@ name: Horgan, Stuart C
 yr: SR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 53.09
 prelim_time: 50.80
 finals_time: 50.65!
 prelim_rank: 7
@@ -3093,7 +3093,7 @@ name: Gagne', Matthew L
 yr: FR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 52.09
 prelim_time: 50.55
 finals_time: 50.77
 prelim_rank: 5
@@ -3104,7 +3104,7 @@ name: Guiffre, John J
 yr: SR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 54.93
 prelim_time: 51.00
 finals_time: 51.25
 prelim_rank: 8
@@ -3115,7 +3115,7 @@ name: Marrano, Ryan C
 yr: SR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 54.21
 prelim_time: 51.70
 finals_time: 51.16
 prelim_rank: 11
@@ -3126,7 +3126,7 @@ name: Kafina, Martin D
 yr: JR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
+seed_time: 54.03
 prelim_time: 51.36
 finals_time: 51.56
 prelim_rank: 9
@@ -3137,7 +3137,7 @@ name: Scott, Ned E
 yr: SR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 53.05
 prelim_time: 51.55
 finals_time: 51.62
 prelim_rank: 10
@@ -3148,7 +3148,7 @@ name: Duvvuri, Venkatesh
 yr: SO
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 54.41
 prelim_time: 51.84
 finals_time: 51.84
 prelim_rank: 12
@@ -3159,7 +3159,7 @@ name: Douglas, Eric A
 yr: SO
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 54.30
 prelim_time: 51.94
 finals_time: 51.99
 prelim_rank: 16
@@ -3170,7 +3170,7 @@ name: Asaga, Kazu
 yr: SR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 52.88
 prelim_time: 51.87
 finals_time: 52.26
 prelim_rank: 13
@@ -3181,7 +3181,7 @@ name: Mauel, Jack P
 yr: JR
 school: Colby-ME
 exhibition: False
-seed_time: None
+seed_time: 54.99
 prelim_time: 51.89
 finals_time: 52.33
 prelim_rank: 14
@@ -3192,7 +3192,7 @@ name: Trafton, Ryan D
 yr: SR
 school: Colby-ME
 exhibition: False
-seed_time: None
+seed_time: 54.08
 prelim_time: 51.91
 finals_time: 52.33
 prelim_rank: 15
@@ -3203,7 +3203,7 @@ name: Yan, Erik S
 yr: FR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
+seed_time: 53.34
 prelim_time: 52.80
 finals_time: 52.17
 prelim_rank: 21
@@ -3214,7 +3214,7 @@ name: Napolitano, Mike T
 yr: FR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 53.84
 prelim_time: 52.75
 finals_time: 52.34
 prelim_rank: 20
@@ -3225,7 +3225,7 @@ name: Granata, Chris J
 yr: SO
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 53.28
 prelim_time: 51.97
 finals_time: 52.57
 prelim_rank: 17
@@ -3236,7 +3236,7 @@ name: Patton, William R
 yr: FR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 55.92
 prelim_time: 52.70
 finals_time: 52.89
 prelim_rank: 19
@@ -3247,7 +3247,7 @@ name: Landefeld, Peter C
 yr: SO
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 52.27
 prelim_time: 52.58
 finals_time: 53.00
 prelim_rank: 18
@@ -3258,7 +3258,7 @@ name: Ching, Brandon L
 yr: SR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 53.39
 prelim_time: 52.93
 finals_time: 53.06
 prelim_rank: 22
@@ -3269,7 +3269,7 @@ name: Smachlo, Alex A
 yr: FR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 54.57
 prelim_time: 52.96
 finals_time: 53.18
 prelim_rank: 23
@@ -3280,7 +3280,7 @@ name: McGinnis, Patrick R
 yr: FR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 56.31
 prelim_time: 53.02
 finals_time: 53.38
 prelim_rank: 24
@@ -3291,8 +3291,8 @@ name: Devine, John R
 yr: FR
 school: Tufts-NE
 exhibition: False
-seed_time: None
-prelim_time: 53.86
+seed_time: 53.86
+prelim_time: 53.06
 finals_time: None
 prelim_rank: 25
 final_rank: None
@@ -3302,8 +3302,8 @@ name: Gilman, Brian J
 yr: SO
 school: Connecticut-CT
 exhibition: False
-seed_time: None
-prelim_time: 55.00
+seed_time: 55.00
+prelim_time: 53.15
 finals_time: None
 prelim_rank: 26
 final_rank: None
@@ -3313,8 +3313,8 @@ name: Kuo, Teddy
 yr: FR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 54.06
+seed_time: 54.06
+prelim_time: 53.34
 finals_time: None
 prelim_rank: 27
 final_rank: None
@@ -3324,8 +3324,8 @@ name: Pielock, Christopher M
 yr: JR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
-prelim_time: 55.82
+seed_time: 55.82
+prelim_time: 54.05
 finals_time: None
 prelim_rank: 28
 final_rank: None
@@ -3335,8 +3335,8 @@ name: Boyd, Graham H
 yr: SO
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 56.60
+seed_time: 56.60
+prelim_time: 54.44
 finals_time: None
 prelim_rank: 29
 final_rank: None
@@ -3346,8 +3346,8 @@ name: Brown, Stefan
 yr: FR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
-prelim_time: 55.87
+seed_time: 55.87
+prelim_time: 54.50
 finals_time: None
 prelim_rank: 30
 final_rank: None
@@ -3357,8 +3357,8 @@ name: Gerard, Paul
 yr: SO
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 56.96
+seed_time: 56.96
+prelim_time: 54.66
 finals_time: None
 prelim_rank: 31
 final_rank: None
@@ -3368,8 +3368,8 @@ name: Teumer, Fred G
 yr: JR
 school: Tufts-NE
 exhibition: False
-seed_time: None
-prelim_time: 57.33
+seed_time: 57.33
+prelim_time: 54.69
 finals_time: None
 prelim_rank: 32
 final_rank: None
@@ -3379,8 +3379,8 @@ name: Fung, Jonathan J
 yr: SR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 54.47
+seed_time: 54.47
+prelim_time: 54.70
 finals_time: None
 prelim_rank: 33
 final_rank: None
@@ -3390,8 +3390,8 @@ name: Sandoval, Tyler Q
 yr: JR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 53.99
+seed_time: 53.99
+prelim_time: 54.77
 finals_time: None
 prelim_rank: 34
 final_rank: None
@@ -3401,8 +3401,8 @@ name: Kozikowski, Kevin M
 yr: FR
 school: Tufts-NE
 exhibition: False
-seed_time: None
-prelim_time: 55.54
+seed_time: 55.54
+prelim_time: 55.02
 finals_time: None
 prelim_rank: 35
 final_rank: None
@@ -3412,8 +3412,8 @@ name: Makrides, Chris J
 yr: SO
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 57.43
+seed_time: 57.43
+prelim_time: 55.26
 finals_time: None
 prelim_rank: 36
 final_rank: None
@@ -3423,8 +3423,8 @@ name: Andler, Sam B
 yr: SR
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 59.70
+seed_time: 59.70
+prelim_time: 57.06
 finals_time: None
 prelim_rank: 37
 final_rank: None
@@ -3434,8 +3434,8 @@ name: Dix, Zach
 yr: FR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 58.62
+seed_time: 58.62
+prelim_time: 57.49
 finals_time: None
 prelim_rank: 38
 final_rank: None
@@ -3445,8 +3445,8 @@ name: Rosenbloom, Jake
 yr: FR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
-prelim_time: 59.22
+seed_time: 59.22
+prelim_time: 58.09
 finals_time: None
 prelim_rank: 39
 final_rank: None
@@ -3456,8 +3456,8 @@ name: Sohail, Omar A
 yr: FR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
-prelim_time: 1:01.79
+seed_time: 1:01.79
+prelim_time: 58.81
 finals_time: None
 prelim_rank: 40
 final_rank: None
@@ -3477,7 +3477,7 @@ name: Vieth, Tom C
 yr: JR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 1:40.69
 prelim_time: 1:40.92
 finals_time: 1:38.91
 prelim_rank: 3
@@ -3488,7 +3488,7 @@ name: Lichtenfels, Ryan R
 yr: SR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 1:42.28
 prelim_time: 1:41.31
 finals_time: 1:40.39!
 prelim_rank: 4
@@ -3499,7 +3499,7 @@ name: Sholtis, Connor J
 yr: FR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 1:50.89
 prelim_time: 1:40.81
 finals_time: 1:40.56!
 prelim_rank: 2
@@ -3510,7 +3510,7 @@ name: White, Tim
 yr: SR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 1:42.69
 prelim_time: 1:40.55
 finals_time: 1:41.15!
 prelim_rank: 1
@@ -3521,7 +3521,7 @@ name: Egan, Nick Q
 yr: SO
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 1:44.25
 prelim_time: 1:42.27
 finals_time: 1:42.39
 prelim_rank: 5
@@ -3532,7 +3532,7 @@ name: Weihs, Chris G
 yr: FR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 1:45.80
 prelim_time: 1:43.43
 finals_time: 1:42.72
 prelim_rank: 8
@@ -3543,7 +3543,7 @@ name: Moody, Parker W
 yr: SO
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 1:44.57
 prelim_time: 1:43.28
 finals_time: 1:42.97
 prelim_rank: 7
@@ -3554,7 +3554,7 @@ name: Hogenkamp, Taylor P
 yr: JR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
+seed_time: 1:45.46
 prelim_time: 1:43.22
 finals_time: 1:43.38
 prelim_rank: 6
@@ -3565,7 +3565,7 @@ name: Strittmatter, Alex A
 yr: SR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 1:48.03
 prelim_time: 1:44.64
 finals_time: 1:43.85
 prelim_rank: 13
@@ -3576,7 +3576,7 @@ name: Sutherland, Sean M
 yr: SO
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 1:49.26
 prelim_time: 1:44.11
 finals_time: 1:43.92
 prelim_rank: 11
@@ -3587,7 +3587,7 @@ name: Boniface, Tom J
 yr: SR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 1:46.03
 prelim_time: 1:43.93
 finals_time: 1:44.06
 prelim_rank: 10
@@ -3598,7 +3598,7 @@ name: Nanda, Alexander K
 yr: FR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 1:45.38
 prelim_time: 1:44.81
 finals_time: 1:44.11
 prelim_rank: 14
@@ -3609,7 +3609,7 @@ name: Brown, Will A
 yr: FR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 1:45.24
 prelim_time: 1:43.77
 finals_time: 1:44.15
 prelim_rank: 9
@@ -3620,7 +3620,7 @@ name: Berman, Drew J
 yr: SO
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 1:46.26
 prelim_time: 1:45.19
 finals_time: 1:46.19
 prelim_rank: 15
@@ -3631,7 +3631,7 @@ name: Collins, Conor M
 yr: SO
 school: Hamilton-AD
 exhibition: False
-seed_time: None
+seed_time: 1:49.51
 prelim_time: 1:45.57
 finals_time: 1:46.28
 prelim_rank: 16
@@ -3642,7 +3642,7 @@ name: Galea, Vincent
 yr: FR
 school: Colby-ME
 exhibition: False
-seed_time: None
+seed_time: 1:49.23
 prelim_time: 1:45.87
 finals_time: 1:45.45
 prelim_rank: 18
@@ -3653,7 +3653,7 @@ name: Litman, Ethan A
 yr: JR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 1:47.08
 prelim_time: 1:46.28
 finals_time: 1:46.55
 prelim_rank: 20
@@ -3664,7 +3664,7 @@ name: Rieling, Ray R
 yr: SR
 school: Colby-ME
 exhibition: False
-seed_time: None
+seed_time: 1:48.52
 prelim_time: 1:46.12
 finals_time: 1:46.96
 prelim_rank: 19
@@ -3675,7 +3675,7 @@ name: Ruddock, Sam J
 yr: FR
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
+seed_time: 1:48.16
 prelim_time: 1:45.57
 finals_time: 1:47.28
 prelim_rank: 17
@@ -3686,7 +3686,7 @@ name: Bernstein, Rex L
 yr: FR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
+seed_time: 1:49.47
 prelim_time: 1:46.74
 finals_time: 1:47.39
 prelim_rank: 22
@@ -3697,7 +3697,7 @@ name: Elias, Fred M
 yr: SO
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 1:52.32
 prelim_time: 1:46.34
 finals_time: 1:47.42
 prelim_rank: 21
@@ -3708,7 +3708,7 @@ name: Bachur, Ryan G
 yr: FR
 school: Colby-ME
 exhibition: False
-seed_time: None
+seed_time: 1:52.20
 prelim_time: 1:48.01
 finals_time: 1:47.92
 prelim_rank: 24
@@ -3719,7 +3719,7 @@ name: Lipoff, Matt G
 yr: SR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 1:52.28
 prelim_time: 1:47.99
 finals_time: 1:50.57
 prelim_rank: 23
@@ -3730,8 +3730,8 @@ name: Wood, Austin B
 yr: SO
 school: Tufts-NE
 exhibition: False
-seed_time: None
-prelim_time: 1:47.05
+seed_time: 1:47.05
+prelim_time: 1:44.18
 finals_time: None
 prelim_rank: 12
 final_rank: None
@@ -3741,8 +3741,8 @@ name: Peterson, Andy
 yr: SO
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 1:51.61
+seed_time: 1:51.61
+prelim_time: 1:48.37
 finals_time: None
 prelim_rank: 25
 final_rank: None
@@ -3752,8 +3752,8 @@ name: Deardorff, Peter G
 yr: FR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
-prelim_time: 1:47.21
+seed_time: 1:47.21
+prelim_time: 1:48.68
 finals_time: None
 prelim_rank: 26
 final_rank: None
@@ -3763,8 +3763,8 @@ name: Hanley, Mike R
 yr: JR
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 1:52.84
+seed_time: 1:52.84
+prelim_time: 1:48.74
 finals_time: None
 prelim_rank: 27
 final_rank: None
@@ -3774,8 +3774,8 @@ name: Karlson, Nick
 yr: JR
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 1:52.46
+seed_time: 1:52.46
+prelim_time: 1:49.08
 finals_time: None
 prelim_rank: 28
 final_rank: None
@@ -3785,8 +3785,8 @@ name: Kaminow, Nico I
 yr: FR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 1:55.47
+seed_time: 1:55.47
+prelim_time: 1:49.49
 finals_time: None
 prelim_rank: 29
 final_rank: None
@@ -3796,8 +3796,8 @@ name: McWhirter, Andrew
 yr: FR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 2:00.23
+seed_time: 2:00.23
+prelim_time: 1:52.58
 finals_time: None
 prelim_rank: 30
 final_rank: None
@@ -3807,8 +3807,8 @@ name: Asaga, Fumi
 yr: SO
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 1:58.24
+seed_time: 1:58.24
+prelim_time: 1:52.87
 finals_time: None
 prelim_rank: 31
 final_rank: None
@@ -3818,8 +3818,8 @@ name: Supple, Jack H
 yr: SO
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 2:01.24
+seed_time: 2:01.24
+prelim_time: 1:52.97
 finals_time: None
 prelim_rank: 32
 final_rank: None
@@ -3829,8 +3829,8 @@ name: Celestin, Joe P
 yr: FR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
-prelim_time: 1:51.94
+seed_time: 1:51.94
+prelim_time: 1:53.28
 finals_time: None
 prelim_rank: 33
 final_rank: None
@@ -3840,8 +3840,8 @@ name: Fragoso, Chris A
 yr: SR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
-prelim_time: 2:00.77
+seed_time: 2:00.77
+prelim_time: 1:56.89
 finals_time: None
 prelim_rank: 34
 final_rank: None
@@ -3851,8 +3851,8 @@ name: Milam, Trey R
 yr: SO
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 2:07.50
+seed_time: 2:07.50
+prelim_time: 1:57.40
 finals_time: None
 prelim_rank: 35
 final_rank: None
@@ -3862,8 +3862,8 @@ name: Conkling, Philip R
 yr: SO
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 2:09.49
+seed_time: 2:09.49
+prelim_time: 1:58.05
 finals_time: None
 prelim_rank: 36
 final_rank: None
@@ -3873,8 +3873,8 @@ name: Fields, Ben C
 yr: FR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 2:03.83
+seed_time: 2:03.83
+prelim_time: 1:58.64
 finals_time: None
 prelim_rank: 37
 final_rank: None
@@ -3884,8 +3884,8 @@ name: Dizengoff, Reuben
 yr: FR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 2:04.28
+seed_time: 2:04.28
+prelim_time: 2:00.89
 finals_time: None
 prelim_rank: 38
 final_rank: None
@@ -3895,8 +3895,8 @@ name: Brockway, Henry J
 yr: JR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
-prelim_time: 2:06.05
+seed_time: 2:06.05
+prelim_time: 2:01.03
 finals_time: None
 prelim_rank: 39
 final_rank: None
@@ -3916,7 +3916,7 @@ name: McBratney, Ben A
 yr: SR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 1:00.07
 prelim_time: 57.06
 finals_time: 56.29M
 prelim_rank: 2
@@ -3927,7 +3927,7 @@ name: Mecray, Nathan E
 yr: SR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 57.65
 prelim_time: 57.65
 finals_time: 56.91!
 prelim_rank: 4
@@ -3938,7 +3938,7 @@ name: Jorento, Daeus J
 yr: JR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 1:00.14
 prelim_time: 57.60
 finals_time: 57.48!
 prelim_rank: 3
@@ -3949,7 +3949,7 @@ name: McElroy, Greg S
 yr: SR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 1:00.44
 prelim_time: 57.97
 finals_time: 57.71!
 prelim_rank: 5
@@ -3960,7 +3960,7 @@ name: Federak, Bart
 yr: SR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 1:01.64
 prelim_time: 58.35
 finals_time: 58.11
 prelim_rank: 7
@@ -3971,7 +3971,7 @@ name: Roberts, Mason D
 yr: SR
 school: Colby-ME
 exhibition: False
-seed_time: None
+seed_time: 1:01.97
 prelim_time: 56.73
 finals_time: 58.12
 prelim_rank: 1
@@ -3982,7 +3982,7 @@ name: Rood, Owen R
 yr: SR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 1:00.73
 prelim_time: 58.96
 finals_time: 58.82
 prelim_rank: 8
@@ -3993,7 +3993,7 @@ name: O'Connor, Mike
 yr: SR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 1:01.22
 prelim_time: 58.11
 finals_time: 58.99
 prelim_rank: 6
@@ -4004,7 +4004,7 @@ name: Kang, Alex S
 yr: FR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 1:00.99
 prelim_time: 59.98
 finals_time: 58.95
 prelim_rank: 13
@@ -4015,7 +4015,7 @@ name: Czelewicz, Kirk J
 yr: FR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 1:00.60
 prelim_time: 59.12
 finals_time: 59.33
 prelim_rank: 9
@@ -4026,7 +4026,7 @@ name: Wennberg, Paul E
 yr: FR
 school: Colby-ME
 exhibition: False
-seed_time: None
+seed_time: 1:05.35
 prelim_time: 59.61
 finals_time: 59.76
 prelim_rank: 10
@@ -4037,7 +4037,7 @@ name: Griffin, Will N
 yr: SR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 1:02.80
 prelim_time: 59.78
 finals_time: 59.78
 prelim_rank: 11
@@ -4048,7 +4048,7 @@ name: Johnson, Cam W
 yr: FR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 1:01.24
 prelim_time: 59.97
 finals_time: 1:00.00
 prelim_rank: 12
@@ -4059,7 +4059,7 @@ name: Greeno, Christopher H
 yr: SO
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 1:02.39
 prelim_time: 1:00.11
 finals_time: 1:00.13
 prelim_rank: 14
@@ -4070,7 +4070,7 @@ name: Nichols, Ian C
 yr: JR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
+seed_time: 1:02.62
 prelim_time: 1:00.78
 finals_time: 1:00.64
 prelim_rank: 16
@@ -4081,7 +4081,7 @@ name: Spierer, Adam N
 yr: JR
 school: Colby-ME
 exhibition: False
-seed_time: None
+seed_time: 1:05.69
 prelim_time: 1:00.48
 finals_time: 1:00.74
 prelim_rank: 15
@@ -4092,7 +4092,7 @@ name: Vandiford, Christopher W
 yr: FR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 1:00.64
 prelim_time: 1:00.90
 finals_time: 1:00.17
 prelim_rank: 18
@@ -4103,7 +4103,7 @@ name: Turk, Andrew D
 yr: SO
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 1:04.90
 prelim_time: 1:01.08
 finals_time: 1:00.35
 prelim_rank: 20
@@ -4114,7 +4114,7 @@ name: Debbaut, Peter S
 yr: SR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 1:02.98
 prelim_time: 1:01.55
 finals_time: 1:00.91
 prelim_rank: 21
@@ -4125,7 +4125,7 @@ name: Ma, Max
 yr: SO
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
+seed_time: 1:02.21
 prelim_time: 1:00.98
 finals_time: 1:01.02
 prelim_rank: 19
@@ -4136,7 +4136,7 @@ name: Li, Patrick G
 yr: FR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 1:01.68
 prelim_time: 1:01.93
 finals_time: 1:01.32
 prelim_rank: 23
@@ -4147,7 +4147,7 @@ name: Youngblood, Tom
 yr: JR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
+seed_time: 1:03.12
 prelim_time: 1:00.89
 finals_time: 1:01.37
 prelim_rank: 17
@@ -4158,7 +4158,7 @@ name: McKeown, Alex C
 yr: SR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 1:02.53
 prelim_time: 1:01.82
 finals_time: 1:01.45
 prelim_rank: 22
@@ -4169,7 +4169,7 @@ name: Briggs, Andrew F
 yr: FR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 1:03.33
 prelim_time: 1:02.00
 finals_time: 1:02.33
 prelim_rank: 24
@@ -4180,8 +4180,8 @@ name: McLaughlin, Colin H
 yr: SO
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 1:06.01
+seed_time: 1:06.01
+prelim_time: 1:02.01
 finals_time: None
 prelim_rank: 25
 final_rank: None
@@ -4191,8 +4191,8 @@ name: Hirsch, Peter C
 yr: SR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 1:02.94
+seed_time: 1:02.94
+prelim_time: 1:02.23
 finals_time: None
 prelim_rank: 26
 final_rank: None
@@ -4202,8 +4202,8 @@ name: Sivulich, Ethan M
 yr: FR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 1:03.14
+seed_time: 1:03.14
+prelim_time: 1:02.34
 finals_time: None
 prelim_rank: 27
 final_rank: None
@@ -4213,8 +4213,8 @@ name: Ching, Brandon L
 yr: SR
 school: Tufts-NE
 exhibition: False
-seed_time: None
-prelim_time: 1:01.32
+seed_time: 1:01.32
+prelim_time: 1:02.36
 finals_time: None
 prelim_rank: 28
 final_rank: None
@@ -4224,8 +4224,8 @@ name: Perez, Zach B
 yr: SR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
-prelim_time: 1:02.58
+seed_time: 1:02.58
+prelim_time: 1:02.46
 finals_time: None
 prelim_rank: 29
 final_rank: None
@@ -4235,8 +4235,8 @@ name: Choi, Justin
 yr: FR
 school: Tufts-NE
 exhibition: False
-seed_time: None
-prelim_time: 1:04.07
+seed_time: 1:04.07
+prelim_time: 1:02.73
 finals_time: None
 prelim_rank: 30
 final_rank: None
@@ -4246,8 +4246,8 @@ name: Colasurdo, Joseph
 yr: FR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
-prelim_time: 1:04.56
+seed_time: 1:04.56
+prelim_time: 1:02.78
 finals_time: None
 prelim_rank: 31
 final_rank: None
@@ -4257,8 +4257,8 @@ name: Cho, Thomas
 yr: JR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
-prelim_time: 1:03.62
+seed_time: 1:03.62
+prelim_time: 1:02.81
 finals_time: None
 prelim_rank: 32
 final_rank: None
@@ -4268,8 +4268,8 @@ name: Seaton, Andrew J
 yr: FR
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 1:03.35
+seed_time: 1:03.35
+prelim_time: 1:02.93
 finals_time: None
 prelim_rank: 33
 final_rank: None
@@ -4279,8 +4279,8 @@ name: Zhang, Alex
 yr: SO
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
-prelim_time: 1:08.76
+seed_time: 1:08.76
+prelim_time: 1:03.61
 finals_time: None
 prelim_rank: 34
 final_rank: None
@@ -4290,8 +4290,8 @@ name: Ho, Wesley Y
 yr: FR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
-prelim_time: 1:04.61
+seed_time: 1:04.61
+prelim_time: 1:04.10
 finals_time: None
 prelim_rank: 35
 final_rank: None
@@ -4301,8 +4301,8 @@ name: Lee, Andrew
 yr: FR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 1:04.76
+seed_time: 1:04.76
+prelim_time: 1:04.14
 finals_time: None
 prelim_rank: 36
 final_rank: None
@@ -4312,8 +4312,8 @@ name: O'Neill, Shelby F
 yr: FR
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 1:06.86
+seed_time: 1:06.86
+prelim_time: 1:04.68
 finals_time: None
 prelim_rank: 37
 final_rank: None
@@ -4323,8 +4323,8 @@ name: Reinhardt, Karl B
 yr: FR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
-prelim_time: 1:07.48
+seed_time: 1:07.48
+prelim_time: 1:05.39
 finals_time: None
 prelim_rank: 38
 final_rank: None
@@ -4344,7 +4344,7 @@ name: Walsh, Timothy M
 yr: SR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 51.11
 prelim_time: 50.39
 finals_time: 49.78
 prelim_rank: 1
@@ -4355,7 +4355,7 @@ name: Deveney, Conor J
 yr: FR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 52.18
 prelim_time: 51.65
 finals_time: 51.01!
 prelim_rank: 2
@@ -4366,7 +4366,7 @@ name: Treesh, Philip R
 yr: JR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 53.46
 prelim_time: 52.45
 finals_time: 51.75!
 prelim_rank: 8
@@ -4377,7 +4377,7 @@ name: Stuyvesant, Basyl L
 yr: JR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 53.62
 prelim_time: 52.09
 finals_time: 51.76!
 prelim_rank: 3
@@ -4388,7 +4388,7 @@ name: Taylor, David
 yr: JR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 54.00
 prelim_time: 52.23
 finals_time: 52.02
 prelim_rank: 4
@@ -4399,7 +4399,7 @@ name: Schwab, Daniel A
 yr: JR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 53.74
 prelim_time: 52.24
 finals_time: 52.14
 prelim_rank: 5
@@ -4410,7 +4410,7 @@ name: Paquette, Sean E
 yr: FR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 53.78
 prelim_time: 52.43
 finals_time: 52.50
 prelim_rank: 7
@@ -4421,7 +4421,7 @@ name: Asaga, Kazu
 yr: SR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 53.51
 prelim_time: 52.40
 finals_time: 52.56
 prelim_rank: 6
@@ -4432,7 +4432,7 @@ name: Brown, Brandon
 yr: FR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 53.41
 prelim_time: 52.92
 finals_time: 52.13
 prelim_rank: 10
@@ -4443,7 +4443,7 @@ name: Aupi, Dan A
 yr: SR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 54.08
 prelim_time: 52.61
 finals_time: 52.62
 prelim_rank: 9
@@ -4454,7 +4454,7 @@ name: Olynyk, Craig O
 yr: SO
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 55.86
 prelim_time: 53.74
 finals_time: 53.15
 prelim_rank: 15
@@ -4465,7 +4465,7 @@ name: Swartz, Reid M
 yr: FR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
+seed_time: 55.11
 prelim_time: 53.15
 finals_time: 53.34
 prelim_rank: 11
@@ -4476,7 +4476,7 @@ name: Reynolds, Aron C
 yr: SO
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 55.38
 prelim_time: 53.65
 finals_time: 53.66
 prelim_rank: 14
@@ -4487,7 +4487,7 @@ name: Depew, Nathaniel H
 yr: SR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 54.97
 prelim_time: 53.48
 finals_time: 53.80
 prelim_rank: 13
@@ -4498,7 +4498,7 @@ name: Johns, Matt
 yr: JR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 58.64
 prelim_time: 53.76
 finals_time: 53.83
 prelim_rank: 16
@@ -4509,7 +4509,7 @@ name: Druckman, Daniel R
 yr: FR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 55.76
 prelim_time: 53.40
 finals_time: 53.91
 prelim_rank: 12
@@ -4520,7 +4520,7 @@ name: Matson, Kyle M
 yr: SO
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 56.50
 prelim_time: 53.97
 finals_time: 54.17
 prelim_rank: 17
@@ -4531,7 +4531,7 @@ name: Rhodes, Linc L
 yr: SO
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 55.13
 prelim_time: 54.09
 finals_time: 54.32
 prelim_rank: 19
@@ -4542,7 +4542,7 @@ name: Wing, James M
 yr: FR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 55.19
 prelim_time: 54.40
 finals_time: 54.36
 prelim_rank: 21
@@ -4553,7 +4553,7 @@ name: Parker, Will P
 yr: FR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 56.52
 prelim_time: 54.97
 finals_time: 54.40
 prelim_rank: 23
@@ -4564,7 +4564,7 @@ name: Weinzierl, Michael S
 yr: FR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
+seed_time: 56.90
 prelim_time: 54.13
 finals_time: 54.52
 prelim_rank: 20
@@ -4575,7 +4575,7 @@ name: Landefeld, Peter C
 yr: SO
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 53.30
 prelim_time: 54.08
 finals_time: 54.59
 prelim_rank: 18
@@ -4586,7 +4586,7 @@ name: Huston, Nick C
 yr: JR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
+seed_time: 56.44
 prelim_time: 55.01
 finals_time: 55.05
 prelim_rank: 24
@@ -4597,7 +4597,7 @@ name: Oster, Mike J
 yr: SO
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 58.59
 prelim_time: 54.64
 finals_time: 55.35
 prelim_rank: 22
@@ -4608,8 +4608,8 @@ name: Schultz, Nico F
 yr: FR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
-prelim_time: 54.97
+seed_time: 54.97
+prelim_time: 55.06
 finals_time: None
 prelim_rank: 25
 final_rank: None
@@ -4619,8 +4619,8 @@ name: Kulesza, Ryan J
 yr: FR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
-prelim_time: 55.23
+seed_time: 55.23
+prelim_time: 55.19
 finals_time: None
 prelim_rank: 26
 final_rank: None
@@ -4630,8 +4630,8 @@ name: Park, Andrew S
 yr: FR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
-prelim_time: 54.78
+seed_time: 54.78
+prelim_time: 56.04
 finals_time: None
 prelim_rank: 27
 final_rank: None
@@ -4641,8 +4641,8 @@ name: Trombetta, Jeremy T
 yr: FR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 56.99
+seed_time: 56.99
+prelim_time: 56.19
 finals_time: None
 prelim_rank: 28
 final_rank: None
@@ -4652,8 +4652,8 @@ name: Tamposi, Joe A
 yr: SO
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 58.85
+seed_time: 58.85
+prelim_time: 56.50
 finals_time: None
 prelim_rank: 29
 final_rank: None
@@ -4663,8 +4663,8 @@ name: Huston, Dan E
 yr: SO
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 1:01.13
+seed_time: 1:01.13
+prelim_time: 56.58
 finals_time: None
 prelim_rank: 30
 final_rank: None
@@ -4674,8 +4674,8 @@ name: Newton, Matthew S
 yr: JR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
-prelim_time: 1:00.78
+seed_time: 1:00.78
+prelim_time: 56.81
 finals_time: None
 prelim_rank: 31
 final_rank: None
@@ -4685,8 +4685,8 @@ name: Tschaen, Brendan P
 yr: SO
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 58.48
+seed_time: 58.48
+prelim_time: 56.93
 finals_time: None
 prelim_rank: 32
 final_rank: None
@@ -4696,8 +4696,8 @@ name: Forde, James H
 yr: SO
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
-prelim_time: 58.91
+seed_time: 58.91
+prelim_time: 57.24
 finals_time: None
 prelim_rank: 33
 final_rank: None
@@ -4707,8 +4707,8 @@ name: McCann, Ryan R
 yr: SO
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
-prelim_time: 1:00.09
+seed_time: 1:00.09
+prelim_time: 57.99
 finals_time: None
 prelim_rank: 34
 final_rank: None
@@ -4718,8 +4718,8 @@ name: Castelluccio, Brian C
 yr: SR
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
-prelim_time: 1:01.10
+seed_time: 1:01.10
+prelim_time: 58.48
 finals_time: None
 prelim_rank: 36
 final_rank: None
@@ -4729,8 +4729,8 @@ name: Norton, Adam T
 yr: SR
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
-prelim_time: 1:01.72
+seed_time: 1:01.72
+prelim_time: 59.76
 finals_time: None
 prelim_rank: 37
 final_rank: None
@@ -4740,8 +4740,8 @@ name: Lerner, Lane R
 yr: SO
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 1:04.79
+seed_time: 1:04.79
+prelim_time: 1:02.18
 finals_time: None
 prelim_rank: 38
 final_rank: None
@@ -4751,8 +4751,8 @@ name: Holmsen, Erik K
 yr: FR
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 1:16.22
+seed_time: 1:16.22
+prelim_time: 1:07.94
 finals_time: None
 prelim_rank: 39
 final_rank: None
@@ -4792,7 +4792,7 @@ name: Walsh, Timothy M
 yr: SR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 1:53.81
 prelim_time: 1:50.04
 finals_time: 1:49.04
 prelim_rank: 2
@@ -4803,7 +4803,7 @@ name: Deveney, Conor J
 yr: FR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 1:52.35
 prelim_time: 1:48.81
 finals_time: 1:49.57!
 prelim_rank: 1
@@ -4814,7 +4814,7 @@ name: Taylor, David
 yr: JR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 1:55.42
 prelim_time: 1:52.22
 finals_time: 1:51.94!
 prelim_rank: 3
@@ -4825,7 +4825,7 @@ name: Stuyvesant, Basyl L
 yr: JR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 1:56.03
 prelim_time: 1:53.30
 finals_time: 1:53.25!
 prelim_rank: 5
@@ -4836,7 +4836,7 @@ name: Savidge, Kyle E
 yr: SO
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 1:59.42
 prelim_time: 1:54.06
 finals_time: 1:53.40!
 prelim_rank: 8
@@ -4847,7 +4847,7 @@ name: Schwab, Daniel A
 yr: JR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 1:55.42
 prelim_time: 1:53.25
 finals_time: 1:53.41!
 prelim_rank: 4
@@ -4858,7 +4858,7 @@ name: Treesh, Philip R
 yr: JR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 1:58.15
 prelim_time: 1:53.35
 finals_time: 1:53.64!
 prelim_rank: 6
@@ -4869,7 +4869,7 @@ name: Brown, Brandon
 yr: FR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 1:55.33
 prelim_time: 1:53.62
 finals_time: 1:56.14
 prelim_rank: 7
@@ -4880,7 +4880,7 @@ name: Reynolds, Aron C
 yr: SO
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 2:00.05
 prelim_time: 1:56.37
 finals_time: 1:54.99
 prelim_rank: 10
@@ -4891,7 +4891,7 @@ name: Kulesza, Ryan J
 yr: FR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 2:00.31
 prelim_time: 1:56.95
 finals_time: 1:55.83
 prelim_rank: 13
@@ -4902,7 +4902,7 @@ name: Druckman, Daniel R
 yr: FR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 1:58.61
 prelim_time: 1:57.30
 finals_time: 1:56.06
 prelim_rank: 14
@@ -4913,7 +4913,7 @@ name: Keenan, Nick S
 yr: SO
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 2:00.78
 prelim_time: 1:56.87
 finals_time: 1:56.18
 prelim_rank: 12
@@ -4924,7 +4924,7 @@ name: Jones, Christian M
 yr: SO
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 2:00.10
 prelim_time: 1:56.29
 finals_time: 1:56.31
 prelim_rank: 9
@@ -4935,7 +4935,7 @@ name: Landefeld, Peter C
 yr: SO
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 1:55.89
 prelim_time: 1:56.62
 finals_time: 1:56.43
 prelim_rank: 11
@@ -4946,7 +4946,7 @@ name: Swartz, Reid M
 yr: FR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
+seed_time: 1:58.10
 prelim_time: 1:57.34
 finals_time: 1:58.27
 prelim_rank: 15
@@ -4957,7 +4957,7 @@ name: Paquette, Sean E
 yr: FR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 1:58.47
 prelim_time: 1:57.58
 finals_time: 1:59.13
 prelim_rank: 16
@@ -4968,7 +4968,7 @@ name: Depew, Nathaniel H
 yr: SR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 2:01.18
 prelim_time: 1:58.78
 finals_time: 1:56.41
 prelim_rank: 19
@@ -4979,7 +4979,7 @@ name: Weinzierl, Michael S
 yr: FR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
+seed_time: 2:03.33
 prelim_time: 1:57.89
 finals_time: 1:58.58
 prelim_rank: 17
@@ -4990,7 +4990,7 @@ name: Johns, Matt
 yr: JR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 2:10.54
 prelim_time: 1:58.59
 finals_time: 1:59.15
 prelim_rank: 18
@@ -5001,7 +5001,7 @@ name: Matson, Kyle M
 yr: SO
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 2:04.86
 prelim_time: 2:00.16
 finals_time: 2:00.20
 prelim_rank: 20
@@ -5012,7 +5012,7 @@ name: Gilman, Brian J
 yr: SO
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 2:05.47
 prelim_time: 2:00.88
 finals_time: 2:00.59
 prelim_rank: 22
@@ -5023,7 +5023,7 @@ name: Huston, Nick C
 yr: JR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
+seed_time: 2:03.08
 prelim_time: 2:01.20
 finals_time: 2:00.90
 prelim_rank: 24
@@ -5034,7 +5034,7 @@ name: Schultz, Nico F
 yr: FR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 2:02.61
 prelim_time: 2:00.42
 finals_time: 2:01.28
 prelim_rank: 21
@@ -5045,7 +5045,7 @@ name: Tamposi, Joe A
 yr: SO
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 2:06.00
 prelim_time: 2:00.99
 finals_time: 2:01.81
 prelim_rank: 23
@@ -5056,8 +5056,8 @@ name: Trombetta, Jeremy T
 yr: FR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 2:03.37
+seed_time: 2:03.37
+prelim_time: 2:01.67
 finals_time: None
 prelim_rank: 25
 final_rank: None
@@ -5067,8 +5067,8 @@ name: Peterson, Andy
 yr: SO
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 2:05.34
+seed_time: 2:05.34
+prelim_time: 2:02.01
 finals_time: None
 prelim_rank: 26
 final_rank: None
@@ -5078,8 +5078,8 @@ name: Portelance, Dylan
 yr: JR
 school: Tufts-NE
 exhibition: False
-seed_time: None
-prelim_time: 2:05.52
+seed_time: 2:05.52
+prelim_time: 2:02.75
 finals_time: None
 prelim_rank: 27
 final_rank: None
@@ -5089,8 +5089,8 @@ name: Tschaen, Brendan P
 yr: SO
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 2:08.12
+seed_time: 2:08.12
+prelim_time: 2:04.18
 finals_time: None
 prelim_rank: 28
 final_rank: None
@@ -5100,8 +5100,8 @@ name: Grodkiewicz, Travis J
 yr: SR
 school: Tufts-NE
 exhibition: False
-seed_time: None
-prelim_time: 2:02.42
+seed_time: 2:02.42
+prelim_time: 2:06.46
 finals_time: None
 prelim_rank: 29
 final_rank: None
@@ -5111,8 +5111,8 @@ name: Huston, Dan E
 yr: SO
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 2:14.24
+seed_time: 2:14.24
+prelim_time: 2:06.75
 finals_time: None
 prelim_rank: 30
 final_rank: None
@@ -5122,8 +5122,8 @@ name: Forde, James H
 yr: SO
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
-prelim_time: 2:10.84
+seed_time: 2:10.84
+prelim_time: 2:06.90
 finals_time: None
 prelim_rank: 31
 final_rank: None
@@ -5133,8 +5133,8 @@ name: McCann, Ryan R
 yr: SO
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
-prelim_time: 2:10.68
+seed_time: 2:10.68
+prelim_time: 2:07.80
 finals_time: None
 prelim_rank: 32
 final_rank: None
@@ -5144,8 +5144,8 @@ name: Castelluccio, Brian C
 yr: SR
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
-prelim_time: 2:12.63
+seed_time: 2:12.63
+prelim_time: 2:08.25
 finals_time: None
 prelim_rank: 33
 final_rank: None
@@ -5155,8 +5155,8 @@ name: Norton, Adam T
 yr: SR
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
-prelim_time: 2:16.46
+seed_time: 2:16.46
+prelim_time: 2:11.03
 finals_time: None
 prelim_rank: 34
 final_rank: None
@@ -5176,7 +5176,7 @@ name: Rood, Owen R
 yr: SR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 47.38
 prelim_time: 45.92
 finals_time: 45.03!
 prelim_rank: 2
@@ -5187,7 +5187,7 @@ name: Sholtis, Connor J
 yr: FR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 47.83
 prelim_time: 45.66
 finals_time: 45.53!
 prelim_rank: 1
@@ -5198,7 +5198,7 @@ name: Gill, Sam P
 yr: SO
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 47.52
 prelim_time: 45.93
 finals_time: 45.70!
 prelim_rank: 3
@@ -5209,7 +5209,7 @@ name: Vieth, Tom C
 yr: JR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 46.87
 prelim_time: 46.22
 finals_time: 46.11
 prelim_rank: 4
@@ -5220,7 +5220,7 @@ name: Nanda, Alexander K
 yr: FR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 48.19
 prelim_time: 46.27
 finals_time: 46.54
 prelim_rank: 5
@@ -5231,7 +5231,7 @@ name: Hampton, Tyler J
 yr: FR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 47.55
 prelim_time: 46.43
 finals_time: 46.82
 prelim_rank: 6
@@ -5242,7 +5242,7 @@ name: Hogenkamp, Taylor P
 yr: JR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
+seed_time: 47.25
 prelim_time: 46.73
 finals_time: 47.06
 prelim_rank: 7
@@ -5253,7 +5253,7 @@ name: Aupi, Dan A
 yr: SR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 48.41
 prelim_time: 46.87
 finals_time: 47.29
 prelim_rank: 8
@@ -5264,7 +5264,7 @@ name: Daly, Nick N
 yr: SR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 47.34
 prelim_time: 46.95
 finals_time: 46.78
 prelim_rank: 9
@@ -5275,7 +5275,7 @@ name: Egan, Nick Q
 yr: SO
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 47.41
 prelim_time: 47.31
 finals_time: 47.01
 prelim_rank: 11
@@ -5286,7 +5286,7 @@ name: Moody, Parker W
 yr: SO
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 49.04
 prelim_time: 47.40
 finals_time: 47.19
 prelim_rank: 13
@@ -5297,7 +5297,7 @@ name: Boniface, Tom J
 yr: SR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 48.44
 prelim_time: 47.34
 finals_time: 47.42
 prelim_rank: 12
@@ -5308,7 +5308,7 @@ name: Wood, Austin B
 yr: SO
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 49.01
 prelim_time: 47.28
 finals_time: 47.48
 prelim_rank: 10
@@ -5319,7 +5319,7 @@ name: Elias, Fred M
 yr: SO
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 48.90
 prelim_time: 47.92
 finals_time: 47.73
 prelim_rank: 16
@@ -5330,7 +5330,7 @@ name: Weihs, Chris G
 yr: FR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 49.17
 prelim_time: 47.69
 finals_time: 47.73
 prelim_rank: 14
@@ -5341,7 +5341,7 @@ name: Scott, Ned E
 yr: SR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 50.68
 prelim_time: 47.88
 finals_time: 48.34
 prelim_rank: 15
@@ -5352,7 +5352,7 @@ name: Galea, Vincent
 yr: FR
 school: Colby-ME
 exhibition: False
-seed_time: None
+seed_time: 49.44
 prelim_time: 47.97
 finals_time: 47.35
 prelim_rank: 17
@@ -5363,7 +5363,7 @@ name: Parker, Will P
 yr: FR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 49.93
 prelim_time: 48.26
 finals_time: 47.52
 prelim_rank: 22
@@ -5374,7 +5374,7 @@ name: Ainley, Nathaniel M
 yr: FR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 49.89
 prelim_time: 48.18
 finals_time: 47.91
 prelim_rank: 19
@@ -5385,7 +5385,7 @@ name: Shi, William Y
 yr: FR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 48.71
 prelim_time: 48.17
 finals_time: 47.97
 prelim_rank: 18
@@ -5396,7 +5396,7 @@ name: Litman, Ethan A
 yr: JR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 49.07
 prelim_time: 48.19
 finals_time: 48.07
 prelim_rank: 20
@@ -5407,7 +5407,7 @@ name: Ruddock, Sam J
 yr: FR
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
+seed_time: 49.42
 prelim_time: 48.27
 finals_time: 48.42
 prelim_rank: 23
@@ -5418,7 +5418,7 @@ name: Schaffer, Adam J
 yr: SR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 50.06
 prelim_time: 48.22
 finals_time: 48.49
 prelim_rank: 21
@@ -5429,7 +5429,7 @@ name: Hirsch, Peter C
 yr: SR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 50.59
 prelim_time: 48.31
 finals_time: 48.80
 prelim_rank: 24
@@ -5440,8 +5440,8 @@ name: Wing, James M
 yr: FR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 48.87
+seed_time: 48.87
+prelim_time: 48.40
 finals_time: None
 prelim_rank: 25
 final_rank: None
@@ -5451,8 +5451,8 @@ name: Devine, John R
 yr: FR
 school: Tufts-NE
 exhibition: False
-seed_time: None
-prelim_time: 48.59
+seed_time: 48.59
+prelim_time: 48.41
 finals_time: None
 prelim_rank: 26
 final_rank: None
@@ -5462,8 +5462,8 @@ name: Karlson, Nick
 yr: JR
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 50.46
+seed_time: 50.46
+prelim_time: 48.47
 finals_time: None
 prelim_rank: 27
 final_rank: None
@@ -5473,8 +5473,8 @@ name: Olynyk, Craig O
 yr: SO
 school: Tufts-NE
 exhibition: False
-seed_time: None
-prelim_time: 49.40
+seed_time: 49.40
+prelim_time: 48.68
 finals_time: None
 prelim_rank: 28
 final_rank: None
@@ -5484,8 +5484,8 @@ name: Oster, Mike J
 yr: SO
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 49.69
+seed_time: 49.69
+prelim_time: 48.78
 finals_time: None
 prelim_rank: 29
 final_rank: None
@@ -5495,8 +5495,8 @@ name: Googins, Ej J
 yr: JR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
-prelim_time: 51.20
+seed_time: 51.20
+prelim_time: 48.88
 finals_time: None
 prelim_rank: 30
 final_rank: None
@@ -5506,8 +5506,8 @@ name: Wennberg, Paul E
 yr: FR
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 51.31
+seed_time: 51.31
+prelim_time: 48.97
 finals_time: None
 prelim_rank: 31
 final_rank: None
@@ -5517,8 +5517,8 @@ name: Collins, Conor M
 yr: SO
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 50.50
+seed_time: 50.50
+prelim_time: 49.12
 finals_time: None
 prelim_rank: 32
 final_rank: None
@@ -5528,8 +5528,8 @@ name: Rieling, Ray R
 yr: SR
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 50.36
+seed_time: 50.36
+prelim_time: 49.18
 finals_time: None
 prelim_rank: 33
 final_rank: None
@@ -5539,8 +5539,8 @@ name: Hanley, Mike R
 yr: JR
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 51.00
+seed_time: 51.00
+prelim_time: 49.26
 finals_time: None
 prelim_rank: 34
 final_rank: None
@@ -5550,8 +5550,8 @@ name: Colasurdo, Joseph
 yr: FR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
-prelim_time: 50.86
+seed_time: 50.86
+prelim_time: 49.32
 finals_time: None
 prelim_rank: 35
 final_rank: None
@@ -5561,8 +5561,8 @@ name: Bachur, Ryan G
 yr: FR
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 50.62
+seed_time: 50.62
+prelim_time: 49.33
 finals_time: None
 prelim_rank: 36
 final_rank: None
@@ -5572,8 +5572,8 @@ name: Lipoff, Matt G
 yr: SR
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 50.53
+seed_time: 50.53
+prelim_time: 49.47
 finals_time: None
 prelim_rank: 37
 final_rank: None
@@ -5583,8 +5583,8 @@ name: Kurose, Alex A
 yr: FR
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
-prelim_time: 51.89
+seed_time: 51.89
+prelim_time: 49.47
 finals_time: None
 prelim_rank: 37
 final_rank: None
@@ -5594,8 +5594,8 @@ name: Patton, William R
 yr: FR
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 51.71
+seed_time: 51.71
+prelim_time: 49.62
 finals_time: None
 prelim_rank: 39
 final_rank: None
@@ -5605,8 +5605,8 @@ name: Bernstein, Rex L
 yr: FR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
-prelim_time: 50.15
+seed_time: 50.15
+prelim_time: 49.66
 finals_time: None
 prelim_rank: 40
 final_rank: None
@@ -5616,8 +5616,8 @@ name: McWhirter, Andrew
 yr: FR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 51.33
+seed_time: 51.33
+prelim_time: 49.71
 finals_time: None
 prelim_rank: 41
 final_rank: None
@@ -5627,8 +5627,8 @@ name: Fung, Jonathan J
 yr: SR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 49.98
+seed_time: 49.98
+prelim_time: 49.72
 finals_time: None
 prelim_rank: 42
 final_rank: None
@@ -5638,8 +5638,8 @@ name: Markusen, Jack W
 yr: SO
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 53.67
+seed_time: 53.67
+prelim_time: 49.96
 finals_time: None
 prelim_rank: 43
 final_rank: None
@@ -5649,8 +5649,8 @@ name: Kaminow, Nico I
 yr: FR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 52.72
+seed_time: 52.72
+prelim_time: 50.00
 finals_time: None
 prelim_rank: 44
 final_rank: None
@@ -5660,8 +5660,8 @@ name: Hurley, Tom H
 yr: SR
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 54.08
+seed_time: 54.08
+prelim_time: 50.15
 finals_time: None
 prelim_rank: 45
 final_rank: None
@@ -5671,8 +5671,8 @@ name: Supple, Jack H
 yr: SO
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 52.52
+seed_time: 52.52
+prelim_time: 50.20
 finals_time: None
 prelim_rank: 46
 final_rank: None
@@ -5682,8 +5682,8 @@ name: Reinhardt, Karl B
 yr: FR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
-prelim_time: 52.16
+seed_time: 52.16
+prelim_time: 50.42
 finals_time: None
 prelim_rank: 47
 final_rank: None
@@ -5693,8 +5693,8 @@ name: Hootsmans, James A
 yr: JR
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 53.52
+seed_time: 53.52
+prelim_time: 50.96
 finals_time: None
 prelim_rank: 48
 final_rank: None
@@ -5704,8 +5704,8 @@ name: Asaga, Fumi
 yr: SO
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 51.33
+seed_time: 51.33
+prelim_time: 51.10
 finals_time: None
 prelim_rank: 49
 final_rank: None
@@ -5715,8 +5715,8 @@ name: Feminella, John M
 yr: JR
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
-prelim_time: 53.84
+seed_time: 53.84
+prelim_time: 51.64
 finals_time: None
 prelim_rank: 50
 final_rank: None
@@ -5726,8 +5726,8 @@ name: Lewis, Ben
 yr: SO
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 55.28
+seed_time: 55.28
+prelim_time: 51.95
 finals_time: None
 prelim_rank: 51
 final_rank: None
@@ -5737,8 +5737,8 @@ name: Fragoso, Chris A
 yr: SR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
-prelim_time: 53.93
+seed_time: 53.93
+prelim_time: 52.29
 finals_time: None
 prelim_rank: 52
 final_rank: None
@@ -5748,8 +5748,8 @@ name: Tran, Hugo
 yr: JR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
-prelim_time: 53.85
+seed_time: 53.85
+prelim_time: 52.80
 finals_time: None
 prelim_rank: 53
 final_rank: None
@@ -5759,8 +5759,8 @@ name: Fields, Ben C
 yr: FR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 54.91
+seed_time: 54.91
+prelim_time: 52.88
 finals_time: None
 prelim_rank: 54
 final_rank: None
@@ -5770,8 +5770,8 @@ name: Milam, Trey R
 yr: SO
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 56.38
+seed_time: 56.38
+prelim_time: 53.81
 finals_time: None
 prelim_rank: 55
 final_rank: None
@@ -5781,8 +5781,8 @@ name: Lerner, Lane R
 yr: SO
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 57.05
+seed_time: 57.05
+prelim_time: 55.04
 finals_time: None
 prelim_rank: 56
 final_rank: None
@@ -5802,7 +5802,7 @@ name: Dyrkacz, Paul M
 yr: JR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 2:06.81
 prelim_time: 2:01.56
 finals_time: 1:59.70C
 prelim_rank: 1
@@ -5813,7 +5813,7 @@ name: Roberts, Mason D
 yr: SR
 school: Colby-ME
 exhibition: False
-seed_time: None
+seed_time: 2:19.82
 prelim_time: 2:05.95
 finals_time: 2:04.08!
 prelim_rank: 3
@@ -5824,7 +5824,7 @@ name: Corbett, Christopher J
 yr: JR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 2:09.76
 prelim_time: 2:04.96
 finals_time: 2:04.46!
 prelim_rank: 2
@@ -5835,7 +5835,7 @@ name: Lattimer, Timothy R
 yr: FR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 2:10.02
 prelim_time: 2:06.08
 finals_time: 2:04.60!
 prelim_rank: 4
@@ -5846,7 +5846,7 @@ name: McElroy, Greg S
 yr: SR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 2:12.82
 prelim_time: 2:06.97
 finals_time: 2:06.32!
 prelim_rank: 6
@@ -5857,7 +5857,7 @@ name: Federak, Bart
 yr: SR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 2:11.70
 prelim_time: 2:06.63
 finals_time: 2:06.60!
 prelim_rank: 5
@@ -5868,7 +5868,7 @@ name: O'Connor, Mike
 yr: SR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 2:12.58
 prelim_time: 2:07.13
 finals_time: 2:06.87
 prelim_rank: 7
@@ -5879,7 +5879,7 @@ name: Liao, Eric Y
 yr: SO
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 2:15.48
 prelim_time: 2:08.02
 finals_time: 2:08.06
 prelim_rank: 8
@@ -5890,7 +5890,7 @@ name: Beaulieu, Connor W
 yr: SO
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 2:09.62
 prelim_time: 2:08.32
 finals_time: 2:08.31
 prelim_rank: 9
@@ -5901,7 +5901,7 @@ name: McLoughlin, Joe P
 yr: SR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 2:18.30
 prelim_time: 2:10.17
 finals_time: 2:09.25
 prelim_rank: 12
@@ -5912,7 +5912,7 @@ name: Nemeth, Andrew J
 yr: FR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 2:11.99
 prelim_time: 2:08.34
 finals_time: 2:09.96
 prelim_rank: 10
@@ -5923,7 +5923,7 @@ name: Czelewicz, Kirk J
 yr: FR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 2:14.18
 prelim_time: 2:09.54
 finals_time: 2:10.48
 prelim_rank: 11
@@ -5934,7 +5934,7 @@ name: Berman, Drew J
 yr: SO
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 2:14.79
 prelim_time: 2:13.33
 finals_time: 2:10.59
 prelim_rank: 16
@@ -5945,7 +5945,7 @@ name: Saleh, Momo A
 yr: SR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
+seed_time: 2:15.33
 prelim_time: 2:10.83
 finals_time: 2:10.76
 prelim_rank: 13
@@ -5956,7 +5956,7 @@ name: Ma, Max
 yr: SO
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
+seed_time: 2:16.79
 prelim_time: 2:11.33
 finals_time: 2:11.54
 prelim_rank: 14
@@ -5967,7 +5967,7 @@ name: Johnson, Cam W
 yr: FR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 2:16.47
 prelim_time: 2:12.45
 finals_time: 2:12.65
 prelim_rank: 15
@@ -5978,7 +5978,7 @@ name: Greeno, Christopher H
 yr: SO
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 2:18.33
 prelim_time: 2:13.47
 finals_time: 2:13.07
 prelim_rank: 17
@@ -5989,7 +5989,7 @@ name: Gilligan, Brian J
 yr: SR
 school: Colby-ME
 exhibition: False
-seed_time: None
+seed_time: 2:19.93
 prelim_time: 2:13.68
 finals_time: 2:13.30
 prelim_rank: 19
@@ -6000,7 +6000,7 @@ name: Turk, Andrew D
 yr: SO
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 2:24.50
 prelim_time: 2:13.66
 finals_time: 2:13.43
 prelim_rank: 18
@@ -6011,7 +6011,7 @@ name: Debbaut, Peter S
 yr: SR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 2:18.35
 prelim_time: 2:13.84
 finals_time: 2:13.72
 prelim_rank: 20
@@ -6022,7 +6022,7 @@ name: Spierer, Adam N
 yr: JR
 school: Colby-ME
 exhibition: False
-seed_time: None
+seed_time: 2:30.45
 prelim_time: 2:14.18
 finals_time: 2:14.22
 prelim_rank: 21
@@ -6033,7 +6033,7 @@ name: Youngblood, Tom
 yr: JR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
+seed_time: 2:23.00
 prelim_time: 2:15.33
 finals_time: 2:14.61
 prelim_rank: 24
@@ -6044,7 +6044,7 @@ name: Griffin, Will N
 yr: SR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 2:24.32
 prelim_time: 2:15.08
 finals_time: 2:15.01
 prelim_rank: 23
@@ -6055,7 +6055,7 @@ name: Choi, Justin
 yr: FR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 2:17.05
 prelim_time: 2:14.32
 finals_time: 2:15.18
 prelim_rank: 22
@@ -6066,8 +6066,8 @@ name: Sivulich, Ethan M
 yr: FR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 2:22.65
+seed_time: 2:22.65
+prelim_time: 2:15.37
 finals_time: None
 prelim_rank: 25
 final_rank: None
@@ -6077,8 +6077,8 @@ name: McLaughlin, Colin H
 yr: SO
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 2:23.71
+seed_time: 2:23.71
+prelim_time: 2:15.59
 finals_time: None
 prelim_rank: 26
 final_rank: None
@@ -6088,8 +6088,8 @@ name: Briggs, Andrew F
 yr: FR
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 2:18.53
+seed_time: 2:18.53
+prelim_time: 2:15.76
 finals_time: None
 prelim_rank: 27
 final_rank: None
@@ -6099,8 +6099,8 @@ name: Perez, Zach B
 yr: SR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
-prelim_time: 2:18.31
+seed_time: 2:18.31
+prelim_time: 2:16.29
 finals_time: None
 prelim_rank: 28
 final_rank: None
@@ -6110,8 +6110,8 @@ name: Watson, Luke S
 yr: FR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
-prelim_time: 2:21.81
+seed_time: 2:21.81
+prelim_time: 2:17.10
 finals_time: None
 prelim_rank: 29
 final_rank: None
@@ -6121,8 +6121,8 @@ name: Seaton, Andrew J
 yr: FR
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 2:20.75
+seed_time: 2:20.75
+prelim_time: 2:17.42
 finals_time: None
 prelim_rank: 30
 final_rank: None
@@ -6132,8 +6132,8 @@ name: Gavin, Tripp
 yr: SR
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
-prelim_time: 2:26.82
+seed_time: 2:26.82
+prelim_time: 2:18.44
 finals_time: None
 prelim_rank: 31
 final_rank: None
@@ -6143,8 +6143,8 @@ name: McKeown, Alex C
 yr: SR
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 2:20.26
+seed_time: 2:20.26
+prelim_time: 2:18.87
 finals_time: None
 prelim_rank: 32
 final_rank: None
@@ -6154,8 +6154,8 @@ name: Cho, Thomas
 yr: JR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
-prelim_time: 2:16.94
+seed_time: 2:16.94
+prelim_time: 2:19.87
 finals_time: None
 prelim_rank: 33
 final_rank: None
@@ -6165,8 +6165,8 @@ name: O'Neill, Shelby F
 yr: FR
 school: Colby-ME
 exhibition: False
-seed_time: None
-prelim_time: 2:26.06
+seed_time: 2:26.06
+prelim_time: 2:20.69
 finals_time: None
 prelim_rank: 34
 final_rank: None
@@ -6176,8 +6176,8 @@ name: Crafa, James R
 yr: SR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 2:23.12
+seed_time: 2:23.12
+prelim_time: 2:20.77
 finals_time: None
 prelim_rank: 35
 final_rank: None
@@ -6187,8 +6187,8 @@ name: Ho, Wesley Y
 yr: FR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
-prelim_time: 2:24.57
+seed_time: 2:24.57
+prelim_time: 2:22.86
 finals_time: None
 prelim_rank: 36
 final_rank: None
@@ -6198,8 +6198,8 @@ name: Lee, Andrew
 yr: FR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 2:28.78
+seed_time: 2:28.78
+prelim_time: 2:25.66
 finals_time: None
 prelim_rank: 37
 final_rank: None
@@ -6219,7 +6219,7 @@ name: Ricotta, Thad J
 yr: FR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 1:56.54
 prelim_time: 1:51.46
 finals_time: 1:50.98!
 prelim_rank: 1
@@ -6230,7 +6230,7 @@ name: Bulakul, Tyler
 yr: SO
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 1:56.38
 prelim_time: 1:54.14
 finals_time: 1:51.47!
 prelim_rank: 5
@@ -6241,7 +6241,7 @@ name: Rochford, Michael D
 yr: FR
 school: Amherst-NE
 exhibition: False
-seed_time: None
+seed_time: 1:54.57
 prelim_time: 1:53.68
 finals_time: 1:52.09!
 prelim_rank: 3
@@ -6252,7 +6252,7 @@ name: Horgan, Stuart C
 yr: SR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 1:56.24
 prelim_time: 1:53.78
 finals_time: 1:53.82!
 prelim_rank: 4
@@ -6263,7 +6263,7 @@ name: Granata, Chris J
 yr: SO
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 1:55.64
 prelim_time: 1:52.54
 finals_time: 1:53.92
 prelim_rank: 2
@@ -6274,7 +6274,7 @@ name: Sutherland, Sean M
 yr: SO
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 2:01.46
 prelim_time: 1:54.35
 finals_time: 1:55.77
 prelim_rank: 6
@@ -6285,7 +6285,7 @@ name: Fortin, Brendan P
 yr: JR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
+seed_time: 1:58.13
 prelim_time: 1:54.39
 finals_time: 1:57.08
 prelim_rank: 7
@@ -6296,7 +6296,7 @@ name: Guiffre, John J
 yr: SR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 2:00.99
 prelim_time: 1:55.12
 finals_time: 1:57.13
 prelim_rank: 8
@@ -6307,7 +6307,7 @@ name: Gagne', Matthew L
 yr: FR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 1:59.18
 prelim_time: 1:56.17
 finals_time: 1:54.03
 prelim_rank: 11
@@ -6318,7 +6318,7 @@ name: Marrano, Ryan C
 yr: SR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 2:01.26
 prelim_time: 1:55.76
 finals_time: 1:55.02
 prelim_rank: 10
@@ -6329,7 +6329,7 @@ name: Napolitano, Mike T
 yr: FR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 1:59.70
 prelim_time: 1:56.25
 finals_time: 1:55.38
 prelim_rank: 12
@@ -6340,7 +6340,7 @@ name: Rhodes, Linc L
 yr: SO
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
+seed_time: 2:00.86
 prelim_time: 1:55.36
 finals_time: 1:55.52
 prelim_rank: 9
@@ -6351,7 +6351,7 @@ name: Yanagisawa, Mark K
 yr: SO
 school: Trinity C.-CT
 exhibition: False
-seed_time: None
+seed_time: 2:01.45
 prelim_time: 1:58.01
 finals_time: 1:57.23
 prelim_rank: 16
@@ -6362,7 +6362,7 @@ name: Kafina, Martin D
 yr: JR
 school: Wesleyan-CT
 exhibition: False
-seed_time: None
+seed_time: 2:02.77
 prelim_time: 1:56.45
 finals_time: 1:57.26
 prelim_rank: 13
@@ -6373,7 +6373,7 @@ name: Duvvuri, Venkatesh
 yr: SO
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 2:03.22
 prelim_time: 1:57.34
 finals_time: 1:57.49
 prelim_rank: 14
@@ -6384,7 +6384,7 @@ name: Kuo, Teddy
 yr: FR
 school: Middlebury-NE
 exhibition: False
-seed_time: None
+seed_time: 1:58.78
 prelim_time: 1:58.00
 finals_time: 1:59.34
 prelim_rank: 15
@@ -6395,7 +6395,7 @@ name: Brown, Will A
 yr: FR
 school: Williams-NE
 exhibition: False
-seed_time: None
+seed_time: 1:59.13
 prelim_time: 1:58.48
 finals_time: 1:58.09
 prelim_rank: 18
@@ -6406,7 +6406,7 @@ name: Kozikowski, Kevin M
 yr: FR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 2:00.65
 prelim_time: 1:59.34
 finals_time: 1:58.39
 prelim_rank: 21
@@ -6417,7 +6417,7 @@ name: Smachlo, Alex A
 yr: FR
 school: Bates-ME
 exhibition: False
-seed_time: None
+seed_time: 2:01.04
 prelim_time: 1:58.44
 finals_time: 1:58.95
 prelim_rank: 17
@@ -6428,7 +6428,7 @@ name: Strittmatter, Alex A
 yr: SR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 2:03.72
 prelim_time: 1:59.11
 finals_time: 1:59.10
 prelim_rank: 19
@@ -6439,7 +6439,7 @@ name: Gibson, Joe W
 yr: SO
 school: Connecticut-CT
 exhibition: False
-seed_time: None
+seed_time: 2:02.20
 prelim_time: 2:00.61
 finals_time: 1:59.14
 prelim_rank: 24
@@ -6450,7 +6450,7 @@ name: Trafton, Ryan D
 yr: SR
 school: Colby-ME
 exhibition: False
-seed_time: None
+seed_time: 2:08.18
 prelim_time: 1:59.64
 finals_time: 2:00.19
 prelim_rank: 22
@@ -6461,7 +6461,7 @@ name: Dinwoodie, Ian R
 yr: FR
 school: Tufts-NE
 exhibition: False
-seed_time: None
+seed_time: 2:03.34
 prelim_time: 2:00.27
 finals_time: 2:01.60
 prelim_rank: 23
@@ -6472,7 +6472,7 @@ name: Mauel, Jack P
 yr: JR
 school: Colby-ME
 exhibition: False
-seed_time: None
+seed_time: 2:06.63
 prelim_time: 1:59.23
 finals_time: 2:17.14
 prelim_rank: 20
@@ -6483,8 +6483,8 @@ name: Buehler, Andrew W
 yr: JR
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 2:11.17
+seed_time: 2:11.17
+prelim_time: 2:00.85
 finals_time: None
 prelim_rank: 25
 final_rank: None
@@ -6494,8 +6494,8 @@ name: Deardorff, Peter G
 yr: FR
 school: Bowdoin-ME
 exhibition: False
-seed_time: None
-prelim_time: 2:07.13
+seed_time: 2:07.13
+prelim_time: 2:01.34
 finals_time: None
 prelim_rank: 26
 final_rank: None
@@ -6505,8 +6505,8 @@ name: Jenkins, Cody M
 yr: SO
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 2:07.14
+seed_time: 2:07.14
+prelim_time: 2:01.59
 finals_time: None
 prelim_rank: 27
 final_rank: None
@@ -6516,8 +6516,8 @@ name: Gerard, Paul
 yr: SO
 school: Middlebury-NE
 exhibition: False
-seed_time: None
-prelim_time: 2:06.61
+seed_time: 2:06.61
+prelim_time: 2:01.80
 finals_time: None
 prelim_rank: 28
 final_rank: None
@@ -6527,8 +6527,8 @@ name: Levine, Daniel J
 yr: JR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 2:09.53
+seed_time: 2:09.53
+prelim_time: 2:01.83
 finals_time: None
 prelim_rank: 29
 final_rank: None
@@ -6538,8 +6538,8 @@ name: Pielock, Christopher M
 yr: JR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
-prelim_time: 2:05.63
+seed_time: 2:05.63
+prelim_time: 2:02.11
 finals_time: None
 prelim_rank: 30
 final_rank: None
@@ -6549,8 +6549,8 @@ name: Douglas, Eric A
 yr: SO
 school: Tufts-NE
 exhibition: False
-seed_time: None
-prelim_time: 2:09.63
+seed_time: 2:09.63
+prelim_time: 2:02.17
 finals_time: None
 prelim_rank: 31
 final_rank: None
@@ -6560,8 +6560,8 @@ name: Hillsberg, Matthew K
 yr: FR
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 2:10.97
+seed_time: 2:10.97
+prelim_time: 2:04.37
 finals_time: None
 prelim_rank: 32
 final_rank: None
@@ -6571,8 +6571,8 @@ name: Boyd, Graham H
 yr: SO
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 2:10.39
+seed_time: 2:10.39
+prelim_time: 2:05.62
 finals_time: None
 prelim_rank: 33
 final_rank: None
@@ -6582,8 +6582,8 @@ name: Makrides, Chris J
 yr: SO
 school: Bates-ME
 exhibition: False
-seed_time: None
-prelim_time: 2:11.86
+seed_time: 2:11.86
+prelim_time: 2:08.75
 finals_time: None
 prelim_rank: 34
 final_rank: None
@@ -6593,8 +6593,8 @@ name: Beauregard, Harry B
 yr: SR
 school: Connecticut-CT
 exhibition: False
-seed_time: None
-prelim_time: 2:10.62
+seed_time: 2:10.62
+prelim_time: 2:09.32
 finals_time: None
 prelim_rank: 35
 final_rank: None
@@ -6604,8 +6604,8 @@ name: Dix, Zach
 yr: FR
 school: Hamilton-AD
 exhibition: False
-seed_time: None
-prelim_time: 2:20.24
+seed_time: 2:20.24
+prelim_time: 2:12.03
 finals_time: None
 prelim_rank: 36
 final_rank: None

@@ -1,13 +1,3 @@
-event: 1
-meet: 2005_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 200
-source_file: 2005_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
 event: 2
 meet: 2005_Nescac_Msd_Results
 stroke: Breaststroke
@@ -305,6 +295,17 @@ prelim_rank: 26
 final_rank: None
 
 Swimmer 27:
+name: Baker, Erik
+yr: NONE 
+school: Bates
+exhibition: False
+seed_time: None
+prelim_time: 30.06
+finals_time: None
+prelim_rank: 27
+final_rank: None
+
+Swimmer 28:
 name: Smith, Chip
 yr: FR
 school: Hamilton
@@ -315,7 +316,29 @@ finals_time: None
 prelim_rank: 28
 final_rank: None
 
-Swimmer 28:
+Swimmer 29:
+name: Alex, Joel
+yr: NONE
+school: Colby
+exhibition: False
+seed_time: None
+prelim_time: 30.95
+finals_time: None
+prelim_rank: 29
+final_rank: None
+
+Swimmer 30:
+name: Bittl, Jim
+yr: NONE
+school: Bowdoin
+exhibition: False
+seed_time: None
+prelim_time: 31.00
+finals_time: None
+prelim_rank: 30
+final_rank: None
+
+Swimmer 31:
 name: Tucker, Pat
 yr: FR
 school: Trinity
@@ -326,7 +349,7 @@ finals_time: None
 prelim_rank: 31
 final_rank: None
 
-Swimmer 29:
+Swimmer 31:
 name: Mostyn, Pat
 yr: FR
 school: Trinity
@@ -600,7 +623,29 @@ finals_time: 24.81
 prelim_rank: 22
 final_rank: 23
 
-Swimmer 24:
+Swimmer 25:
+name: Alto, Bill
+yr: NONE
+school: Bowdoin
+exhibition: False
+seed_time: None
+prelim_time: 24.70
+finals_time: None
+prelim_rank: 25
+final_rank: None
+
+Swimmer 26:
+name: Thomas, Carter
+yr: NONE
+school: Bowdoin
+exhibition: False
+seed_time: None
+prelim_time: 24.87
+finals_time: None
+prelim_rank: 26
+final_rank: None
+
+Swimmer 27:
 name: Kaplan, Adam
 yr: SO
 school: Amherst
@@ -611,7 +656,7 @@ finals_time: None
 prelim_rank: 27
 final_rank: None
 
-Swimmer 25:
+Swimmer 28:
 name: Donne, Matt
 yr: SO
 school: Wesleyan
@@ -622,7 +667,7 @@ finals_time: None
 prelim_rank: 28
 final_rank: None
 
-Swimmer 26:
+Swimmer 29:
 name: Hannigan, Mark
 yr: SR
 school: Middlebury
@@ -633,7 +678,18 @@ finals_time: None
 prelim_rank: 29
 final_rank: None
 
-Swimmer 27:
+Swimmer 30:
+name: Peterson, Andrew
+yr: NONE
+school: Colby
+exhibition: False
+seed_time: None
+prelim_time: 25.03
+finals_time: None
+prelim_rank: 30
+final_rank: None
+
+Swimmer 31:
 name: Schleusener, Luke
 yr: SO
 school: Wesleyan
@@ -644,7 +700,7 @@ finals_time: None
 prelim_rank: 31
 final_rank: None
 
-Swimmer 28:
+Swimmer 32:
 name: Meigher, Mark
 yr: SO
 school: Hamilton
@@ -655,7 +711,7 @@ finals_time: None
 prelim_rank: 31
 final_rank: None
 
-Swimmer 29:
+Swimmer 33:
 name: Cahill, Mike
 yr: JR
 school: Amherst
@@ -666,7 +722,7 @@ finals_time: None
 prelim_rank: 33
 final_rank: None
 
-Swimmer 30:
+Swimmer 34:
 name: Orlando, Steve
 yr: FR
 school: Hamilton
@@ -831,14 +887,14 @@ prelim_rank: 12
 final_rank: 13
 
 Swimmer 14:
-name: Bettencourt, Grego
+name: Bettencourt, Gregory
 yr: NONE
 school: Tufts
 exhibition: False
 seed_time: None
 prelim_time: 4:49.59
 finals_time: 4:49.74
-prelim_rank: None
+prelim_rank: 15
 final_rank: 14
 
 Swimmer 15:
@@ -952,17 +1008,6 @@ prelim_rank: 18
 final_rank: 24
 
 Swimmer 25:
-name: Bettencourt, Gregory
-yr: NONE
-school: Tufts
-exhibition: False
-seed_time: None
-prelim_time: 4:49.59
-finals_time: None
-prelim_rank: 15
-final_rank: None
-
-Swimmer 26:
 name: Goldberg, Jeff
 yr: NONE
 school: Tufts
@@ -973,7 +1018,7 @@ finals_time: None
 prelim_rank: 25
 final_rank: None
 
-Swimmer 27:
+Swimmer 26:
 name: Ullian, David
 yr: FR
 school: Amherst
@@ -984,7 +1029,29 @@ finals_time: None
 prelim_rank: 26
 final_rank: None
 
+Swimmer 27:
+name: Swanson, Charles
+yr: NONE
+school: Bates
+exhibition: False
+seed_time: None
+prelim_time: 5:02.11
+finals_time: None
+prelim_rank: 27
+final_rank: None
+
 Swimmer 28:
+name: Youmans, Will
+yr: NONE
+school: Bates
+exhibition: False
+seed_time: None
+prelim_time: 5:02.23
+finals_time: None
+prelim_rank: 28
+final_rank: None
+
+Swimmer 29:
 name: McClellan, Sean
 yr: SO
 school: Wesleyan
@@ -995,7 +1062,7 @@ finals_time: None
 prelim_rank: 29
 final_rank: None
 
-Swimmer 29:
+Swimmer 30:
 name: Spurrier, Alex
 yr: SO
 school: Trinity
@@ -1006,7 +1073,7 @@ finals_time: None
 prelim_rank: 30
 final_rank: None
 
-Swimmer 30:
+Swimmer 31:
 name: Campany, Tim
 yr: FR
 school: Hamilton
@@ -1017,7 +1084,7 @@ finals_time: None
 prelim_rank: 31
 final_rank: None
 
-Swimmer 31:
+Swimmer 32:
 name: Koza, Jason
 yr: NONE
 school: Tufts
@@ -1028,7 +1095,18 @@ finals_time: None
 prelim_rank: 32
 final_rank: None
 
-Swimmer 32:
+Swimmer 33:
+name: Sanders, Patrick
+yr: NONE
+school: Colby
+exhibition: False
+seed_time: None
+prelim_time: 5:10.99
+finals_time: None
+prelim_rank: 33
+final_rank: None
+
+Swimmer 34:
 name: Bernstein, Mike
 yr: FR
 school: Amherst
@@ -1037,6 +1115,50 @@ seed_time: None
 prelim_time: 5:13.28
 finals_time: None
 prelim_rank: 34
+final_rank: None
+
+Swimmer 35:
+name: Latham, Russ
+yr: NONE
+school: Bates
+exhibition: False
+seed_time: None
+prelim_time: 5:13.39
+finals_time: None
+prelim_rank: 35
+final_rank: None
+
+Swimmer 36:
+name: Karl, Adam
+yr: NONE
+school: Bowdoin
+exhibition: False
+seed_time: None
+prelim_time: 5:14.64
+finals_time: None
+prelim_rank: 36
+final_rank: None
+
+Swimmer 37:
+name: Harrington, Matt
+yr: NONE
+school: Bates
+exhibition: False
+seed_time: None
+prelim_time: 5:21.77
+finals_time: None
+prelim_rank: 37
+final_rank: None
+
+Swimmer 38:
+name: Rezvani, Rob 
+yr: NONE
+school: Bowdoin
+exhibition: False
+seed_time: None
+prelim_time: 5:36.19
+finals_time: None
+prelim_rank: 38
 final_rank: None
 --------------------------------------------------
 event: 5
@@ -1325,6 +1447,17 @@ prelim_rank: 25
 final_rank: None
 
 Swimmer 26:
+name: Kyle, Ian
+yr: NONE
+school: Bowdoin
+exhibition: False
+seed_time: None
+prelim_time: 27.41
+finals_time: None
+prelim_rank: 26
+final_rank: None
+
+Swimmer 27:
 name: Curhan, Drew
 yr: NONE
 school: Tufts
@@ -1333,6 +1466,17 @@ seed_time: None
 prelim_time: 28.15
 finals_time: None
 prelim_rank: 27
+final_rank: None
+
+Swimmer 28:
+name: Peckenham, James
+yr: NONE
+school: Bates
+exhibition: False
+seed_time: None
+prelim_time: 28.57
+finals_time: None
+prelim_rank: 28
 final_rank: None
 --------------------------------------------------
 event: 6
@@ -1352,7 +1496,7 @@ school: Williams
 exhibition: False
 seed_time: None
 prelim_time: 1:54.30
-finals_time: 1:51.23&
+finals_time: 1:51.23
 prelim_rank: 2
 final_rank: 1
 
@@ -1610,6 +1754,17 @@ prelim_rank: None
 final_rank: 24
 
 Swimmer 25:
+name: Bowden, Eric
+yr: NONE
+school: Bates
+exhibition: False
+seed_time: None
+prelim_time: 2:04.18
+finals_time: None
+prelim_rank: 25
+final_rank: None
+
+Swimmer 26:
 name: Brownstein, Matt
 yr: SO
 school: Wesleyan
@@ -1620,7 +1775,7 @@ finals_time: None
 prelim_rank: 26
 final_rank: None
 
-Swimmer 26:
+Swimmer 27:
 name: Katz, Marc
 yr: NONE
 school: Tufts
@@ -1631,7 +1786,7 @@ finals_time: None
 prelim_rank: 27
 final_rank: None
 
-Swimmer 27:
+Swimmer 28:
 name: Silva, Mark
 yr: SR
 school: Trinity
@@ -1642,7 +1797,7 @@ finals_time: None
 prelim_rank: 28
 final_rank: None
 
-Swimmer 28:
+Swimmer 29:
 name: Gordon, Jason
 yr: FR
 school: Trinity
@@ -1950,6 +2105,17 @@ prelim_rank: 26
 final_rank: None
 
 Swimmer 27:
+name: Thomas, Carter
+yr: NONE
+school: Bowdoin 
+exhibition: False
+seed_time: None
+prelim_time: 22.84
+finals_time: None
+prelim_rank: 27
+final_rank: None
+
+Swimmer 28:
 name: Boardman, Tom
 yr: SO
 school: Middlebury
@@ -1960,7 +2126,29 @@ finals_time: None
 prelim_rank: 28
 final_rank: None
 
-Swimmer 28:
+Swimmer 29:
+name: Pepper, Frosty
+yr: NONE
+school: Bates
+exhibition: False
+seed_time: None
+prelim_time: 23.03
+finals_time: None
+prelim_rank: 28
+final_rank: None
+
+Swimmer 30:
+name: Alto, Bill
+yr: NONE
+school: Bowdoin
+exhibition: False
+seed_time: None
+prelim_time: 23.15
+finals_time: None
+prelim_rank: 30
+final_rank: None
+
+Swimmer 31:
 name: Curhan, Drew
 yr: NONE
 school: Tufts
@@ -1971,7 +2159,29 @@ finals_time: None
 prelim_rank: 31
 final_rank: None
 
-Swimmer 29:
+Swimmer 32:
+name: Bittl, Jim
+yr: NONE
+school: Bowdoin
+exhibition: False
+seed_time: None
+prelim_time: 
+finals_time: None
+prelim_rank: 32
+final_rank: None
+
+Swimmer 33:
+name: 
+yr: NONE
+school: 
+exhibition: False
+seed_time: None
+prelim_time: 
+finals_time: None
+prelim_rank: 33
+final_rank: None
+
+Swimmer 34:
 name: McKeown, Rich
 yr: FR
 school: Hamilton
@@ -1982,7 +2192,7 @@ finals_time: None
 prelim_rank: 34
 final_rank: None
 
-Swimmer 30:
+Swimmer 35:
 name: Emmons, Nate
 yr: SO
 school: Hamilton
@@ -1993,7 +2203,18 @@ finals_time: None
 prelim_rank: 35
 final_rank: None
 
-Swimmer 31:
+Swimmer 36:
+name: Tillotson, Mike
+yr: NONE
+school: Bowdoin
+exhibition: False
+seed_time: None
+prelim_time: 23.63
+finals_time: None
+prelim_rank: 36
+final_rank: None
+
+Swimmer 37:
 name: Millar, Mike
 yr: FR
 school: Hamilton
@@ -2004,7 +2225,7 @@ finals_time: None
 prelim_rank: 37
 final_rank: None
 
-Swimmer 32:
+Swimmer 38:
 name: Cahill, Mike
 yr: JR
 school: Amherst
@@ -2015,7 +2236,18 @@ finals_time: None
 prelim_rank: 38
 final_rank: None
 
-Swimmer 33:
+Swimmer 39:
+name: Cade, Nick
+yr: NONE
+school: Colby
+exhibition: False
+seed_time: None
+prelim_time: 24.01
+finals_time: None
+prelim_rank: 39
+final_rank: None
+
+Swimmer 40:
 name: Tucker, Pat
 yr: FR
 school: Trinity
@@ -2025,36 +2257,17 @@ prelim_time: 24.43
 finals_time: None
 prelim_rank: 40
 final_rank: None
---------------------------------------------------
-event: 9
-meet: 2005_Nescac_Msd_Results
-stroke: Medley Relay
-gender: Men
-distance: 400
-source_file: 2005_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 10
-meet: 2005_Nescac_Msd_Results
-stroke: Medley Relay
-gender: Men
-distance: 200
-source_file: 2005_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 11
-meet: 2005_Nescac_Msd_Results
-stroke: Freestyle
-gender: Men
-distance: 1000
-source_file: 2005_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: individual
-Results:
+
+Swimmer 41:
+name: Seifert, Dan
+yr: NONE
+school: Colby
+exhibition: False
+seed_time: None
+prelim_time: 27.35
+finals_time: None
+prelim_rank: 41
+final_rank: None
 --------------------------------------------------
 event: 12
 meet: 2005_Nescac_Msd_Results
@@ -2583,6 +2796,28 @@ prelim_rank: 25
 final_rank: None
 
 Swimmer 26:
+name: Guerette, Chris
+yr: NONE
+school: Bates
+exhibition: False
+seed_time: None
+prelim_time: 56.45
+finals_time: None
+prelim_rank: 26
+final_rank: None
+
+Swimmer 27:
+name: Peterson, Andrew
+yr: NONE
+school: Colby
+exhibition: False
+seed_time: None
+prelim_time: 56.58
+finals_time: None
+prelim_rank: 27
+final_rank: None
+
+Swimmer 28:
 name: Kolenut, Tim
 yr: NONE
 school: Tufts
@@ -2593,7 +2828,7 @@ finals_time: None
 prelim_rank: 28
 final_rank: None
 
-Swimmer 27:
+Swimmer 29:
 name: Cahill, Mike
 yr: JR
 school: Amherst
@@ -2604,7 +2839,7 @@ finals_time: None
 prelim_rank: 29
 final_rank: None
 
-Swimmer 28:
+Swimmer 30:
 name: Nealon, Kevin
 yr: FR
 school: Middlebury
@@ -2615,7 +2850,7 @@ finals_time: None
 prelim_rank: 30
 final_rank: None
 
-Swimmer 29:
+Swimmer 31:
 name: Orlando, Steve
 yr: FR
 school: Hamilton
@@ -2624,6 +2859,17 @@ seed_time: None
 prelim_time: 1:01.88
 finals_time: None
 prelim_rank: 31
+final_rank: None
+
+Swimmer 32:
+name: Barr, Phil
+yr: NONE
+school: Bates
+exhibition: False
+seed_time: None
+prelim_time: 1:03.67
+finals_time: None
+prelim_rank: 32
 final_rank: None
 --------------------------------------------------
 event: 14
@@ -2659,14 +2905,14 @@ prelim_rank: None
 final_rank: 2
 
 Swimmer 3:
-name: Bettencourt, Grego
+name: Bettencourt, Gregory
 yr: NONE
 school: Tufts
 exhibition: False
 seed_time: None
 prelim_time: 1:44.27
 finals_time: 1:44.13
-prelim_rank: None
+prelim_rank: 3
 final_rank: 3
 
 Swimmer 4:
@@ -2901,14 +3147,14 @@ prelim_rank: None
 final_rank: 24
 
 Swimmer 25:
-name: Bettencourt, Gregory
+name: Pepper, Frosty
 yr: NONE
-school: Tufts
+school: Bates
 exhibition: False
 seed_time: None
-prelim_time: 1:44.27
+prelim_time: 1:50.27
 finals_time: None
-prelim_rank: 3
+prelim_rank: 25
 final_rank: None
 
 Swimmer 26:
@@ -2967,6 +3213,17 @@ prelim_rank: 30
 final_rank: None
 
 Swimmer 31:
+name: Latham, Russ
+yr: NONE
+school: Bates
+exhibition: False
+seed_time: None
+prelim_time: 1:51.65
+finals_time: None
+prelim_rank: 31
+final_rank: None
+
+Swimmer 32:
 name: Emmons, Nate
 yr: SO
 school: Hamilton
@@ -2977,7 +3234,7 @@ finals_time: None
 prelim_rank: 32
 final_rank: None
 
-Swimmer 32:
+Swimmer 33:
 name: Silva, Mark
 yr: SR
 school: Trinity
@@ -2988,7 +3245,18 @@ finals_time: None
 prelim_rank: 33
 final_rank: None
 
-Swimmer 33:
+Swimmer 34:
+name: Cade, Nick
+yr: NONE
+school: Colby
+exhibition: False
+seed_time: None
+prelim_time: 1:56.42
+finals_time: None
+prelim_rank: 34
+final_rank: None
+
+Swimmer 35:
 name: Bernstein, Mike
 yr: FR
 school: Amherst
@@ -2997,6 +3265,17 @@ seed_time: None
 prelim_time: 1:57.45
 finals_time: None
 prelim_rank: 35
+final_rank: None
+
+Swimmer 36:
+name: Rezvani, Rob
+yr: NONE
+school: Bowdoin
+exhibition: False
+seed_time: None
+prelim_time: 2:01.01
+finals_time: None
+prelim_rank: 36
 final_rank: None
 --------------------------------------------------
 event: 15
@@ -3296,6 +3575,17 @@ prelim_rank: 26
 final_rank: None
 
 Swimmer 27:
+name: Qua, Fisher
+yr: NONE
+school: Bates
+exhibition: False
+seed_time: None
+prelim_time: 1:04.54
+finals_time: None
+prelim_rank: 27
+final_rank: None
+
+Swimmer 28:
 name: Meigher, Mark
 yr: SO
 school: Hamilton
@@ -3306,7 +3596,7 @@ finals_time: None
 prelim_rank: 28
 final_rank: None
 
-Swimmer 28:
+Swimmer 29:
 name: Altneu, Eric
 yr: SO
 school: Wesleyan
@@ -3317,7 +3607,7 @@ finals_time: None
 prelim_rank: 29
 final_rank: None
 
-Swimmer 29:
+Swimmer 30:
 name: Brownstein, Matt
 yr: SO
 school: Wesleyan
@@ -3328,7 +3618,18 @@ finals_time: None
 prelim_rank: 30
 final_rank: None
 
-Swimmer 30:
+Swimmer 31:
+name: Alex, Joel
+yr: NONE
+school: Colby
+exhibition: False
+seed_time: None
+prelim_time: 1:07.06
+finals_time: None
+prelim_rank: 31
+final_rank: None
+
+Swimmer 32:
 name: Smith, Chip
 yr: FR
 school: Hamilton
@@ -3339,7 +3640,7 @@ finals_time: None
 prelim_rank: 32
 final_rank: None
 
-Swimmer 31:
+Swimmer 33:
 name: Tucker, Pat
 yr: FR
 school: Trinity
@@ -3350,7 +3651,7 @@ finals_time: None
 prelim_rank: 33
 final_rank: None
 
-Swimmer 32:
+Swimmer 34:
 name: Mostyn, Pat
 yr: FR
 school: Trinity
@@ -3636,6 +3937,28 @@ prelim_rank: 24
 final_rank: 24
 
 Swimmer 25:
+name: Lewis, Jason
+yr: NONE
+school: Bowdoin
+exhibition: False
+seed_time: None
+prelim_time: 59.85
+finals_time: None
+prelim_rank: 25
+final_rank: None
+
+Swimmer 26:
+name: Boutin, Ryan
+yr: NONE
+school: Bowdoin
+exhibition: False
+seed_time: None
+prelim_time: 1:00.08
+finals_time: None
+prelim_rank: 26
+final_rank: None
+
+Swimmer 27:
 name: Chow, Joe
 yr: SO
 school: Amherst
@@ -3645,26 +3968,39 @@ prelim_time: 1:00.22
 finals_time: None
 prelim_rank: 27
 final_rank: None
---------------------------------------------------
-event: 17
-meet: 2005_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 800
-source_file: 2005_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 18
-meet: 2005_Nescac_Msd_Results
-stroke: Freestyle
-gender: Men
-distance: 1650
-source_file: 2005_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: individual
-Results:
+
+Swimmer 28:
+name: Thompson, Ken
+yr: NONE
+school: Colby
+exhibition: False
+seed_time: None
+prelim_time: 1:00.97
+finals_time: None
+prelim_rank: 28
+final_rank: None
+
+Swimmer 29:
+name: Tillotson, Mike
+yr: NONE
+school: Bowdoin
+exhibition: False
+seed_time: None
+prelim_time: 1:02.29
+finals_time: None
+prelim_rank: 29
+final_rank: None
+
+Swimmer 30:
+name: Peckenham, James
+yr: NONE
+school: Bates
+exhibition: False
+seed_time: None
+prelim_time: 1:02.69
+finals_time: None
+prelim_rank: 30
+final_rank: None
 --------------------------------------------------
 event: 19
 meet: 2005_Nescac_Msd_Results
@@ -3941,6 +4277,17 @@ prelim_rank: 24
 final_rank: 24
 
 Swimmer 25:
+name: Bowden, Eric
+yr: NONE
+school: Bates
+exhibition: False
+seed_time: None
+prelim_time: 2:05.35
+finals_time: None
+prelim_rank: 25
+final_rank: None
+
+Swimmer 26:
 name: Chow, Joe
 yr: SO
 school: Amherst
@@ -3951,7 +4298,7 @@ finals_time: None
 prelim_rank: 26
 final_rank: None
 
-Swimmer 26:
+Swimmer 27:
 name: Gordon, Jason
 yr: FR
 school: Trinity
@@ -3962,7 +4309,18 @@ finals_time: None
 prelim_rank: 27
 final_rank: None
 
-Swimmer 27:
+Swimmer 28:
+name: Boutin, Ryan
+yr: NONE
+school: Bowdoin
+exhibition: False
+seed_time: None
+prelim_time: 2:10.68
+finals_time: None
+prelim_rank: 28
+final_rank: None
+
+Swimmer 29:
 name: Kolenut, Tim
 yr: NONE
 school: Tufts
@@ -3971,6 +4329,28 @@ seed_time: None
 prelim_time: 2:11.65
 finals_time: None
 prelim_rank: 29
+final_rank: None
+
+Swimmer 30:
+name: Thompson, Ken
+yr: NONE
+school: Colby
+exhibition: False
+seed_time: None
+prelim_time: 2:15.26
+finals_time: None
+prelim_rank: 30
+final_rank: None
+
+Swimmer 31:
+name: Peckenham, James
+yr: NONE
+school: Bates
+exhibition: False
+seed_time: None
+prelim_time: 2:15.92
+finals_time: None
+prelim_rank: 31
 final_rank: None
 --------------------------------------------------
 event: 20
@@ -4280,7 +4660,7 @@ finals_time: None
 prelim_rank: 26
 final_rank: None
 
-Swimmer 28:
+Swimmer 27:
 name: Heynen, Dominik
 yr: NONE
 school: Wesleyan
@@ -4291,7 +4671,40 @@ finals_time: None
 prelim_rank: 27
 final_rank: None
 
+Swimmer 28:
+name: Baker, Erik
+yr: NONE
+school: Bates
+exhibition: False
+seed_time: None
+prelim_time: 49.80
+finals_time: None
+prelim_rank: 28
+final_rank: None
+
 Swimmer 29:
+name: Youmans, Will
+yr: NONE
+school: Bates
+exhibition: False
+seed_time: None
+prelim_time: 50.18
+finals_time: None
+prelim_rank: 29
+final_rank: None
+
+Swimmer 30:
+name: Sanders, Patrick
+yr: NONE
+school: Colby
+exhibition: False
+seed_time: None
+prelim_time: 50.21
+finals_time: None
+prelim_rank: 30
+final_rank: None
+
+Swimmer 31:
 name: Zebrowski, Alec
 yr: JR
 school: Wesleyan
@@ -4302,7 +4715,18 @@ finals_time: None
 prelim_rank: 31
 final_rank: None
 
-Swimmer 30:
+Swimmer 32:
+name: Pepper, Frosty
+yr: NONE
+school: Bates
+exhibition: False
+seed_time: None
+prelim_time: 50.28
+finals_time: None
+prelim_rank: 31
+final_rank: None
+
+Swimmer 33:
 name: Boardman, Tom
 yr: SO
 school: Middlebury
@@ -4313,7 +4737,7 @@ finals_time: None
 prelim_rank: 33
 final_rank: None
 
-Swimmer 31:
+Swimmer 34:
 name: Piyade, Baris
 yr: NONE
 school: Tufts
@@ -4324,7 +4748,18 @@ finals_time: None
 prelim_rank: 34
 final_rank: None
 
-Swimmer 32:
+Swimmer 35:
+name: Kyle, Ian
+yr: NONE
+school: Bowdoin
+exhibition: False
+seed_time: None
+prelim_time: 50.51
+finals_time: None
+prelim_rank: 35
+final_rank: None
+
+Swimmer 36:
 name: Campany, Tim
 yr: FR
 school: Hamilton
@@ -4335,7 +4770,7 @@ finals_time: None
 prelim_rank: 36
 final_rank: None
 
-Swimmer 33:
+Swimmer 37:
 name: McKeown, Rich
 yr: FR
 school: Hamilton
@@ -4346,7 +4781,7 @@ finals_time: None
 prelim_rank: 37
 final_rank: None
 
-Swimmer 34:
+Swimmer 38:
 name: Emmons, Nate
 yr: SO
 school: Hamilton
@@ -4357,7 +4792,7 @@ finals_time: None
 prelim_rank: 38
 final_rank: None
 
-Swimmer 35:
+Swimmer 39:
 name: Curhan, Drew
 yr: NONE
 school: Tufts
@@ -4368,7 +4803,7 @@ finals_time: None
 prelim_rank: 39
 final_rank: None
 
-Swimmer 36:
+Swimmer 40:
 name: Pacchia, Tom
 yr: JR
 school: Trinity
@@ -4379,7 +4814,51 @@ finals_time: None
 prelim_rank: 40
 final_rank: None
 
-Swimmer 37:
+Swimmer 41:
+name: Bittle, Jim
+yr: NONE
+school: Bowdoin
+exhibition: False
+seed_time: None
+prelim_time: 51.30
+finals_time: None
+prelim_rank: 41
+final_rank: None
+
+Swimmer 42:
+name: Cade, Nick
+yr: NONE
+school: colby
+exhibition: False
+seed_time: None
+prelim_time: 52.26
+finals_time: None
+prelim_rank: 42
+final_rank: None
+
+Swimmer 43:
+name: Tillotson, Mike
+yr: NONE
+school: Bowdion
+exhibition: False
+seed_time: None
+prelim_time: 52.56
+finals_time: None
+prelim_rank: 43
+final_rank: None
+
+Swimmer 44:
+name: Rezvani, Rob
+yr: NONE
+school: Bowdoin
+exhibition: False
+seed_time: None
+prelim_time: 53.17
+finals_time: None
+prelim_rank: 44
+final_rank: None
+
+Swimmer 45:
 name: Silva, Mark
 yr: SR
 school: Trinity
@@ -4390,7 +4869,7 @@ finals_time: None
 prelim_rank: 45
 final_rank: None
 
-Swimmer 38:
+Swimmer 46:
 name: Bernstein, Mike
 yr: FR
 school: Amherst
@@ -4401,7 +4880,7 @@ finals_time: None
 prelim_rank: 46
 final_rank: None
 
-Swimmer 39:
+Swimmer 47:
 name: Orlando, Steve
 yr: FR
 school: Hamilton
@@ -4410,6 +4889,17 @@ seed_time: None
 prelim_time: 56.34
 finals_time: None
 prelim_rank: 47
+final_rank: None
+
+Swimmer 48:
+name: Seifert, Dan
+yr: NONE
+school: Colby
+exhibition: False
+seed_time: None
+prelim_time: 1:01.55
+finals_time: None
+prelim_rank: 48
 final_rank: None
 --------------------------------------------------
 event: 21
@@ -4720,6 +5210,17 @@ prelim_rank: 27
 final_rank: None
 
 Swimmer 28:
+name: Alex, Joel
+yr: NONE
+school: Colby
+exhibition: False
+seed_time: None
+prelim_time: 2:26.58
+finals_time: None
+prelim_rank: 28
+final_rank: None
+
+Swimmer 29:
 name: Abbott, Chris
 yr: FR
 school: Middlebury
@@ -4730,7 +5231,7 @@ finals_time: None
 prelim_rank: 29
 final_rank: None
 
-Swimmer 29:
+Swimmer 30:
 name: Smith, Chip
 yr: FR
 school: Hamilton
@@ -4739,6 +5240,17 @@ seed_time: None
 prelim_time: 2:29.86
 finals_time: None
 prelim_rank: 30
+final_rank: None
+
+Swimmer 31:
+name: Harrington, Matt
+yr: NONE
+school: Bates
+exhibition: False
+seed_time: None
+prelim_time: 2:32.01
+finals_time: None
+prelim_rank: 31
 final_rank: None
 --------------------------------------------------
 event: 22
@@ -5025,104 +5537,3 @@ prelim_time: 2:21.00
 finals_time: None
 prelim_rank: 25
 final_rank: None
---------------------------------------------------
-event: 24
-meet: 2005_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 400
-source_file: 2005_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 101
-meet: 2005_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 200
-source_file: 2005_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 109
-meet: 2005_Nescac_Msd_Results
-stroke: Medley Relay
-gender: Men
-distance: 400
-source_file: 2005_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 110
-meet: 2005_Nescac_Msd_Results
-stroke: Medley Relay
-gender: Men
-distance: 200
-source_file: 2005_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 117
-meet: 2005_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 800
-source_file: 2005_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 124
-meet: 2005_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 400
-source_file: 2005_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 201
-meet: 2005_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 200
-source_file: 2005_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 209
-meet: 2005_Nescac_Msd_Results
-stroke: Medley Relay
-gender: Men
-distance: 400
-source_file: 2005_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 210
-meet: 2005_Nescac_Msd_Results
-stroke: Medley Relay
-gender: Men
-distance: 200
-source_file: 2005_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 224
-meet: 2005_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 400
-source_file: 2005_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------

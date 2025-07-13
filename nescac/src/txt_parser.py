@@ -176,102 +176,104 @@ class TXTParser(BaseParser):
 
     def _parse_individual_entry(self, line: str, current_section: str, is_exhibition: bool) -> Optional[Dict]:
         clean = line.strip()
-        # Try finals pattern first (with year)
-        m = self.txt_finals_re.match(clean)
-        if m:
-            groups = m.groups()
-            rank, name, yr, school, prelim, final, pts = groups
-            parsed_yr = self._parse_year_field(yr) if yr else 'NONE'
-            # SKIP: If school is empty and prelim or final is a 2-digit number
-            if (not school.strip()) and ((prelim and len(prelim.strip()) == 2 and prelim.strip().isdigit()) or (final and len(final.strip()) == 2 and final.strip().isdigit())):
-                return None
-            result = {
-                'name': name.strip(),
-                'yr': parsed_yr,
-                'school': school.strip(),
-                'seed_time': None,
-                'prelim_time': self._clean_time_string(prelim) if prelim else None,
-                'finals_time': self._clean_time_string(final) if final else None,
-                'rank': 'exhibition' if is_exhibition else rank,
-                'exhibition': is_exhibition,
-                'section': current_section
-            }
-            result = self._cleanup_school_time(result)
-            return result
-        # Try finals pattern (no year)
-        m = self.txt_finals_no_year_re.match(clean)
-        if m:
-            rank, name, school, prelim, final, pts = m.groups()
-            # SKIP: If school is empty and prelim or final is a 2-digit number
-            if (not school.strip()) and ((prelim and len(prelim.strip()) == 2 and prelim.strip().isdigit()) or (final and len(final.strip()) == 2 and final.strip().isdigit())):
-                return None
-            result = {
-                'name': name.strip(),
-                'yr': 'NONE',
-                'school': school.strip(),
-                'seed_time': None,
-                'prelim_time': self._clean_time_string(prelim) if prelim else None,
-                'finals_time': self._clean_time_string(final) if final else None,
-                'rank': 'exhibition' if is_exhibition else rank,
-                'exhibition': is_exhibition,
-                'section': current_section
-            }
-            result = self._cleanup_school_time(result)
-            return result
-        # Try prelims pattern (with year)
-        m = self.txt_prelims_re.match(clean)
-        if m:
-            groups = m.groups()
-            rank, name, yr, school, time1, time2 = groups
-            parsed_yr = self._parse_year_field(yr) if yr else 'NONE'
-            # SKIP: If school is empty and time1 or time2 is a 2-digit number
-            if (not school.strip()) and ((time1 and len(time1.strip()) == 2 and time1.strip().isdigit()) or (time2 and len(time2.strip()) == 2 and time2.strip().isdigit())):
-                return None
-            if time2:
-                seed_time = self._clean_time_string(time1)
-                prelim_time = self._clean_time_string(time2)
-            else:
-                seed_time = None
-                prelim_time = self._clean_time_string(time1)
-            result = {
-                'name': name.strip(),
-                'yr': parsed_yr,
-                'school': school.strip(),
-                'seed_time': seed_time,
-                'prelim_time': prelim_time,
-                'finals_time': None,
-                'rank': 'exhibition' if is_exhibition else rank,
-                'exhibition': is_exhibition,
-                'section': current_section
-            }
-            result = self._cleanup_school_time(result)
-            return result
-        # Try prelims pattern (no year)
-        m = self.txt_prelims_no_year_re.match(clean)
-        if m:
-            rank, name, school, time1, time2 = m.groups()
-            # SKIP: If school is empty and time1 or time2 is a 2-digit number
-            if (not school.strip()) and ((time1 and len(time1.strip()) == 2 and time1.strip().isdigit()) or (time2 and len(time2.strip()) == 2 and time2.strip().isdigit())):
-                return None
-            if time2:
-                seed_time = self._clean_time_string(time1)
-                prelim_time = self._clean_time_string(time2)
-            else:
-                seed_time = None
-                prelim_time = self._clean_time_string(time1)
-            result = {
-                'name': name.strip(),
-                'yr': 'NONE',
-                'school': school.strip(),
-                'seed_time': seed_time,
-                'prelim_time': prelim_time,
-                'finals_time': None,
-                'rank': 'exhibition' if is_exhibition else rank,
-                'exhibition': is_exhibition,
-                'section': current_section
-            }
-            result = self._cleanup_school_time(result)
-            return result
+        # Only try finals regexes if section is 'finals'
+        if current_section == 'finals':
+            m = self.txt_finals_re.match(clean)
+            if m:
+                groups = m.groups()
+                rank, name, yr, school, prelim, final, pts = groups
+                parsed_yr = self._parse_year_field(yr) if yr else 'NONE'
+                # SKIP: If school is empty and prelim or final is a 2-digit number
+                if (not school.strip()) and ((prelim and len(prelim.strip()) == 2 and prelim.strip().isdigit()) or (final and len(final.strip()) == 2 and final.strip().isdigit())):
+                    return None
+                result = {
+                    'name': name.strip(),
+                    'yr': parsed_yr,
+                    'school': school.strip(),
+                    'seed_time': None,
+                    'prelim_time': self._clean_time_string(prelim) if prelim else None,
+                    'finals_time': self._clean_time_string(final) if final else None,
+                    'rank': 'exhibition' if is_exhibition else rank,
+                    'exhibition': is_exhibition,
+                    'section': current_section
+                }
+                result = self._cleanup_school_time(result)
+                return result
+            m = self.txt_finals_no_year_re.match(clean)
+            if m:
+                rank, name, school, prelim, final, pts = m.groups()
+                # SKIP: If school is empty and prelim or final is a 2-digit number
+                if (not school.strip()) and ((prelim and len(prelim.strip()) == 2 and prelim.strip().isdigit()) or (final and len(final.strip()) == 2 and final.strip().isdigit())):
+                    return None
+                result = {
+                    'name': name.strip(),
+                    'yr': 'NONE',
+                    'school': school.strip(),
+                    'seed_time': None,
+                    'prelim_time': self._clean_time_string(prelim) if prelim else None,
+                    'finals_time': self._clean_time_string(final) if final else None,
+                    'rank': 'exhibition' if is_exhibition else rank,
+                    'exhibition': is_exhibition,
+                    'section': current_section
+                }
+                result = self._cleanup_school_time(result)
+                return result
+        # Only try prelims regexes if section is 'prelims'
+        if current_section == 'prelims':
+            m = self.txt_prelims_re.match(clean)
+            if m:
+                groups = m.groups()
+                rank, name, yr, school, time1, time2 = groups
+                parsed_yr = self._parse_year_field(yr) if yr else 'NONE'
+                # SKIP: If school is empty and time1 or time2 is a 2-digit number
+                if (not school.strip()) and ((time1 and len(time1.strip()) == 2 and time1.strip().isdigit()) or (time2 and len(time2.strip()) == 2 and time2.strip().isdigit())):
+                    return None
+                # Fix: if two times, first is seed_time, second is prelim_time; if one, it's prelim_time
+                if time2:
+                    seed_time = self._clean_time_string(time1)
+                    prelim_time = self._clean_time_string(time2)
+                else:
+                    seed_time = None
+                    prelim_time = self._clean_time_string(time1)
+                result = {
+                    'name': name.strip(),
+                    'yr': parsed_yr,
+                    'school': school.strip(),
+                    'seed_time': seed_time,
+                    'prelim_time': prelim_time,
+                    'finals_time': None,
+                    'rank': 'exhibition' if is_exhibition else rank,
+                    'exhibition': is_exhibition,
+                    'section': current_section
+                }
+                result = self._cleanup_school_time(result)
+                return result
+            m = self.txt_prelims_no_year_re.match(clean)
+            if m:
+                rank, name, school, time1, time2 = m.groups()
+                # SKIP: If school is empty and time1 or time2 is a 2-digit number
+                if (not school.strip()) and ((time1 and len(time1.strip()) == 2 and time1.strip().isdigit()) or (time2 and len(time2.strip()) == 2 and time2.strip().isdigit())):
+                    return None
+                # Fix: if two times, first is seed_time, second is prelim_time; if one, it's prelim_time
+                if time2:
+                    seed_time = self._clean_time_string(time1)
+                    prelim_time = self._clean_time_string(time2)
+                else:
+                    seed_time = None
+                    prelim_time = self._clean_time_string(time1)
+                result = {
+                    'name': name.strip(),
+                    'yr': 'NONE',
+                    'school': school.strip(),
+                    'seed_time': seed_time,
+                    'prelim_time': prelim_time,
+                    'finals_time': None,
+                    'rank': 'exhibition' if is_exhibition else rank,
+                    'exhibition': is_exhibition,
+                    'section': current_section
+                }
+                result = self._cleanup_school_time(result)
+                return result
         # Try single time pattern (with year)
         m = self.txt_single_time_re.match(clean)
         if m:
@@ -363,7 +365,7 @@ class TXTParser(BaseParser):
                     if key != current_key:
                         current_key = key
                         self._ensure_event_exists(events, key, stripped)
-                        logging.debug(f"TXT: Starting event {key} - {stripped}")
+
                     current_section = None
                     continue
                 current_key = None; current_section = None
@@ -372,7 +374,7 @@ class TXTParser(BaseParser):
                 sec = self._is_section_header(line)
                 if sec:
                     current_section = sec
-                    logging.debug(f"TXT: Section change to '{sec}' for event {current_key}")
+
                     continue
             if current_section and current_key:
                 entry = self._parse_entry(line, current_section, events[current_key]['event_type'])
@@ -401,17 +403,49 @@ class TXTParser(BaseParser):
                 
                 # Update based on section
                 if current_section == 'prelims':
-                    existing['seed_time'] = existing['seed_time'] or entry['seed_time']
+                    # For prelims, preserve seed_time if it exists in the entry
+                    if entry['seed_time'] is not None:
+                        existing['seed_time'] = entry['seed_time']
                     existing['prelim_time'] = existing['prelim_time'] or entry['prelim_time']
                     existing['prelim_rank'] = existing['prelim_rank'] or entry['rank']
-                    logging.debug(f"TXT: Prelims entry for {entry['name']}: seed={entry['seed_time']}, prelim={entry['prelim_time']}, rank={entry['rank']}")
+
                 else:  # finals
                     # In finals, the first time is prelim, second is final
                     if entry['prelim_time'] and not existing['prelim_time']:
                         existing['prelim_time'] = entry['prelim_time']
                     existing['finals_time'] = entry['finals_time']
                     existing['final_rank'] = entry['rank']
-                    logging.debug(f"TXT: Finals entry for {entry['name']}: prelim={entry['prelim_time']}, finals={entry['finals_time']}, rank={entry['rank']}")
+
+
+        # After merging by (name, yr, school), do a second pass to merge seed_time by (name, school) if missing
+        for event in events.values():
+            if event.get('event_type') != 'individual':
+                continue
+            result_map = event.get('results_map', {})
+            # Build a lookup by (name, school) for entries with seed_time
+            prelim_seed_lookup = {}
+            for k, v in result_map.items():
+                if v.get('seed_time'):
+                    prelim_seed_lookup[(v['name'], v['school'])] = v['seed_time']
+            # Fill in missing seed_time for finals entries
+            for k, v in result_map.items():
+                if not v.get('seed_time'):
+                    fallback = prelim_seed_lookup.get((v['name'], v['school']))
+                    if fallback:
+                        v['seed_time'] = fallback
+
+            # Ensure all prelims entries are included if they have a seed_time or prelim_time
+            # Build a set of (name, school) already in result_map
+            existing_keys = set((v['name'], v['school']) for v in result_map.values())
+            # Find all prelims entries (by section) in result_map
+            prelim_entries = [v for v in result_map.values() if v.get('section') == 'prelims']
+            for v in prelim_entries:
+                key2 = (v['name'], v['school'])
+                if key2 not in existing_keys and (v.get('seed_time') or v.get('prelim_time')):
+                    # Add this entry to result_map with a new key (name, NONE, school)
+                    result_map[(v['name'], 'NONE', v['school'])] = v
+                    existing_keys.add(key2)
+
 
         # consolidate and return
         self._consolidate_swimmer_results(events)

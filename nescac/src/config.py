@@ -9,7 +9,7 @@ USA_SWIMMING_BASE = "https://www.usaswimming.org"
 # ====================
 # Logging & Output
 # ====================
-LOG_LEVEL = "DEBUG"
+LOG_LEVEL = "INFO"
 DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
 TIMEZONE = "UTC"
 
@@ -17,5 +17,5 @@ TIMEZONE = "UTC"
 # Development Settings
 # ====================
 DEBUG_MODE = False
-VERBOSE_LOGGING = True
+VERBOSE_LOGGING = False
 SAVE_INTERMEDIATE_FILES = True

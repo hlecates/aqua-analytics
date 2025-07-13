@@ -1,13 +1,3 @@
-event: 1
-meet: 2002_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 200
-source_file: 2002_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
 event: 2
 meet: 2002_Nescac_Msd_Results
 stroke: Breaststroke
@@ -590,14 +580,14 @@ prelim_rank: 21
 final_rank: 22
 
 Swimmer 23:
-name: Shanahan Jr., Kear
+name: Shanahan Jr., Kearney
 yr: SO
 school: Colby
 exhibition: False
 seed_time: None
 prelim_time: 24.75
 finals_time: 25.24
-prelim_rank: None
+prelim_rank: 18
 final_rank: 23
 
 Swimmer 24:
@@ -612,17 +602,6 @@ prelim_rank: 21
 final_rank: 24
 
 Swimmer 25:
-name: Shanahan Jr., Kearney
-yr: SO
-school: Colby
-exhibition: False
-seed_time: None
-prelim_time: 24.75
-finals_time: None
-prelim_rank: 18
-final_rank: None
-
-Swimmer 26:
 name: Salinas, Adrian
 yr: FR
 school: Williams
@@ -633,7 +612,7 @@ finals_time: None
 prelim_rank: 25
 final_rank: None
 
-Swimmer 27:
+Swimmer 26:
 name: Longmire, Andrew
 yr: SR
 school: Conn College
@@ -644,7 +623,7 @@ finals_time: None
 prelim_rank: 26
 final_rank: None
 
-Swimmer 28:
+Swimmer 27:
 name: Guerette, Chris
 yr: FR
 school: Bates
@@ -655,7 +634,7 @@ finals_time: None
 prelim_rank: 27
 final_rank: None
 
-Swimmer 29:
+Swimmer 28:
 name: Bowden, Eric
 yr: FR
 school: Bates
@@ -666,7 +645,7 @@ finals_time: None
 prelim_rank: 28
 final_rank: None
 
-Swimmer 30:
+Swimmer 29:
 name: Alto, Bill
 yr: FR
 school: Bowdoin
@@ -732,14 +711,14 @@ prelim_rank: 4
 final_rank: 4
 
 Swimmer 5:
-name: Vollmond-Carstens,
+name: Vollmond-Carstens, Chris
 yr: SO
 school: Williams
 exhibition: False
 seed_time: None
 prelim_time: 4:41.39
 finals_time: 4:39.35
-prelim_rank: None
+prelim_rank: 5
 final_rank: 5
 
 Swimmer 6:
@@ -952,17 +931,6 @@ prelim_rank: 24
 final_rank: 24
 
 Swimmer 25:
-name: Vollmond-Carstens, Chris
-yr: SO
-school: Williams
-exhibition: False
-seed_time: None
-prelim_time: 4:41.39
-finals_time: None
-prelim_rank: 5
-final_rank: None
-
-Swimmer 26:
 name: Turner, Alex
 yr: FR
 school: Tufts
@@ -973,7 +941,7 @@ finals_time: None
 prelim_rank: 25
 final_rank: None
 
-Swimmer 27:
+Swimmer 26:
 name: Harden, Dave
 yr: JR
 school: Bowdoin
@@ -984,7 +952,7 @@ finals_time: None
 prelim_rank: 26
 final_rank: None
 
-Swimmer 28:
+Swimmer 27:
 name: Manchester, Eric
 yr: FR
 school: Williams
@@ -995,7 +963,7 @@ finals_time: None
 prelim_rank: 27
 final_rank: None
 
-Swimmer 29:
+Swimmer 28:
 name: Barr, Phil
 yr: SO
 school: Bates
@@ -1006,7 +974,7 @@ finals_time: None
 prelim_rank: 28
 final_rank: None
 
-Swimmer 30:
+Swimmer 29:
 name: O'Brien, Rich W
 yr: SR
 school: Amherst
@@ -1017,7 +985,7 @@ finals_time: None
 prelim_rank: 29
 final_rank: None
 
-Swimmer 31:
+Swimmer 30:
 name: Bares, Ryan D
 yr: JR
 school: Trinity
@@ -1028,7 +996,7 @@ finals_time: None
 prelim_rank: 30
 final_rank: None
 
-Swimmer 32:
+Swimmer 31:
 name: Byrne, Matt
 yr: SR
 school: Bowdoin
@@ -1039,7 +1007,7 @@ finals_time: None
 prelim_rank: 31
 final_rank: None
 
-Swimmer 33:
+Swimmer 32:
 name: Bucklin, Matt
 yr: FR
 school: Colby
@@ -1050,7 +1018,7 @@ finals_time: None
 prelim_rank: 32
 final_rank: None
 
-Swimmer 34:
+Swimmer 33:
 name: Jones, Dan
 yr: JR
 school: Wesleyan
@@ -1061,7 +1029,7 @@ finals_time: None
 prelim_rank: 33
 final_rank: None
 
-Swimmer 35:
+Swimmer 34:
 name: Clifford, John
 yr: SR
 school: Bowdoin
@@ -1072,7 +1040,7 @@ finals_time: None
 prelim_rank: 34
 final_rank: None
 
-Swimmer 36:
+Swimmer 35:
 name: Kingsbury, Josh
 yr: JR
 school: Bowdoin
@@ -1100,7 +1068,7 @@ school: Middlebury
 exhibition: False
 seed_time: None
 prelim_time: 24.61
-finals_time: 24.52&
+finals_time: 24.52
 prelim_rank: 1
 final_rank: 1
 
@@ -1211,7 +1179,7 @@ exhibition: False
 seed_time: None
 prelim_time: 26.13
 finals_time: 26.02
-prelim_rank: None
+prelim_rank: 9
 final_rank: 10
 
 Swimmer 12:
@@ -1357,16 +1325,6 @@ finals_time: 30.94
 prelim_rank: 24
 final_rank: 24
 
-Swimmer 25:
-name: Meyers, Jamie
-yr: NONE
-school: SO
-exhibition: False
-seed_time: None
-prelim_time: T
-finals_time: None
-prelim_rank: 9
-final_rank: None
 --------------------------------------------------
 event: 6
 meet: 2002_Nescac_Msd_Results
@@ -2113,36 +2071,7 @@ prelim_time: 29.02
 finals_time: None
 prelim_rank: 39
 final_rank: None
---------------------------------------------------
-event: 9
-meet: 2002_Nescac_Msd_Results
-stroke: Medley Relay
-gender: Men
-distance: 400
-source_file: 2002_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 10
-meet: 2002_Nescac_Msd_Results
-stroke: Medley Relay
-gender: Men
-distance: 200
-source_file: 2002_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 11
-meet: 2002_Nescac_Msd_Results
-stroke: Freestyle
-gender: Men
-distance: 1000
-source_file: 2002_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: individual
-Results:
+
 --------------------------------------------------
 event: 12
 meet: 2002_Nescac_Msd_Results
@@ -2347,7 +2276,7 @@ school: Middlebury
 exhibition: False
 seed_time: None
 prelim_time: 51.01
-finals_time: 50.70&
+finals_time: 50.70
 prelim_rank: 1
 final_rank: 1
 
@@ -2495,14 +2424,14 @@ prelim_rank: 14
 final_rank: 14
 
 Swimmer 15:
-name: Shanahan Jr., Kear
+name: Shanahan Jr., Kearney
 yr: SO
 school: Colby
 exhibition: False
 seed_time: None
 prelim_time: 54.46
 finals_time: 54.59
-prelim_rank: None
+prelim_rank: 16
 final_rank: 15
 
 Swimmer 16:
@@ -2605,17 +2534,6 @@ prelim_rank: 24
 final_rank: 24
 
 Swimmer 25:
-name: Shanahan Jr., Kearney
-yr: SO
-school: Colby
-exhibition: False
-seed_time: None
-prelim_time: 54.46
-finals_time: None
-prelim_rank: 16
-final_rank: None
-
-Swimmer 26:
 name: Longmire, Andrew
 yr: SR
 school: Conn College
@@ -2626,7 +2544,7 @@ finals_time: None
 prelim_rank: 25
 final_rank: None
 
-Swimmer 27:
+Swimmer 26:
 name: Connell, Ryan
 yr: SO
 school: Colby
@@ -2637,7 +2555,7 @@ finals_time: None
 prelim_rank: 26
 final_rank: None
 
-Swimmer 28:
+Swimmer 27:
 name: Salibra, Larry
 yr: SO
 school: Wesleyan
@@ -2648,7 +2566,7 @@ finals_time: None
 prelim_rank: 27
 final_rank: None
 
-Swimmer 29:
+Swimmer 28:
 name: Barr, Phil
 yr: SO
 school: Bates
@@ -2934,6 +2852,17 @@ prelim_rank: 17
 final_rank: 24
 
 Swimmer 25:
+name: Kuppens, Nick
+yr: SR
+school: Bates
+exhibition: False
+seed_time: None
+prelim_time: 1:51.03
+finals_time: None
+prelim_rank: 25
+final_rank: None
+
+Swimmer 26:
 name: Evans, Charlie
 yr: SO
 school: Middlebury
@@ -2944,7 +2873,7 @@ finals_time: None
 prelim_rank: 26
 final_rank: None
 
-Swimmer 26:
+Swimmer 27:
 name: Ghoussaini, Nick
 yr: SO
 school: Tufts
@@ -2955,7 +2884,7 @@ finals_time: None
 prelim_rank: 27
 final_rank: None
 
-Swimmer 27:
+Swimmer 28:
 name: Smith, Clay
 yr: JR
 school: Colby
@@ -2966,7 +2895,7 @@ finals_time: None
 prelim_rank: 28
 final_rank: None
 
-Swimmer 28:
+Swimmer 29:
 name: Halsey, Micah
 yr: FR
 school: Williams
@@ -2977,7 +2906,7 @@ finals_time: None
 prelim_rank: 29
 final_rank: None
 
-Swimmer 29:
+Swimmer 30:
 name: Harden, Dave
 yr: JR
 school: Bowdoin
@@ -2988,7 +2917,7 @@ finals_time: None
 prelim_rank: 30
 final_rank: None
 
-Swimmer 30:
+Swimmer 31:
 name: Merrill, Landon
 yr: SR
 school: Conn College
@@ -2999,7 +2928,7 @@ finals_time: None
 prelim_rank: 31
 final_rank: None
 
-Swimmer 31:
+Swimmer 32:
 name: Heynen, Dominik
 yr: FR
 school: Wesleyan
@@ -3010,7 +2939,7 @@ finals_time: None
 prelim_rank: 32
 final_rank: None
 
-Swimmer 32:
+Swimmer 33:
 name: Silva, Mark V
 yr: FR
 school: Trinity
@@ -3021,7 +2950,7 @@ finals_time: None
 prelim_rank: 33
 final_rank: None
 
-Swimmer 33:
+Swimmer 34:
 name: Thomas, Will
 yr: JR
 school: Bowdoin
@@ -3032,7 +2961,7 @@ finals_time: None
 prelim_rank: 34
 final_rank: None
 
-Swimmer 34:
+Swimmer 35:
 name: Hazard, Rob
 yr: FR
 school: Tufts
@@ -3043,7 +2972,7 @@ finals_time: None
 prelim_rank: 35
 final_rank: None
 
-Swimmer 35:
+Swimmer 36:
 name: Bucklin, Matt
 yr: FR
 school: Colby
@@ -3054,7 +2983,7 @@ finals_time: None
 prelim_rank: 36
 final_rank: None
 
-Swimmer 36:
+Swimmer 37:
 name: Cole, Adam
 yr: JR
 school: Williams
@@ -3065,7 +2994,7 @@ finals_time: None
 prelim_rank: 37
 final_rank: None
 
-Swimmer 37:
+Swimmer 38:
 name: Kingsbury, Josh
 yr: JR
 school: Bowdoin
@@ -3076,7 +3005,7 @@ finals_time: None
 prelim_rank: 38
 final_rank: None
 
-Swimmer 38:
+Swimmer 39:
 name: Fernandez-Goodman, Mosah
 yr: FR
 school: Wesleyan
@@ -3744,26 +3673,7 @@ prelim_time: 1:06.54
 finals_time: 1:05.83
 prelim_rank: 23
 final_rank: 23
---------------------------------------------------
-event: 17
-meet: 2002_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 800
-source_file: 2002_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 18
-meet: 2002_Nescac_Msd_Results
-stroke: Freestyle
-gender: Men
-distance: 1650
-source_file: 2002_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: individual
-Results:
+
 --------------------------------------------------
 event: 19
 meet: 2002_Nescac_Msd_Results
@@ -4972,14 +4882,14 @@ prelim_rank: 12
 final_rank: 12
 
 Swimmer 13:
-name: Shanahan Jr., Kear
+name: Shanahan Jr., Kearney
 yr: SO
 school: Colby
 exhibition: False
 seed_time: None
 prelim_time: 2:01.29
 finals_time: 2:02.49
-prelim_rank: None
+prelim_rank: 11
 final_rank: 13
 
 Swimmer 14:
@@ -5104,17 +5014,6 @@ prelim_rank: 24
 final_rank: 24
 
 Swimmer 25:
-name: Shanahan Jr., Kearney
-yr: SO
-school: Colby
-exhibition: False
-seed_time: None
-prelim_time: 2:01.29
-finals_time: None
-prelim_rank: 11
-final_rank: None
-
-Swimmer 26:
 name: Sterling, Christian A
 yr: SR
 school: Trinity
@@ -5125,7 +5024,7 @@ finals_time: None
 prelim_rank: 14
 final_rank: None
 
-Swimmer 27:
+Swimmer 26:
 name: Barr, Phil
 yr: SO
 school: Bates
@@ -5136,7 +5035,7 @@ finals_time: None
 prelim_rank: 25
 final_rank: None
 
-Swimmer 28:
+Swimmer 27:
 name: Lee, Reese D
 yr: JR
 school: Trinity
@@ -5147,7 +5046,7 @@ finals_time: None
 prelim_rank: 26
 final_rank: None
 
-Swimmer 29:
+Swimmer 28:
 name: Jones, Dan
 yr: JR
 school: Wesleyan
@@ -5157,367 +5056,3 @@ prelim_time: 2:22.25
 finals_time: None
 prelim_rank: 27
 final_rank: None
---------------------------------------------------
-event: 23
-meet: 2002_Nescac_Msd_Results
-stroke: IM
-gender: Men
-distance: 100
-source_file: 2002_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: individual
-Results:
-
-Swimmer 1:
-name: Morash, Dan
-yr: SO
-school: Amherst
-exhibition: False
-seed_time: None
-prelim_time: 54.12
-finals_time: 54.29
-prelim_rank: 1
-final_rank: 1
-
-Swimmer 2:
-name: Kinney, Stephen
-yr: JR
-school: Middlebury
-exhibition: False
-seed_time: None
-prelim_time: 55.43
-finals_time: 54.66
-prelim_rank: 3
-final_rank: 2
-
-Swimmer 3:
-name: Solow, Aeric
-yr: SO
-school: Tufts
-exhibition: False
-seed_time: None
-prelim_time: 55.34
-finals_time: 55.02
-prelim_rank: 2
-final_rank: 3
-
-Swimmer 4:
-name: Heagle, Jimmy
-yr: JR
-school: Tufts
-exhibition: False
-seed_time: None
-prelim_time: 55.83
-finals_time: 55.25
-prelim_rank: 4
-final_rank: 4
-
-Swimmer 5:
-name: Meyers, Jamie
-yr: SO
-school: Tufts
-exhibition: False
-seed_time: None
-prelim_time: 56.53
-finals_time: 56.12
-prelim_rank: 7
-final_rank: 5
-
-Swimmer 6:
-name: Hseng, Sao Ohn
-yr: FR
-school: Bates
-exhibition: False
-seed_time: None
-prelim_time: 56.40
-finals_time: 56.22
-prelim_rank: 6
-final_rank: 6
-
-Swimmer 7:
-name: Imig, Steve
-yr: SR
-school: Bates
-exhibition: False
-seed_time: None
-prelim_time: 56.18
-finals_time: 56.51
-prelim_rank: 5
-final_rank: 7
-
-Swimmer 8:
-name: Ovsjanikovs, Max
-yr: FR
-school: Middlebury
-exhibition: False
-seed_time: None
-prelim_time: 56.80
-finals_time: 56.88
-prelim_rank: 8
-final_rank: 8
-
-Swimmer 9:
-name: Anson, Robie
-yr: JR
-school: Bowdoin
-exhibition: False
-seed_time: None
-prelim_time: 56.82
-finals_time: 56.62
-prelim_rank: 9
-final_rank: 9
-
-Swimmer 10:
-name: Schmidt, Greg
-yr: SO
-school: Tufts
-exhibition: False
-seed_time: None
-prelim_time: 56.82
-finals_time: 57.23
-prelim_rank: 9
-final_rank: 10
-
-Swimmer 11:
-name: Porter, Colin
-yr: FR
-school: Amherst
-exhibition: False
-seed_time: None
-prelim_time: 57.50
-finals_time: 57.66
-prelim_rank: 12
-final_rank: 11
-
-Swimmer 12:
-name: Salinas, Adrian
-yr: FR
-school: Williams
-exhibition: False
-seed_time: None
-prelim_time: 57.59
-finals_time: 57.77
-prelim_rank: 13
-final_rank: 12
-
-Swimmer 13:
-name: Catalano, Kenny
-yr: SR
-school: Bates
-exhibition: False
-seed_time: None
-prelim_time: 58.91
-finals_time: 57.86
-prelim_rank: 16
-final_rank: 13
-
-Swimmer 14:
-name: Callow, Dane
-yr: SR
-school: Middlebury
-exhibition: False
-seed_time: None
-prelim_time: 56.99
-finals_time: 58.07
-prelim_rank: 11
-final_rank: 14
-
-Swimmer 15:
-name: Bowden, Eric
-yr: FR
-school: Bates
-exhibition: False
-seed_time: None
-prelim_time: 58.01
-finals_time: 58.39
-prelim_rank: 14
-final_rank: 15
-
-Swimmer 16:
-name: Bouley, Tim
-yr: SR
-school: Tufts
-exhibition: False
-seed_time: None
-prelim_time: 58.71
-finals_time: 58.40
-prelim_rank: 15
-final_rank: 16
-
-Swimmer 17:
-name: Held, Jeff
-yr: SO
-school: Tufts
-exhibition: False
-seed_time: None
-prelim_time: 59.23
-finals_time: 58.25
-prelim_rank: 18
-final_rank: 17
-
-Swimmer 18:
-name: Smith, Clay
-yr: JR
-school: Colby
-exhibition: False
-seed_time: None
-prelim_time: 59.13
-finals_time: 58.74
-prelim_rank: 17
-final_rank: 18
-
-Swimmer 19:
-name: Merrill, Landon
-yr: SR
-school: Conn College
-exhibition: False
-seed_time: None
-prelim_time: 1:00.23
-finals_time: 1:00.00
-prelim_rank: 19
-final_rank: 19
-
-Swimmer 20:
-name: Laughery, Colin
-yr: FR
-school: Hamilton
-exhibition: False
-seed_time: None
-prelim_time: 1:02.48
-finals_time: 1:02.11
-prelim_rank: 21
-final_rank: 20
-
-Swimmer 21:
-name: Connell, Ryan
-yr: SO
-school: Colby
-exhibition: False
-seed_time: None
-prelim_time: 1:01.84
-finals_time: 1:02.63
-prelim_rank: 20
-final_rank: 21
-
-Swimmer 22:
-name: Thomas, Will
-yr: JR
-school: Bowdoin
-exhibition: False
-seed_time: None
-prelim_time: 1:02.51
-finals_time: 1:03.17
-prelim_rank: 22
-final_rank: 22
-
-Swimmer 23:
-name: Cohen, Chase
-yr: FR
-school: Colby
-exhibition: False
-seed_time: None
-prelim_time: 1:04.79
-finals_time: 1:05.53
-prelim_rank: 23
-final_rank: 23
---------------------------------------------------
-event: 25
-meet: 2002_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 400
-source_file: 2002_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 101
-meet: 2002_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 200
-source_file: 2002_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 109
-meet: 2002_Nescac_Msd_Results
-stroke: Medley Relay
-gender: Men
-distance: 400
-source_file: 2002_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 110
-meet: 2002_Nescac_Msd_Results
-stroke: Medley Relay
-gender: Men
-distance: 200
-source_file: 2002_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 117
-meet: 2002_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 800
-source_file: 2002_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 125
-meet: 2002_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 400
-source_file: 2002_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 201
-meet: 2002_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 200
-source_file: 2002_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 209
-meet: 2002_Nescac_Msd_Results
-stroke: Medley Relay
-gender: Men
-distance: 400
-source_file: 2002_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 210
-meet: 2002_Nescac_Msd_Results
-stroke: Medley Relay
-gender: Men
-distance: 200
-source_file: 2002_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 225
-meet: 2002_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 400
-source_file: 2002_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
