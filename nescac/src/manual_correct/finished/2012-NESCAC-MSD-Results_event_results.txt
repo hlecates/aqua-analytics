@@ -1,13 +1,3 @@
-event: 1
-meet: 2012_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 200
-source_file: 2012_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
 event: 2
 meet: 2012_Nescac_Msd_Results
 stroke: Breaststroke
@@ -1578,6 +1568,17 @@ prelim_rank: 22
 final_rank: 21
 
 Swimmer 22:
+name: Gong, Duo
+yr: SO
+school: Hamilton-AD
+exhibition: False
+seed_time: 27.15
+prelim_time: 26.61
+finals_time: 26.86
+prelim_rank: 23
+final_rank: 21
+
+Swimmer 23:
 name: Grodkiewicz, Travis J
 yr: SR
 school: Tufts-NE
@@ -1588,7 +1589,7 @@ finals_time: 27.02
 prelim_rank: 25
 final_rank: 23
 
-Swimmer 23:
+Swimmer 24:
 name: McCann, Ryan R
 yr: SO
 school: Trinity C.-CT
@@ -1599,7 +1600,7 @@ finals_time: 27.13
 prelim_rank: 24
 final_rank: 24
 
-Swimmer 24:
+Swimmer 25:
 name: Gilligan, Brian J
 yr: SR
 school: Colby-ME
@@ -1610,7 +1611,7 @@ finals_time: None
 prelim_rank: 7
 final_rank: None
 
-Swimmer 25:
+Swimmer 26:
 name: Tschaen, Brendan P
 yr: SO
 school: Colby-ME
@@ -1621,7 +1622,7 @@ finals_time: None
 prelim_rank: 26
 final_rank: None
 
-Swimmer 26:
+Swimmer 27:
 name: Trombetta, Jeremy T
 yr: FR
 school: Hamilton-AD
@@ -1632,7 +1633,7 @@ finals_time: None
 prelim_rank: 27
 final_rank: None
 
-Swimmer 27:
+Swimmer 28:
 name: Castelluccio, Brian C
 yr: SR
 school: Trinity C.-CT
@@ -1643,7 +1644,7 @@ finals_time: None
 prelim_rank: 28
 final_rank: None
 
-Swimmer 28:
+Swimmer 29:
 name: Huston, Dan E
 yr: SO
 school: Bates-ME
@@ -1654,7 +1655,7 @@ finals_time: None
 prelim_rank: 29
 final_rank: None
 
-Swimmer 29:
+Swimmer 30:
 name: Forde, James H
 yr: SO
 school: Wesleyan-CT
@@ -1665,7 +1666,7 @@ finals_time: None
 prelim_rank: 30
 final_rank: None
 
-Swimmer 30:
+Swimmer 31:
 name: Norton, Adam T
 yr: SR
 school: Trinity C.-CT
@@ -1676,7 +1677,7 @@ finals_time: None
 prelim_rank: 31
 final_rank: None
 
-Swimmer 31:
+Swimmer 32:
 name: Lerner, Lane R
 yr: SO
 school: Hamilton-AD
@@ -1687,7 +1688,7 @@ finals_time: None
 prelim_rank: 32
 final_rank: None
 
-Swimmer 32:
+Swimmer 33:
 name: Holmsen, Erik K
 yr: FR
 school: Colby-ME
@@ -2685,36 +2686,6 @@ prelim_time: 24.39
 finals_time: None
 prelim_rank: 47
 final_rank: None
---------------------------------------------------
-event: 9
-meet: 2012_Nescac_Msd_Results
-stroke: Medley Relay
-gender: Men
-distance: 400
-source_file: 2012_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 10
-meet: 2012_Nescac_Msd_Results
-stroke: Medley Relay
-gender: Men
-distance: 200
-source_file: 2012_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 11
-meet: 2012_Nescac_Msd_Results
-stroke: Freestyle
-gender: Men
-distance: 1000
-source_file: 2012_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: individual
-Results:
 --------------------------------------------------
 event: 12
 meet: 2012_Nescac_Msd_Results
@@ -4714,6 +4685,17 @@ prelim_rank: 34
 final_rank: None
 
 Swimmer 35:
+name: Gong, Duo
+yr: SO
+school: Hamilton-AD
+exhibition: False
+seed_time: 58.41
+prelim_time: 58.20
+finals_time: None
+prelim_rank: 35
+final_rank: None
+
+Swimmer 36:
 name: Castelluccio, Brian C
 yr: SR
 school: Trinity C.-CT
@@ -4724,7 +4706,7 @@ finals_time: None
 prelim_rank: 36
 final_rank: None
 
-Swimmer 36:
+Swimmer 37:
 name: Norton, Adam T
 yr: SR
 school: Trinity C.-CT
@@ -4735,7 +4717,7 @@ finals_time: None
 prelim_rank: 37
 final_rank: None
 
-Swimmer 37:
+Swimmer 38:
 name: Lerner, Lane R
 yr: SO
 school: Hamilton-AD
@@ -4746,7 +4728,7 @@ finals_time: None
 prelim_rank: 38
 final_rank: None
 
-Swimmer 38:
+Swimmer 39:
 name: Holmsen, Erik K
 yr: FR
 school: Colby-ME
@@ -4756,26 +4738,6 @@ prelim_time: 1:07.94
 finals_time: None
 prelim_rank: 39
 final_rank: None
---------------------------------------------------
-event: 17
-meet: 2012_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 800
-source_file: 2012_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 18
-meet: 2012_Nescac_Msd_Results
-stroke: Freestyle
-gender: Men
-distance: 1650
-source_file: 2012_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: individual
-Results:
 --------------------------------------------------
 event: 19
 meet: 2012_Nescac_Msd_Results
@@ -6609,14 +6571,3 @@ prelim_time: 2:12.03
 finals_time: None
 prelim_rank: 36
 final_rank: None
---------------------------------------------------
-event: 24
-meet: 2012_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 400
-source_file: 2012_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------

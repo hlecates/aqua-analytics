@@ -9,7 +9,7 @@ USA_SWIMMING_BASE = "https://www.usaswimming.org"
 # ====================
 # Logging & Output
 # ====================
-LOG_LEVEL = "INFO"
+LOG_LEVEL = "DEBUG"
 DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
 TIMEZONE = "UTC"
 

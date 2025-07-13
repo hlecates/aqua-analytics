@@ -53,7 +53,7 @@ class MeetDataPipeline:
             return []
 
     def parse_single_txt(self, txt_path: Path) -> List[Dict]:
-        logging.debug(f"Parsing TXT: {txt_path.name}")
+        logging.info(f"Parsing TXT: {txt_path.name}")
         try:
             with open(txt_path, 'r', encoding='utf-8', errors='ignore') as file:
                 all_text = file.read()

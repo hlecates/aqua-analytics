@@ -1,13 +1,3 @@
-event: 1
-meet: 2011_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 200
-source_file: 2011_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
 event: 2
 meet: 2011_Nescac_Msd_Results
 stroke: Breaststroke
@@ -2576,36 +2566,6 @@ finals_time: None
 prelim_rank: 43
 final_rank: None
 --------------------------------------------------
-event: 9
-meet: 2011_Nescac_Msd_Results
-stroke: Medley Relay
-gender: Men
-distance: 400
-source_file: 2011_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 10
-meet: 2011_Nescac_Msd_Results
-stroke: Medley Relay
-gender: Men
-distance: 200
-source_file: 2011_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 11
-meet: 2011_Nescac_Msd_Results
-stroke: Freestyle
-gender: Men
-distance: 1000
-source_file: 2011_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: individual
-Results:
---------------------------------------------------
 event: 12
 meet: 2011_Nescac_Msd_Results
 stroke: IM
@@ -4603,26 +4563,6 @@ finals_time: None
 prelim_rank: 31
 final_rank: None
 --------------------------------------------------
-event: 17
-meet: 2011_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 800
-source_file: 2011_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 18
-meet: 2011_Nescac_Msd_Results
-stroke: Freestyle
-gender: Men
-distance: 1650
-source_file: 2011_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: individual
-Results:
---------------------------------------------------
 event: 19
 meet: 2011_Nescac_Msd_Results
 stroke: Backstroke
@@ -6367,104 +6307,3 @@ prelim_time: 2:10.56
 finals_time: None
 prelim_rank: 36
 final_rank: None
---------------------------------------------------
-event: 24
-meet: 2011_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 400
-source_file: 2011_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 101
-meet: 2011_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 200
-source_file: 2011_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 109
-meet: 2011_Nescac_Msd_Results
-stroke: Medley Relay
-gender: Men
-distance: 400
-source_file: 2011_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 110
-meet: 2011_Nescac_Msd_Results
-stroke: Medley Relay
-gender: Men
-distance: 200
-source_file: 2011_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 117
-meet: 2011_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 800
-source_file: 2011_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 124
-meet: 2011_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 400
-source_file: 2011_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 201
-meet: 2011_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 200
-source_file: 2011_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 209
-meet: 2011_Nescac_Msd_Results
-stroke: Medley Relay
-gender: Men
-distance: 400
-source_file: 2011_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 210
-meet: 2011_Nescac_Msd_Results
-stroke: Medley Relay
-gender: Men
-distance: 200
-source_file: 2011_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------
-event: 224
-meet: 2011_Nescac_Msd_Results
-stroke: Freestyle Relay
-gender: Men
-distance: 400
-source_file: 2011_NESCAC_MSD_Results.txt
-meet_category: txts
-event_type: relay
-Results:
---------------------------------------------------

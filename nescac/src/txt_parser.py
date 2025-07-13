@@ -13,6 +13,10 @@ class TXTParser(BaseParser):
         self.txt_prelims_re = re.compile(
             r'^\s*(\d+)\s+([A-Za-z.,\'\- ]+?)\s{2,}([A-Za-z0-9]{2}|[A-Za-z]{2,4}|\d{2}|)\s+([A-Za-z.\'\- ]+?)\s+([\d:.NTXb#&]+)(?:\s+([\d:.NTXb#&A-Z!]+))?'
         )
+        # New pattern for 2013+ format prelims entries (rank, name, year, school, seed, prelim)
+        self.txt_prelims_seed_prelim_re = re.compile(
+            r'^\s*(\d+)\s+([A-Za-z.,\'\- ]+?)\s{2,}([A-Za-z0-9]{2}|[A-Za-z]{2,4}|\d{2}|)\s+([A-Za-z.\'\- ]+?)\s+([\d:.NTXb#&]+)\s+([\d:.NTXb#&A-Z!]+)'
+        )
         # Improved pattern for finals entries (rank, name, year, school, prelim, final, points)
         self.txt_finals_re = re.compile(
             r'^\s*(\d+)\s+([A-Za-z.,\'\- ]+?)\s{2,}([A-Za-z0-9]{2}|[A-Za-z]{2,4}|\d{2}|)\s+([A-Za-z.\'\- ]+?)\s+([\d:.NTXb#&]+)\s+([\d:.NTXb#&A-Z!]+)(?:\s+(\d+))?'
@@ -24,6 +28,10 @@ class TXTParser(BaseParser):
         # Fallback patterns for lines with NO year field
         self.txt_prelims_no_year_re = re.compile(
             r'^\s*(\d+)\s+([A-Za-z.,\'\- ]+?)\s{2,}([A-Za-z.\'\- ]+?)\s+([\d:.NTXb#&]+)(?:\s+([\d:.NTXb#&A-Z!]+))?\s*$'
+        )
+        # New pattern for 2013+ format prelims entries without year (rank, name, school, seed, prelim)
+        self.txt_prelims_seed_prelim_no_year_re = re.compile(
+            r'^\s*(\d+)\s+([A-Za-z.,\'\- ]+?)\s{2,}([A-Za-z.\'\- ]+?)\s+([\d:.NTXb#&]+)\s+([\d:.NTXb#&A-Z!]+)\s*$'
         )
         self.txt_finals_no_year_re = re.compile(
             r'^\s*(\d+)\s+([A-Za-z.,\'\- ]+?)\s{2,}([A-Za-z.\'\- ]+?)\s+([\d:.NTXb#&]+)\s+([\d:.NTXb#&A-Z!]+)(?:\s+(\d+))?\s*$'
@@ -48,7 +56,6 @@ class TXTParser(BaseParser):
             r"^\s*\d+\.\d+\s+NAT[AB]$",
             r"^\s*Name\s+Year\s+School",
             r"^\s*Name\s+Year\s+School\s+Prelims\s+Finals\s+Points",
-            r"^\s*Name\s+Year\s+School\s+Seed\s+Prelims",
         ]
         processed = []
         for line in lines:
@@ -220,6 +227,50 @@ class TXTParser(BaseParser):
                 return result
         # Only try prelims regexes if section is 'prelims'
         if current_section == 'prelims':
+            logging.debug(f"Trying prelims regexes for line: {clean}")
+            # Try new 2013+ format first (seed, prelim)
+            m = self.txt_prelims_seed_prelim_re.match(clean)
+            if m:
+                logging.debug(f"2013+ format matched: {clean}")
+                groups = m.groups()
+                rank, name, yr, school, seed_time, prelim_time = groups
+                parsed_yr = self._parse_year_field(yr) if yr else 'NONE'
+                # SKIP: If school is empty and seed_time or prelim_time is a 2-digit number
+                if (not school.strip()) and ((seed_time and len(seed_time.strip()) == 2 and seed_time.strip().isdigit()) or (prelim_time and len(prelim_time.strip()) == 2 and prelim_time.strip().isdigit())):
+                    return None
+                result = {
+                    'name': name.strip(),
+                    'yr': parsed_yr,
+                    'school': school.strip(),
+                    'seed_time': self._clean_time_string(seed_time),
+                    'prelim_time': self._clean_time_string(prelim_time),
+                    'finals_time': None,
+                    'rank': 'exhibition' if is_exhibition else rank,
+                    'exhibition': is_exhibition,
+                    'section': current_section
+                }
+                result = self._cleanup_school_time(result)
+                return result
+            m = self.txt_prelims_seed_prelim_no_year_re.match(clean)
+            if m:
+                rank, name, school, seed_time, prelim_time = m.groups()
+                # SKIP: If school is empty and seed_time or prelim_time is a 2-digit number
+                if (not school.strip()) and ((seed_time and len(seed_time.strip()) == 2 and seed_time.strip().isdigit()) or (prelim_time and len(prelim_time.strip()) == 2 and prelim_time.strip().isdigit())):
+                    return None
+                result = {
+                    'name': name.strip(),
+                    'yr': 'NONE',
+                    'school': school.strip(),
+                    'seed_time': self._clean_time_string(seed_time),
+                    'prelim_time': self._clean_time_string(prelim_time),
+                    'finals_time': None,
+                    'rank': 'exhibition' if is_exhibition else rank,
+                    'exhibition': is_exhibition,
+                    'section': current_section
+                }
+                result = self._cleanup_school_time(result)
+                return result
+            # Try legacy format (time1, time2 or single time)
             m = self.txt_prelims_re.match(clean)
             if m:
                 groups = m.groups()
@@ -374,7 +425,13 @@ class TXTParser(BaseParser):
                 sec = self._is_section_header(line)
                 if sec:
                     current_section = sec
-
+                    continue
+                
+                # Check for 2013+ format preliminaries section (no explicit header)
+                # Look for the header line that contains "Seed" and "Prelims"
+                if 'Seed' in line and 'Prelims' in line and 'Name' in line:
+                    logging.debug(f"Detected 2013+ prelims section: {line.strip()}")
+                    current_section = 'prelims'
                     continue
             if current_section and current_key:
                 entry = self._parse_entry(line, current_section, events[current_key]['event_type'])
@@ -405,6 +462,7 @@ class TXTParser(BaseParser):
                 if current_section == 'prelims':
                     # For prelims, preserve seed_time if it exists in the entry
                     if entry['seed_time'] is not None:
+                        logging.debug(f"Setting seed_time for {entry['name']}: {entry['seed_time']}")
                         existing['seed_time'] = entry['seed_time']
                     existing['prelim_time'] = existing['prelim_time'] or entry['prelim_time']
                     existing['prelim_rank'] = existing['prelim_rank'] or entry['rank']
@@ -433,6 +491,10 @@ class TXTParser(BaseParser):
                     fallback = prelim_seed_lookup.get((v['name'], v['school']))
                     if fallback:
                         v['seed_time'] = fallback
+
+            # Debug: Check seed times after merging
+            seed_time_count = sum(1 for v in result_map.values() if v.get('seed_time'))
+            logging.debug(f"After merging: {seed_time_count}/{len(result_map)} entries have seed times")
 
             # Ensure all prelims entries are included if they have a seed_time or prelim_time
             # Build a set of (name, school) already in result_map
