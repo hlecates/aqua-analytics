@@ -9,7 +9,7 @@ A comprehensive machine learning project for predicting competitive swimming per
 Aqua Analytics operates at two distinct competitive levels:
 
 - **National Level**: Prediction models for elite national swimming competitions, focusing on world record residuals, American record differentials, and top seed win probabilities
-- **NESCAC Level**: Analysis of Division III conference competition within the New England Small College Athletic Conference
+- **NESCAC Level**: Analysis of Division III conference competition within the New England Small College Athletic Conference, focusing on finals qualification. 
 
 The project combines web scraping, feature engineering, machine learning, and statistical analysis to provide insights into swimming performance patterns and competitive outcomes.
 

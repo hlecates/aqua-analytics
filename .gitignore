@@ -45,5 +45,9 @@ venv.bak/
 Thumbs.db
 
 # Logs
-.logs
+logs/
 *.log
+
+# Inprocess data
+finished/
+individual/

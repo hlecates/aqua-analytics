@@ -226,9 +226,9 @@ class DataFormatter:
         # Extract year from source_file
         df_individual['year'] = df_individual['source_file'].astype(str).apply(self.extract_year_from_source_file)
         
-        # Create event_name from distance and stroke
+        # Create event_name from distance and stroke with underscore
         df_individual['event_name'] = df_individual.apply(
-            lambda row: f"{row['distance']} {row['stroke']}", axis=1
+            lambda row: f"{row['distance']}_{row['stroke']}", axis=1
         )
         
         results = []

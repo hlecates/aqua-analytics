@@ -17,13 +17,11 @@ class MeetDataPipeline:
         self.output_base = output_base
         self.raw_pdf_dir = output_base / "raw" / "pdfs"
         self.raw_txt_dir = output_base / "raw" / "txts"
-        self.processed_dir = output_base / "processed" / "parsed"
         self.clean_dir = output_base / "processed" / "clean"
 
         # Create directories
         self.raw_pdf_dir.mkdir(parents=True, exist_ok=True)
         self.raw_txt_dir.mkdir(parents=True, exist_ok=True)
-        self.processed_dir.mkdir(parents=True, exist_ok=True)
         self.clean_dir.mkdir(parents=True, exist_ok=True)
 
         # Setup logging and initialize parsers
@@ -177,7 +175,7 @@ class MeetDataPipeline:
                 
             # Create a clean filename
             clean_name = meet_name.replace('_', '-').replace(' ', '-')
-            output_path = self.processed_dir / "individual" / f"{clean_name}_parsed.csv"
+            output_path = self.clean_dir / "individual" / f"{clean_name}_parsed.csv"
             
             self.save_data(df, output_path)
             logging.info(f"Saved individual meet file: {output_path.name}")
@@ -191,22 +189,13 @@ class MeetDataPipeline:
         logging.debug(f"Saved data to {output_path}")
         return output_path
 
-    def clean_existing_data(self) -> Tuple[Optional[Path], Optional[Path]]:
-        logging.info("Cleaning existing parsed data")
-        parsed = self.processed_dir / "parsed_events.csv"
-        if not parsed.exists():
-            logging.error(f"Parsed data not found at {parsed}")
-            return None, None
-        df = pd.read_csv(parsed)
-        clean_df = self.data_formatter.clean_dataframe(df)
-        clean_path = self.save_data(clean_df, self.clean_dir / "clean_events.csv")
-        return parsed, clean_path
+
 
     def process_individual_files(self) -> Optional[Path]:
         """Process all individual CSV files and create a combined dataset."""
         logging.info("Processing individual CSV files")
         
-        individual_dir = self.processed_dir / "individual"
+        individual_dir = self.clean_dir / "individual"
         if not individual_dir.exists():
             logging.error(f"Individual directory not found at {individual_dir}")
             return None
@@ -233,6 +222,9 @@ class MeetDataPipeline:
                 # Process the dataframe using the new formatter
                 clean_df = self.data_formatter.clean_dataframe(df)
                 logging.info(f"  Processed into {len(clean_df)} clean rows")
+                
+                # Add the original results column back to the cleaned dataframe
+                clean_df['results'] = df['results']
                 
                 # Add to results
                 all_results.append(clean_df)
@@ -296,11 +288,14 @@ class MeetDataPipeline:
 
     def run_pipeline(self, parse_pdfs: bool = True, parse_txts: bool = True) -> Tuple[Optional[Path], Optional[Path]]:
         logging.info("Starting meet data pipeline")
-        df = self.parse_all_files(parse_pdfs=parse_pdfs, parse_txts=parse_txts)
-        parsed_path = self.save_data(df, self.processed_dir / "parsed_events.csv")
-        clean_df = self.data_formatter.clean_dataframe(df)
-        clean_path = self.save_data(clean_df, self.clean_dir / "clean_events.csv")
-        return parsed_path, clean_path
+        # Parse all files and save individual meet files
+        df = self.parse_all_files(parse_pdfs=parse_pdfs, parse_txts=parse_txts, save_individual=True)
+        parsed_path = self.save_data(df, self.clean_dir / "parsed_events.csv")
+        
+        # Process individual files and create combined dataset
+        combined_path = self.process_individual_files()
+        
+        return parsed_path, combined_path
 
 
 def main():
@@ -327,12 +322,11 @@ def main():
     cmd = args[0].lower() if args else None
     if cmd == "--parse":
         df = pipeline.parse_all_files(save_individual=True, parse_pdfs=parse_pdfs, parse_txts=parse_txts)
-        path = pipeline.save_data(df, pipeline.processed_dir / "parsed_events.csv")
+        path = pipeline.save_data(df, pipeline.clean_dir / "parsed_events.csv")
         print(f"Success: {path}" if path else "Failed to save parsed data.")
-        print("Individual meet files have been saved to the processed/parsed directory.")
+        print("Individual meet files have been saved to the clean/individual directory.")
     elif cmd == "--clean":
-        parsed, clean = pipeline.clean_existing_data()
-        print(f"Success: {clean}" if clean else "Failed to clean data.")
+        print("The --clean command has been deprecated. Use --combine to process individual files.")
     elif cmd == "--combine":
         combined_path = pipeline.process_individual_files()
         if combined_path:
@@ -351,9 +345,9 @@ def main():
             print(f"Combined dataset not found at {combined_path}")
             print("Run --combine first to generate the dataset.")
     else:
-        parsed, clean = pipeline.run_pipeline(parse_pdfs=parse_pdfs, parse_txts=parse_txts)
-        if parsed and clean:
-            print(f"Success: Generated {parsed.name}, {clean.name}")
+        parsed, combined = pipeline.run_pipeline(parse_pdfs=parse_pdfs, parse_txts=parse_txts)
+        if parsed and combined:
+            print(f"Success: Generated {parsed.name}, {combined.name}")
         elif parsed:
             print(f"Partial success: Generated {parsed.name}")
         else:
