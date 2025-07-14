@@ -2,15 +2,28 @@ import pandas as pd
 import numpy as np
 import ast
 import re
-from typing import List, Dict, Optional, Union
+from typing import List, Dict, Optional, Union, Tuple
 import logging
 
 class DataFormatter:
     def __init__(self):
         pass
 
+    def clean_time_string(self, time_str: Union[str, None]) -> str:
+        """Clean time string by removing special characters and keeping only numbers, colons, and periods."""
+        if pd.isna(time_str) or not time_str:
+            return ""
+        
+        time_str = str(time_str).strip()
+        
+        # Remove special characters that indicate records or other annotations
+        # Keep only numbers, colons, and periods
+        cleaned = re.sub(r'[^0-9:.]', '', time_str)
+        
+        return cleaned
 
     def parse_time_to_seconds(self, time_str: str) -> Optional[float]:
+        """Convert time string to seconds, handling both MM:SS.HH and SS.HH formats."""
         if pd.isna(time_str) or not time_str:
             return None
         
@@ -19,8 +32,10 @@ class DataFormatter:
         if time_str in ['NT', 'NTX', 'X', 'DQ', 'NS', 'SCR', '--', '---']:
             return None
         
-        # Remove special characters that indicate records
-        time_str = re.sub(r'[#&!*bNATB]+$', '', time_str)
+        # Clean the time string first
+        time_str = self.clean_time_string(time_str)
+        if not time_str:
+            return None
         
         try:
             # Handle MM:SS.HH format
@@ -35,54 +50,82 @@ class DataFormatter:
                 return float(time_str)
         except:
             return None
+
+    def seconds_to_time_format(self, seconds: float) -> str:
+        """Convert seconds back to standard time format (MM:SS.HH or SS.HH)."""
+        if seconds is None:
+            return ""
         
+        if seconds >= 60:
+            minutes = int(seconds // 60)
+            remaining_seconds = seconds % 60
+            return f"{minutes}:{remaining_seconds:06.3f}".rstrip('0').rstrip('.')
+        else:
+            return f"{seconds:.3f}".rstrip('0').rstrip('.')
 
-    def extract_year_from_meet(self, meet_name: str) -> Optional[int]:
-        # Try to find a 4-digit year
-        match = re.search(r'(\d{4})', meet_name)
-        if match:
-            return int(match.group(1))
-        return None
-
-
-    def clean_entry_dict(self, entry: Dict, time_field: str = 'prelim_time') -> Optional[Dict]:
-        if not isinstance(entry, dict):
+    def extract_year_from_source_file(self, source_file: str) -> Optional[int]:
+        """Extract year from the first four characters of source_file."""
+        if pd.isna(source_file) or not source_file:
             return None
         
-        # Create a copy without the 'raw' field
-        cleaned = {k: v for k, v in entry.items() if k != 'raw'}
-        
-        # Fix school names that have times embedded in them
-        if 'school' in cleaned and cleaned['school']:
-            school = cleaned['school']
-            # Check if there's a time pattern in the school name
-            time_match = re.search(r'\s+([\d]+:[\d]+\.[\d]+|[\d]+\.[\d]+)\s*$', school)
-            if time_match:
-                # Extract the time and clean the school name
-                cleaned['school'] = school[:time_match.start()].strip()
-                # The extracted time might be the actual finals time if it's missing
-                if time_field == 'finals_time' and not entry.get('finals_time'):
-                    cleaned['finals_time'] = time_match.group(1)
-        
-        # Add time_sec for all time fields
-        for field in ['seed_time', 'prelim_time', 'finals_time']:
-            if field in cleaned:
-                time_value = cleaned.get(field)
-                cleaned[f'{field}_sec'] = self.parse_time_to_seconds(time_value)
-            else:
-                cleaned[f'{field}_sec'] = None
-        
-        # Add the main time_sec based on the appropriate time field
-        time_value = entry.get(time_field)
-        cleaned['time_sec'] = self.parse_time_to_seconds(time_value)
-        
-        # Only return if we have a valid time
-        if cleaned['time_sec'] is not None:
-            return cleaned
+        source_file = str(source_file)
+        if len(source_file) >= 4:
+            try:
+                return int(source_file[:4])
+            except ValueError:
+                return None
         return None
 
+    def find_cutoff_rank(self, entries: List[Dict], target_rank: int) -> Optional[float]:
+        """
+        Find the cutoff time for a specific rank, handling ties and missing ranks.
+        
+        Args:
+            entries: List of entries sorted by prelim_time_sec
+            target_rank: The target rank (8, 16, or 24)
+        
+        Returns:
+            The time in seconds for the cutoff, or None if not found
+        """
+        if not entries or target_rank <= 0:
+            return None
+        
+        # If we have fewer entries than the target rank, return None
+        if len(entries) < target_rank:
+            return None
+        
+        # Check if there's a tie at the target rank
+        target_entry = entries[target_rank - 1]
+        target_time = target_entry.get('prelim_time_sec')
+        
+        # Check if there are multiple entries with the same time at this rank
+        tied_entries = []
+        for entry in entries:
+            if entry.get('prelim_time_sec') == target_time:
+                tied_entries.append(entry)
+        
+        # If there are ties, use the time of the tie
+        if len(tied_entries) > 1:
+            return target_time
+        
+        # If no tie, check if the target rank exists
+        if target_rank <= len(entries):
+            return target_time
+        
+        # If target rank doesn't exist, try to average surrounding ranks
+        if target_rank > 1 and target_rank < len(entries):
+            lower_time = entries[target_rank - 2].get('prelim_time_sec')
+            upper_time = entries[target_rank].get('prelim_time_sec')
+            
+            if lower_time is not None and upper_time is not None:
+                return (lower_time + upper_time) / 2
+            elif lower_time is not None:
+                return lower_time
+        
+        return None
 
     def process_entries_list(self, entries: Union[str, List], time_field: str = 'prelim_time') -> List[Dict]:
+        """Process entries list and clean all time fields."""
         # Handle None or NaN values
         if entries is None:
             return []
@@ -105,30 +148,40 @@ class DataFormatter:
         if not isinstance(entries, list):
             return []
         
-        # Clean each entry and filter out those without valid times
+        # Clean each entry and add time_sec fields
         cleaned_entries = []
         for entry in entries:
-            cleaned = self.clean_entry_dict(entry, time_field)
-            if cleaned:
-                cleaned_entries.append(cleaned)
+            if not isinstance(entry, dict):
+                continue
+            
+            # Clean all time fields
+            for field in ['seed_time', 'prelim_time', 'finals_time']:
+                if field in entry:
+                    time_value = entry.get(field)
+                    # Clean the time string
+                    cleaned_time = self.clean_time_string(time_value)
+                    entry[f'{field}_cleaned'] = cleaned_time
+                    # Convert to seconds
+                    entry[f'{field}_sec'] = self.parse_time_to_seconds(cleaned_time)
+                else:
+                    entry[f'{field}_cleaned'] = ""
+                    entry[f'{field}_sec'] = None
+            
+            cleaned_entries.append(entry)
         
         return cleaned_entries
 
-
-    def sort_entries_by_time(self, entries: List[Dict], time_field: str = 'time_sec') -> List[Dict]:
+    def sort_entries_by_time(self, entries: List[Dict], time_field: str = 'prelim_time_sec') -> List[Dict]:
+        """Sort entries by time, handling None values."""
         # Add original index to preserve tie order
         for i, entry in enumerate(entries):
             entry['_original_index'] = i
         
         # Sort by the specified time field, then by original index
-        # Handle None values by treating them as infinity
         def get_sort_key(entry):
             time_value = entry.get(time_field)
             if time_value is None:
                 return float('inf')
-            # Convert to seconds if it's a string time
-            if isinstance(time_value, str):
-                return self.parse_time_to_seconds(time_value) or float('inf')
             return time_value
         
         sorted_entries = sorted(entries, key=lambda x: (get_sort_key(x), x['_original_index']))
@@ -139,170 +192,90 @@ class DataFormatter:
         
         return sorted_entries
 
-
-    def get_cutoff_time(self, entries: List[Dict], rank: int, time_field: str = 'time_sec') -> Optional[float]:
-        if rank <= len(entries):
-            return entries[rank - 1].get(time_field)
-        return None
-
-
-    def impute_missing_cutoff(self, cutoffs: Dict[str, Optional[float]], rank: int, 
-                            all_cutoffs: List[Optional[float]]) -> Optional[float]:
-        # DEBUG: Log input
-        logging.debug(f"impute_missing_cutoff called for rank {rank}")
-        logging.debug(f"  Current cutoffs: {cutoffs}")
-        logging.debug(f"  Value for rank_{rank}: {cutoffs.get(f'rank_{rank}')}")
+    def get_winning_time(self, entries: List[Dict]) -> Tuple[Optional[float], str]:
+        """Get the winning time in seconds and standard format."""
+        if not entries:
+            return None, ""
         
-        if cutoffs[f'rank_{rank}'] is not None:
-            logging.debug(f"  Returning existing value: {cutoffs[f'rank_{rank}']}")
-            return cutoffs[f'rank_{rank}']
+        # Find the entry with the best (lowest) finals time
+        best_entry = None
+        best_time = float('inf')
         
-        # Find nearest lower and upper existing cutoffs
-        lower_cutoff = None
-        upper_cutoff = None
+        for entry in entries:
+            finals_time = entry.get('finals_time_sec')
+            if finals_time is not None and finals_time < best_time:
+                best_time = finals_time
+                best_entry = entry
         
-        # Look for lower cutoff
-        for r in range(rank - 1, 0, -1):
-            if r in [8, 16, 24] and cutoffs.get(f'rank_{r}') is not None:
-                lower_cutoff = cutoffs[f'rank_{r}']
-                logging.debug(f"  Found lower cutoff at rank {r}: {lower_cutoff}")
-                break
+        if best_entry is None:
+            return None, ""
         
-        # Look for upper cutoff
-        for r in range(rank + 1, 25):
-            if r in [8, 16, 24] and cutoffs.get(f'rank_{r}') is not None:
-                upper_cutoff = cutoffs[f'rank_{r}']
-                logging.debug(f"  Found upper cutoff at rank {r}: {upper_cutoff}")
-                break
+        winning_time_sec = best_entry.get('finals_time_sec')
+        winning_time_format = best_entry.get('finals_time_cleaned', "")
         
-        # Average if both exist
-        if lower_cutoff is not None and upper_cutoff is not None:
-            result = (lower_cutoff + upper_cutoff) / 2
-            logging.debug(f"  Returning average: {result}")
-            return result
-        elif lower_cutoff is not None:
-            logging.debug(f"  Returning lower cutoff: {lower_cutoff}")
-            return lower_cutoff
-        elif upper_cutoff is not None:
-            logging.debug(f"  Returning upper cutoff: {upper_cutoff}")
-            return upper_cutoff
-        
-        logging.debug(f"  Returning None")
-        return None
-
+        return winning_time_sec, winning_time_format
 
     def clean_dataframe(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Clean and format the dataframe according to the new requirements."""
         logging.info(f"Starting to clean dataframe with {len(df)} rows")
 
         # Filter to individual events only
         df_individual = df[df['event_type'] == 'individual'].copy()
         logging.info(f"Filtered to {len(df_individual)} individual event rows")
 
-        df_individual = df_individual[~df_individual['distance'].isin([1000, 1650])]
-        logging.info(f"Dropped 1000 and 1650 events, {len(df_individual)} rows remaining")
-        
-        # Extract year from meet name
-        df_individual['year'] = df_individual['meet'].apply(self.extract_year_from_meet)
+        # Extract year from source_file
+        df_individual['year'] = df_individual['source_file'].astype(str).apply(self.extract_year_from_source_file)
         
         # Create event_name from distance and stroke
         df_individual['event_name'] = df_individual.apply(
             lambda row: f"{row['distance']} {row['stroke']}", axis=1
         )
         
-        # Group by meet, event, gender, distance
-        grouped = df_individual.groupby(['meet', 'event_name', 'gender', 'distance', 'year', 'stroke'])
-        
         results = []
         
-        for group_key, group_df in grouped:
-            meet, event_name, gender, distance, year, stroke = group_key
-            
-            # DEBUG: Log event being processed
-            if event_name == "50 Backstroke" and gender == "Men" and year == 2006:
-                logging.info(f"\n{'='*60}")
-                logging.info(f"DEBUGGING: {year} {gender} {event_name}")
-                logging.info(f"{'='*60}")
-            
-            # Get the first row for this group
-            row = group_df.iloc[0]
-            
-            # Process prelims and finals
-            prelims = self.process_entries_list(row['prelims'], 'prelim_time')
-            finals = self.process_entries_list(row['finals'], 'finals_time')
-            
-            # DEBUG: Log finals count for target event
-            if event_name == "50 Backstroke" and gender == "Men" and year == 2006:
-                logging.info(f"Number of finals entries parsed: {len(finals)}")
-                if len(finals) > 0:
-                    logging.info(f"First finals entry: {finals[0].get('name')} - {finals[0].get('seed_time_sec')}")
-                    logging.info(f"Last finals entry: {finals[-1].get('name')} - {finals[-1].get('seed_time_sec')}")
-
-            # Sort finals by seed time (not finals time) for cutoff calculation
-            finals_sorted_by_seed = self.sort_entries_by_time(finals, time_field='seed_time')
-            if len(finals_sorted_by_seed) == 0:
+        for _, row in df_individual.iterrows():
+            # Process the results list
+            results_data = row['results']
+            if pd.isna(results_data):
+                continue
+            entries = self.process_entries_list(results_data)
+            if not entries:
                 continue
             
-            # DEBUG: Log sorted finals by seed time for target event
-            if event_name == "50 Backstroke" and gender == "Men" and year == 2006:
-                logging.info(f"\nSorted finals by seed time ({len(finals_sorted_by_seed)} entries):")
-                for i, entry in enumerate(finals_sorted_by_seed[:25]):  # Show first 25
-                    logging.info(f"  Rank {i+1}: {entry.get('name')} - {entry.get('seed_time_sec')}s")
+            # Sort entries by prelim time
+            sorted_entries = self.sort_entries_by_time(entries, 'prelim_time_sec')
             
-            # Split into A, B, C entries based on seed time ranking
-            A_entries = finals_sorted_by_seed[0:8]
-            B_entries = finals_sorted_by_seed[8:16]
-            C_entries = finals_sorted_by_seed[16:24]
+            # Get winning time
+            winning_time_sec, winning_time_format = self.get_winning_time(entries)
             
-            # Get cutoff times from seed time rankings
-            cutoffs = {
-                'rank_8': self.get_cutoff_time(finals_sorted_by_seed, 8, time_field='seed_time'),
-                'rank_16': self.get_cutoff_time(finals_sorted_by_seed, 16, time_field='seed_time'),
-                'rank_24': self.get_cutoff_time(finals_sorted_by_seed, 24, time_field='seed_time')
-            }
+            # Get cutoff times
+            a_cutoff_sec = self.find_cutoff_rank(sorted_entries, 8)
+            b_cutoff_sec = self.find_cutoff_rank(sorted_entries, 16)
+            c_cutoff_sec = self.find_cutoff_rank(sorted_entries, 24)
             
-            # DEBUG: Log raw cutoffs for target event
-            if event_name == "50 Backstroke" and gender == "Men" and year == 2006:
-                logging.info(f"\nRaw cutoffs before imputation:")
-                logging.info(f"  rank_8: {cutoffs['rank_8']}")
-                logging.info(f"  rank_16: {cutoffs['rank_16']}")
-                logging.info(f"  rank_24: {cutoffs['rank_24']}")
-                
-                # Show who is at each cutoff position
-                if len(finals_sorted_by_seed) >= 8:
-                    logging.info(f"  8th place: {finals_sorted_by_seed[7].get('name')} - {finals_sorted_by_seed[7].get('seed_time_sec')}")
-                if len(finals_sorted_by_seed) >= 16:
-                    logging.info(f"  16th place: {finals_sorted_by_seed[15].get('name')} - {finals_sorted_by_seed[15].get('seed_time_sec')}")
-                if len(finals_sorted_by_seed) >= 24:
-                    logging.info(f"  24th place: {finals_sorted_by_seed[23].get('name')} - {finals_sorted_by_seed[23].get('seed_time_sec')}")
-            
-            # Impute missing cutoffs
-            A_cutoff = self.impute_missing_cutoff(cutoffs, 8, list(cutoffs.values()))
-            B_cutoff = self.impute_missing_cutoff(cutoffs, 16, list(cutoffs.values()))
-            C_cutoff = self.impute_missing_cutoff(cutoffs, 24, list(cutoffs.values()))
-            
-            # DEBUG: Log final cutoffs for target event
-            if event_name == "50 Backstroke" and gender == "Men" and year == 2006:
-                logging.info(f"\nFinal cutoffs after imputation:")
-                logging.info(f"  A_cutoff: {A_cutoff}")
-                logging.info(f"  B_cutoff: {B_cutoff}")
-                logging.info(f"  C_cutoff: {C_cutoff}")
-                logging.info(f"{'='*60}\n")
+            # Convert cutoffs to standard format
+            a_cutoff_format = self.seconds_to_time_format(a_cutoff_sec) if a_cutoff_sec is not None else ""
+            b_cutoff_format = self.seconds_to_time_format(b_cutoff_sec) if b_cutoff_sec is not None else ""
+            c_cutoff_format = self.seconds_to_time_format(c_cutoff_sec) if c_cutoff_sec is not None else ""
             
             # Create result row
             result = {
-                'year': year,
-                'event_name': re.sub(r'\s+', '_', event_name),
-                'stroke': stroke,
-                'gender': gender,
-                'distance': distance,
-                'A_cutoff_sec': A_cutoff,
-                'B_cutoff_sec': B_cutoff,
-                'C_cutoff_sec': C_cutoff,
-                'A_entries': A_entries,
-                'B_entries': B_entries,
-                'C_entries': C_entries,
-                'finals': finals,
-                'prelims': self.sort_entries_by_time(prelims, 'prelim_time_sec')  # Sort prelims by prelim time
+                'year': row['year'],
+                'event_name': row['event_name'],
+                'stroke': row['stroke'],
+                'gender': row['gender'],
+                'distance': row['distance'],
+                'meet': row['meet'],
+                'source_file': row['source_file'],
+                'winning_time_sec': winning_time_sec,
+                'winning_time_format': winning_time_format,
+                'a_final_cutoff_sec': a_cutoff_sec,
+                'a_final_cutoff_format': a_cutoff_format,
+                'b_final_cutoff_sec': b_cutoff_sec,
+                'b_final_cutoff_format': b_cutoff_format,
+                'c_final_cutoff_sec': c_cutoff_sec,
+                'c_final_cutoff_format': c_cutoff_format,
+                'total_swimmers': len(entries)
             }
             
             results.append(result)

@@ -15,40 +15,41 @@ class PDFParser(BaseParser):
         # DQ pattern: rank (---, DQ, DSQ), name (optional), year, school, prelim, finals, points (finals section)
         # Handle both individual DQs (with names) and relay DQs (without names)
         self.pdf_dq_re = re.compile(
-            r'^\s*(---|DQ|DSQ|\*?DQ|\*?DSQ)\s+([A-Za-z.,\'\- ]+?)\s+([A-Za-z]{2,4})\s+([A-Za-z.\'\- ]+?)(?:\s+([\d:.NTXb#&]+))?(?:\s+([\d:.NTXb#&A-Z!]+))?(?:\s+([\d.\s]+))?\s*$'
+            r'^\s*(---|DQ|DSQ|\*?DQ|\*?DSQ)\s+([A-Za-z.,\'\- ]+?)\s+([A-Za-z]{2,4})\s+([A-Za-z.\'\- ]+?)(?:\s+([\d:.NTXb#&\$~@\-bp]+))?(?:\s+([\d:.NTXb#&\$~@\-bpA-Z!]+))?(?:\s+([\d.\s]+))?\s*$'
         )
         # Relay DQ pattern: rank (---), school, year, time, points
         self.pdf_relay_dq_re = re.compile(
-            r'^\s*(---|DQ|DSQ)\s+([A-Za-z.\'\- ]+?)\s+([A-Za-z]{1,2})\s+([\d:.NTXb#&]+)\s+([A-Za-z0-9]+)\s*$'
+            r'^\s*(---|DQ|DSQ)\s+([A-Za-z.\'\- ]+?)\s+([A-Za-z]{1,2})\s+([\d:.NTXb#&\$~@\-bp]+)\s+([A-Za-z0-9]+)\s*$'
         )
         # Finals pattern: rank, name, year, school, prelim_time, finals_time, points
         # Fixed to handle names with commas like "Tamposi, Jake"
         # Updated to handle asterisk rankings (*1, *2) for ties
         # Updated to handle points format like "25. 50" (with space)
+        # Updated to handle $, ~, @, -, b, p symbols for National cuts
         self.pdf_finals_re = re.compile(
-            r'^\s*(\*?\d+)\s+([A-Za-z.,\'\- ]+?)\s+([A-Za-z]{2,4})\s+([A-Za-z.\'\- ]+?)\s+([\d:.NTXb#&]+)\s+([\d:.NTXb#&A-Z!]+)\s+([\d.\s]+)\s*$'
+            r'^\s*(\*?\d+)\s+([A-Za-z.,\'\- ]+?)\s+([A-Za-z]{2,4})\s+([A-Za-z.\'\- ]+?)\s+([\d:.NTXb#&\$~@\-bp]+)\s+([\d:.NTXb#&\$~@\-bpA-Z!]+)\s+([\d.\s]+)\s*$'
         )
         # More flexible finals pattern that handles various formats
         self.pdf_finals_flexible_re = re.compile(
-            r'^\s*(\*?\d+)\s+([A-Za-z.,\'\- ]+?)\s+([A-Za-z]{2,4})\s+([A-Za-z.\'\- ]+?)\s+([\d:.NTXb#&]+)\s+([\d:.NTXb#&A-Z!]+)\s+([\d.\s]+)\s*$'
+            r'^\s*(\*?\d+)\s+([A-Za-z.,\'\- ]+?)\s+([A-Za-z]{2,4})\s+([A-Za-z.\'\- ]+?)\s+([\d:.NTXb#&\$~@\-bp]+)\s+([\d:.NTXb#&\$~@\-bpA-Z!]+)\s+([\d.\s]+)\s*$'
         )
         # Prelims pattern: rank, name, year, school, seed_time, prelim_time, qualifier
         self.pdf_prelims_re = re.compile(
-            r'^\s*(\*?\d+)\s+([A-Za-z.,\'\- ]+?)\s+([A-Za-z]{2,4})\s+([A-Za-z.\'\- ]+?)\s+([\d:.NTXb#&]+)\s+([\d:.NTXb#&A-Z!]+)\s*([A-Za-z]*)\s*$'
+            r'^\s*(\*?\d+)\s+([A-Za-z.,\'\- ]+?)\s+([A-Za-z]{2,4})\s+([A-Za-z.\'\- ]+?)\s+([\d:.NTXb#&\$~@\-bp]+)\s+([\d:.NTXb#&\$~@\-bpA-Z!]+)\s*([A-Za-z]*)\s*$'
         )
         # Single time pattern: rank, name, year, school, time
         self.pdf_single_time_re = re.compile(
-            r'^\s*(\*?\d+)\s+([A-Za-z.,\'\- ]+?)\s+([A-Za-z]{2,4})\s+([A-Za-z.\'\- ]+?)\s+([\d:.NTXb#&]+)\s*$'
+            r'^\s*(\*?\d+)\s+([A-Za-z.,\'\- ]+?)\s+([A-Za-z]{2,4})\s+([A-Za-z.\'\- ]+?)\s+([\d:.NTXb#&\$~@\-bp]+)\s*$'
         )
         # Fallback patterns for lines without year
         self.pdf_finals_no_year_re = re.compile(
-            r'^\s*(\*?\d+)\s+([A-Za-z.,\'\- ]+?)\s+([A-Za-z.\'\- ]+?)\s+([\d:.NTXb#&]+)\s+([\d:.NTXb#&A-Z!]+)\s+([\d.\s]+)\s*$'
+            r'^\s*(\*?\d+)\s+([A-Za-z.,\'\- ]+?)\s+([A-Za-z.\'\- ]+?)\s+([\d:.NTXb#&\$~@\-bp]+)\s+([\d:.NTXb#&\$~@\-bpA-Z!]+)\s+([\d.\s]+)\s*$'
         )
         self.pdf_prelims_no_year_re = re.compile(
-            r'^\s*(\*?\d+)\s+([A-Za-z.,\'\- ]+?)\s+([A-Za-z.\'\- ]+?)\s+([\d:.NTXb#&]+)\s+([\d:.NTXb#&A-Z!]+)\s*([A-Za-z]*)\s*$'
+            r'^\s*(\*?\d+)\s+([A-Za-z.,\'\- ]+?)\s+([A-Za-z.\'\- ]+?)\s+([\d:.NTXb#&\$~@\-bp]+)\s+([\d:.NTXb#&\$~@\-bpA-Z!]+)\s*([A-Za-z]*)\s*$'
         )
         self.pdf_single_time_no_year_re = re.compile(
-            r'^\s*(\*?\d+)\s+([A-Za-z.,\'\- ]+?)\s+([A-Za-z.\'\- ]+?)\s+([\d:.NTXb#&]+)\s*$'
+            r'^\s*(\*?\d+)\s+([A-Za-z.,\'\- ]+?)\s+([A-Za-z.\'\- ]+?)\s+([\d:.NTXb#&\$~@\-bp]+)\s*$'
         )
 
     def preprocess_text(self, text: str) -> str:
@@ -113,12 +114,18 @@ class PDFParser(BaseParser):
         return None
 
     def _clean_time_string(self, time_str: str) -> str:
-        """Remove NATA/NATB indicators and # from time strings."""
+        """Remove NATA/NATB indicators, #, $, ~, @, -, b, and p from time strings."""
         if not time_str:
             return time_str
-        # Remove NATA/NATB indicators and #
+        # Remove NATA/NATB indicators, #, $ (National B cut), ~, @ (National A cut), -, b, and p (other cut indicators)
         cleaned = re.sub(r'\s*NAT[AB]\s*$', '', time_str.strip())
         cleaned = cleaned.replace('#', '')
+        cleaned = cleaned.replace('$', '')
+        cleaned = cleaned.replace('~', '')
+        cleaned = cleaned.replace('@', '')
+        cleaned = cleaned.replace('-', '')
+        cleaned = cleaned.replace('b', '')
+        cleaned = cleaned.replace('p', '')
         return cleaned.strip()
 
     def _parse_year_field(self, year_str: str) -> str:

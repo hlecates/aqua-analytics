@@ -202,6 +202,98 @@ class MeetDataPipeline:
         clean_path = self.save_data(clean_df, self.clean_dir / "clean_events.csv")
         return parsed, clean_path
 
+    def process_individual_files(self) -> Optional[Path]:
+        """Process all individual CSV files and create a combined dataset."""
+        logging.info("Processing individual CSV files")
+        
+        individual_dir = self.processed_dir / "individual"
+        if not individual_dir.exists():
+            logging.error(f"Individual directory not found at {individual_dir}")
+            return None
+        
+        # Get all CSV files
+        csv_files = list(individual_dir.glob("*.csv"))
+        if not csv_files:
+            logging.error("No CSV files found in individual directory")
+            return None
+        
+        csv_files.sort()  # Sort to process in chronological order
+        logging.info(f"Found {len(csv_files)} CSV files to process")
+        
+        all_results = []
+        
+        for csv_file in csv_files:
+            logging.info(f"Processing {csv_file.name}...")
+            
+            try:
+                # Load the CSV file
+                df = pd.read_csv(csv_file)
+                logging.info(f"  Loaded {len(df)} rows from {csv_file.name}")
+                
+                # Process the dataframe using the new formatter
+                clean_df = self.data_formatter.clean_dataframe(df)
+                logging.info(f"  Processed into {len(clean_df)} clean rows")
+                
+                # Add to results
+                all_results.append(clean_df)
+                
+            except Exception as e:
+                logging.error(f"  Error processing {csv_file.name}: {e}")
+                continue
+        
+        # Combine all results
+        if all_results:
+            combined_df = pd.concat(all_results, ignore_index=True)
+            logging.info(f"Combined dataset has {len(combined_df)} total rows")
+            
+            # Sort by year, event_name, gender
+            combined_df = combined_df.sort_values(['year', 'event_name', 'gender'])
+            
+            # Save the combined dataset
+            output_path = self.clean_dir / "combined_individual_events.csv"
+            self.save_data(combined_df, output_path)
+            
+            # Print summary statistics
+            logging.info(f"Dataset Summary:")
+            logging.info(f"  Total events: {len(combined_df)}")
+            logging.info(f"  Years: {combined_df['year'].min()} - {combined_df['year'].max()}")
+            logging.info(f"  Unique events: {combined_df['event_name'].nunique()}")
+            logging.info(f"  Genders: {combined_df['gender'].unique()}")
+            
+            return output_path
+        else:
+            logging.error("No data was successfully processed")
+            return None
+
+    def analyze_cutoffs(self, df: pd.DataFrame) -> None:
+        """Analyze the cutoff data to check for any issues."""
+        logging.info("Analyzing cutoff data...")
+        
+        # Check for missing cutoffs
+        missing_a = df['a_final_cutoff_sec'].isna().sum()
+        missing_b = df['b_final_cutoff_sec'].isna().sum()
+        missing_c = df['c_final_cutoff_sec'].isna().sum()
+        
+        logging.info(f"  Missing A Final cutoffs: {missing_a}")
+        logging.info(f"  Missing B Final cutoffs: {missing_b}")
+        logging.info(f"  Missing C Final cutoffs: {missing_c}")
+        
+        # Check events with fewer than 24 swimmers
+        small_events = df[df['total_swimmers'] < 24]
+        logging.info(f"  Events with <24 swimmers: {len(small_events)}")
+        
+        if len(small_events) > 0:
+            logging.info(f"  Sample small events:")
+            for _, row in small_events.head(5).iterrows():
+                logging.info(f"    {row['year']} {row['event_name']} {row['gender']}: {row['total_swimmers']} swimmers")
+        
+        # Check for any cutoff time anomalies
+        logging.info(f"Cutoff Time Ranges:")
+        for cutoff_type in ['a_final_cutoff_sec', 'b_final_cutoff_sec', 'c_final_cutoff_sec']:
+            valid_times = df[df[cutoff_type].notna()][cutoff_type]
+            if len(valid_times) > 0:
+                logging.info(f"  {cutoff_type}: {valid_times.min():.2f}s - {valid_times.max():.2f}s")
+
     def run_pipeline(self, parse_pdfs: bool = True, parse_txts: bool = True) -> Tuple[Optional[Path], Optional[Path]]:
         logging.info("Starting meet data pipeline")
         df = self.parse_all_files(parse_pdfs=parse_pdfs, parse_txts=parse_txts)
@@ -241,6 +333,23 @@ def main():
     elif cmd == "--clean":
         parsed, clean = pipeline.clean_existing_data()
         print(f"Success: {clean}" if clean else "Failed to clean data.")
+    elif cmd == "--combine":
+        combined_path = pipeline.process_individual_files()
+        if combined_path:
+            print(f"Success: Generated combined dataset at {combined_path}")
+            # Load and analyze the combined dataset
+            combined_df = pd.read_csv(combined_path)
+            pipeline.analyze_cutoffs(combined_df)
+        else:
+            print("Failed to generate combined dataset.")
+    elif cmd == "--analyze":
+        combined_path = pipeline.clean_dir / "combined_individual_events.csv"
+        if combined_path.exists():
+            combined_df = pd.read_csv(combined_path)
+            pipeline.analyze_cutoffs(combined_df)
+        else:
+            print(f"Combined dataset not found at {combined_path}")
+            print("Run --combine first to generate the dataset.")
     else:
         parsed, clean = pipeline.run_pipeline(parse_pdfs=parse_pdfs, parse_txts=parse_txts)
         if parsed and clean:
