@@ -110,12 +110,26 @@ class MeetDataPipeline:
         self,
         pdf_paths: Optional[List[Path]] = None,
         txt_paths: Optional[List[Path]] = None,
-        save_individual: bool = True
+        save_individual: bool = True,
+        parse_pdfs: bool = True,
+        parse_txts: bool = True
     ) -> pd.DataFrame:
-        if pdf_paths is None:
-            pdf_paths = list(self.raw_pdf_dir.rglob("*.pdf"))
-        if txt_paths is None:
-            txt_paths = list(self.raw_txt_dir.rglob("*.txt"))
+        # Initialize paths based on parse flags
+        if parse_pdfs:
+            if pdf_paths is None:
+                pdf_paths = list(self.raw_pdf_dir.rglob("*.pdf"))
+            else:
+                pdf_paths = pdf_paths or []
+        else:
+            pdf_paths = []
+            
+        if parse_txts:
+            if txt_paths is None:
+                txt_paths = list(self.raw_txt_dir.rglob("*.txt"))
+            else:
+                txt_paths = txt_paths or []
+        else:
+            txt_paths = []
 
         total = len(pdf_paths) + len(txt_paths)
         logging.debug(f"Parsing {len(pdf_paths)} PDF and {len(txt_paths)} TXT files ({total} total)")
@@ -124,20 +138,22 @@ class MeetDataPipeline:
         success = 0
         individual_files = []
 
-        for p in pdf_paths:
-            ev = self.parse_single_pdf(p)
-            if ev:
-                all_events.extend(ev)
-                if save_individual:
-                    individual_files.append((p.stem, ev))
-                success += 1
-        for t in txt_paths:
-            ev = self.parse_single_txt(t)
-            if ev:
-                all_events.extend(ev)
-                if save_individual:
-                    individual_files.append((t.stem, ev))
-                success += 1
+        if parse_pdfs:
+            for p in pdf_paths:
+                ev = self.parse_single_pdf(p)
+                if ev:
+                    all_events.extend(ev)
+                    if save_individual:
+                        individual_files.append((p.stem, ev))
+                    success += 1
+        if parse_txts:
+            for t in txt_paths:
+                ev = self.parse_single_txt(t)
+                if ev:
+                    all_events.extend(ev)
+                    if save_individual:
+                        individual_files.append((t.stem, ev))
+                    success += 1
 
         logging.debug(f"Successfully parsed {success}/{total} files, extracted {len(all_events)} events")
 
@@ -186,9 +202,9 @@ class MeetDataPipeline:
         clean_path = self.save_data(clean_df, self.clean_dir / "clean_events.csv")
         return parsed, clean_path
 
-    def run_pipeline(self) -> Tuple[Optional[Path], Optional[Path]]:
+    def run_pipeline(self, parse_pdfs: bool = True, parse_txts: bool = True) -> Tuple[Optional[Path], Optional[Path]]:
         logging.info("Starting meet data pipeline")
-        df = self.parse_all_files()
+        df = self.parse_all_files(parse_pdfs=parse_pdfs, parse_txts=parse_txts)
         parsed_path = self.save_data(df, self.processed_dir / "parsed_events.csv")
         clean_df = self.data_formatter.clean_dataframe(df)
         clean_path = self.save_data(clean_df, self.clean_dir / "clean_events.csv")
@@ -200,9 +216,25 @@ def main():
     pipeline = MeetDataPipeline(base / "data")
 
     import sys
-    cmd = sys.argv[1].lower() if len(sys.argv) > 1 else None
+    args = sys.argv[1:] if len(sys.argv) > 1 else []
+    
+    # Parse command line arguments
+    parse_pdfs = True
+    parse_txts = True
+    
+    if "--pdf" in args:
+        parse_pdfs = True
+        parse_txts = False
+    elif "--txt" in args:
+        parse_pdfs = False
+        parse_txts = True
+    
+    # Remove the file type flags from args for command processing
+    args = [arg for arg in args if arg not in ["--pdf", "--txt"]]
+    
+    cmd = args[0].lower() if args else None
     if cmd == "--parse":
-        df = pipeline.parse_all_files(save_individual=True)
+        df = pipeline.parse_all_files(save_individual=True, parse_pdfs=parse_pdfs, parse_txts=parse_txts)
         path = pipeline.save_data(df, pipeline.processed_dir / "parsed_events.csv")
         print(f"Success: {path}" if path else "Failed to save parsed data.")
         print("Individual meet files have been saved to the processed/parsed directory.")
@@ -210,7 +242,7 @@ def main():
         parsed, clean = pipeline.clean_existing_data()
         print(f"Success: {clean}" if clean else "Failed to clean data.")
     else:
-        parsed, clean = pipeline.run_pipeline()
+        parsed, clean = pipeline.run_pipeline(parse_pdfs=parse_pdfs, parse_txts=parse_txts)
         if parsed and clean:
             print(f"Success: Generated {parsed.name}, {clean.name}")
         elif parsed:
