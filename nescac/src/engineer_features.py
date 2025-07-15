@@ -27,7 +27,7 @@ class TimeConverter:
             return minutes * 60 + seconds
         else:
             try:
-                return float(time_str)
+             return float(time_str)
             except ValueError:
                 return np.nan
         
@@ -429,7 +429,7 @@ class FeatureEngineer:
             'Butterfly': 'fly',
             'IM': 'im'
         }
-        df['stroke_category'] = df['stroke'].map(stroke_map)
+        df['stroke_category'] = df['stroke'].map(lambda x: stroke_map.get(x, x))
         
         return df
 

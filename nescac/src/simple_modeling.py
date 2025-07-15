@@ -314,7 +314,7 @@ def main():
     
     # Configuration
     data_file = Path(__file__).parent.parent / "data" / "processed" / "clean" / "combined_individual_events.csv"
-    models_output_dir = Path(__file__).parent.parent / "output" / "models"
+    models_output_dir = Path(__file__).parent.parent / "output" / "models" / "simple_modeling"
     
     print("NESCAC Swimming Prediction Model")
     print("=" * 50)
