@@ -18,12 +18,10 @@ class Preprocessor:
         self.label_encoders = {}
         
     def load_data(self, file_path: str) -> pd.DataFrame:
-        """Load the NESCAC swimming data"""
         df = pd.read_csv(file_path)
         return df
     
     def prepare_cutoff_data(self, df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.Series]:
-        """Prepare data for cutoff time prediction"""
         cutoff_data = []
         
         for _, row in df.iterrows():
@@ -67,7 +65,6 @@ class Preprocessor:
         return X, y
     
     def prepare_winning_time_data(self, df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.Series]:
-        """Prepare data for winning time prediction"""
         # Filter for rows with winning times
         winning_df = df.dropna(subset=['winning_time_sec']).copy()
         
@@ -78,7 +75,6 @@ class Preprocessor:
         return X, y
     
     def _prepare_features(self, df: pd.DataFrame, task: str) -> pd.DataFrame:
-        """Prepare features for modeling"""
         # Encode categorical variables
         le_stroke = LabelEncoder()
         le_final_type = LabelEncoder()
@@ -111,7 +107,6 @@ class ModelTrainer:
         self.scalers = {}
     
     def define_models(self) -> Dict[str, Any]:
-        """Define model configurations"""
         return {
             'linear_regression': LinearRegression(),
             'ridge': Ridge(alpha=1.0),
@@ -122,7 +117,6 @@ class ModelTrainer:
     
     def _temporal_train_test_split(self, X: pd.DataFrame, y: pd.Series, 
                                   test_year_threshold: int = 2024) -> Tuple[pd.DataFrame, pd.DataFrame, pd.Series, pd.Series]:
-        """Split data temporally - train on older years, test on recent years"""
         
         # Assuming 'year' is the first column in your feature matrix
         train_mask = X.iloc[:, 0] < test_year_threshold
@@ -137,7 +131,6 @@ class ModelTrainer:
     
     def train_models(self, X: pd.DataFrame, y: pd.Series, task: str, 
                     test_year_threshold: int = 2024, temporal_split: bool = True) -> Dict[str, Dict]:
-        """Train models for a specific task"""
         models = self.define_models()
         
         if temporal_split:
@@ -210,7 +203,6 @@ class ModelTrainer:
         return self.results[task]
     
     def get_best_model(self, task: str) -> Tuple[str, Any]:
-        """Get the best performing model for a task"""
         if task not in self.results:
             raise ValueError(f"No results found for task: {task}")
         
@@ -230,7 +222,6 @@ class ModelSaver:
     def save_models_and_preprocessing(self, trainer: ModelTrainer, 
                                     preprocessor: Preprocessor,
                                     results: Dict[str, Dict]) -> None:
-        """Save all models and preprocessing objects"""
         
         # Save preprocessing objects
         preprocessing_objects = {
@@ -279,10 +270,8 @@ class ModelSaver:
 
 def create_prediction_functions(trainer: ModelTrainer, 
                               preprocessor: Preprocessor) -> Dict[str, callable]:
-    """Create prediction functions for easy use"""
     
     def predict_cutoff(year: int, stroke: str, distance: int, final_type: str) -> float:
-        """Predict cutoff time"""
         # Encode features
         stroke_encoded = preprocessor.label_encoders['cutoff']['stroke'].transform([stroke])[0]
         final_type_encoded = preprocessor.label_encoders['cutoff']['final_type'].transform([final_type])[0]
@@ -300,7 +289,6 @@ def create_prediction_functions(trainer: ModelTrainer,
         return prediction
     
     def predict_winning_time(year: int, stroke: str, distance: int) -> float:
-        """Predict winning time"""
         # Encode features
         stroke_encoded = preprocessor.label_encoders['winning']['stroke'].transform([stroke])[0]
         
@@ -323,7 +311,6 @@ def create_prediction_functions(trainer: ModelTrainer,
 
 
 def main():
-    """Main function to run the NESCAC modeling pipeline"""
     
     # Configuration
     data_file = Path(__file__).parent.parent / "data" / "processed" / "clean" / "combined_individual_events.csv"

@@ -64,7 +64,6 @@ class MeetDataPipeline:
             return []
 
     def _process_events(self, events: List[Dict], source_path: Path) -> List[Dict]:
-        """Normalize event dicts into flat records with unified results."""
         meet_name = source_path.stem.replace('-complete-results', '').replace('-', ' ').title()
         source_file = source_path.name
         meet_category = source_path.parent.name
@@ -164,7 +163,6 @@ class MeetDataPipeline:
         return pd.DataFrame(all_events)
 
     def _save_individual_files(self, individual_files: List[Tuple[str, List[Dict]]]):
-        """Save each meet's events to its own CSV file."""
         for meet_name, events in individual_files:
             if not events:
                 continue
@@ -192,7 +190,6 @@ class MeetDataPipeline:
 
 
     def process_individual_files(self) -> Optional[Path]:
-        """Process all individual CSV files and create a combined dataset."""
         logging.info("Processing individual CSV files")
         
         individual_dir = self.clean_dir / "individual"
@@ -258,7 +255,6 @@ class MeetDataPipeline:
             return None
 
     def analyze_cutoffs(self, df: pd.DataFrame) -> None:
-        """Analyze the cutoff data to check for any issues."""
         logging.info("Analyzing cutoff data...")
         
         # Check for missing cutoffs

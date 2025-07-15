@@ -10,7 +10,6 @@ class DataFormatter:
         pass
 
     def clean_time_string(self, time_str: Union[str, None]) -> str:
-        """Clean time string by removing special characters and keeping only numbers, colons, and periods."""
         if pd.isna(time_str) or not time_str:
             return ""
         
@@ -23,7 +22,6 @@ class DataFormatter:
         return cleaned
 
     def parse_time_to_seconds(self, time_str: str) -> Optional[float]:
-        """Convert time string to seconds, handling both MM:SS.HH and SS.HH formats."""
         if pd.isna(time_str) or not time_str:
             return None
         
@@ -52,7 +50,6 @@ class DataFormatter:
             return None
 
     def seconds_to_time_format(self, seconds: float) -> str:
-        """Convert seconds back to standard time format (MM:SS.HH or SS.HH)."""
         if seconds is None:
             return ""
         
@@ -64,7 +61,6 @@ class DataFormatter:
             return f"{seconds:.3f}".rstrip('0').rstrip('.')
 
     def extract_year_from_source_file(self, source_file: str) -> Optional[int]:
-        """Extract year from the first four characters of source_file."""
         if pd.isna(source_file) or not source_file:
             return None
         
@@ -77,16 +73,6 @@ class DataFormatter:
         return None
 
     def find_cutoff_rank(self, entries: List[Dict], target_rank: int) -> Optional[float]:
-        """
-        Find the cutoff time for a specific rank, handling ties and missing ranks.
-        
-        Args:
-            entries: List of entries sorted by prelim_time_sec
-            target_rank: The target rank (8, 16, or 24)
-        
-        Returns:
-            The time in seconds for the cutoff, or None if not found
-        """
         if not entries or target_rank <= 0:
             return None
         
@@ -125,7 +111,6 @@ class DataFormatter:
         return None
 
     def process_entries_list(self, entries: Union[str, List], time_field: str = 'prelim_time') -> List[Dict]:
-        """Process entries list and clean all time fields."""
         # Handle None or NaN values
         if entries is None:
             return []
@@ -172,7 +157,6 @@ class DataFormatter:
         return cleaned_entries
 
     def sort_entries_by_time(self, entries: List[Dict], time_field: str = 'prelim_time_sec') -> List[Dict]:
-        """Sort entries by time, handling None values."""
         # Add original index to preserve tie order
         for i, entry in enumerate(entries):
             entry['_original_index'] = i
@@ -193,7 +177,6 @@ class DataFormatter:
         return sorted_entries
 
     def get_winning_time(self, entries: List[Dict]) -> Tuple[Optional[float], str]:
-        """Get the winning time in seconds and standard format."""
         if not entries:
             return None, ""
         
@@ -216,7 +199,6 @@ class DataFormatter:
         return winning_time_sec, winning_time_format
 
     def clean_dataframe(self, df: pd.DataFrame) -> pd.DataFrame:
-        """Clean and format the dataframe according to the new requirements."""
         logging.info(f"Starting to clean dataframe with {len(df)} rows")
 
         # Filter to individual events only

@@ -5,7 +5,6 @@ from base_parser import BaseParser
 
 
 class TXTParser(BaseParser):
-    """Parser for TXT format swimming meet results with unified results list."""
     def __init__(self):
         super().__init__()
         # Improved pattern for prelims entries (rank, name, year, school, seed, prelim)
@@ -41,7 +40,6 @@ class TXTParser(BaseParser):
         )
 
     def preprocess_text(self, text: str) -> str:
-        """Remove noise lines and strip trailing whitespace."""
         lines = text.split("\n")
         skip_patterns = [
             r"^Licensed to",
@@ -68,7 +66,6 @@ class TXTParser(BaseParser):
         return "\n".join(processed)
 
     def _is_section_header(self, line: str) -> Optional[str]:
-        """Identify prelims/finals section headers."""
         lc = line.strip().lower()
         exact = {
             'championship final': 'finals',
@@ -91,7 +88,6 @@ class TXTParser(BaseParser):
         return None
 
     def _clean_time_string(self, time_str: str) -> str:
-        """Remove NATA/NATB indicators and # from time strings."""
         if not time_str:
             return time_str
         # Remove NATA/NATB indicators and #
@@ -100,7 +96,6 @@ class TXTParser(BaseParser):
         return cleaned.strip()
     
     def _cleanup_school_time(self, entry: Dict) -> Dict:
-        """Extract stray time from school field if present and use it as the actual time."""
         school = entry.get('school') or ''
         m = re.search(r"\s+([\d]+:[\d]+\.[\d]+|[\d]+\.[\d]+)\s*$", school)
         if m:
@@ -134,15 +129,6 @@ class TXTParser(BaseParser):
         return entry
 
     def _parse_year_field(self, year_str: str) -> str:
-        """
-        Parse year field robustly. Returns 'NONE' if no valid year found.
-        
-        Args:
-            year_str: The year field from the regex match
-            
-        Returns:
-            String representation of year or 'NONE' if invalid
-        """
         if not year_str or not year_str.strip():
             return 'NONE'
         
@@ -386,7 +372,6 @@ class TXTParser(BaseParser):
         return None
 
     def _parse_entry(self, line: str, current_section: str, event_type: str, **kwargs) -> Optional[Dict]:
-        """Parse a single data entry line."""
         if not line.strip():
             return None
         # Skip separators and split-time lines

@@ -7,7 +7,6 @@ from base_parser import BaseParser
 
 
 class PDFParser(BaseParser):
-    """Parser for PDF format swimming meet results."""
     
     def __init__(self):
         super().__init__()
@@ -53,7 +52,6 @@ class PDFParser(BaseParser):
         )
 
     def preprocess_text(self, text: str) -> str:
-        """Remove noise lines and strip trailing whitespace."""
         lines = text.split("\n")
         skip_patterns = [
             r"^Licensed to",
@@ -88,7 +86,6 @@ class PDFParser(BaseParser):
         return "\n".join(processed)
 
     def _is_section_header(self, line: str) -> Optional[str]:
-        """Identify prelims/finals section headers."""
         lc = line.strip().lower()
         exact = {
             'championship final': 'finals',
@@ -114,7 +111,6 @@ class PDFParser(BaseParser):
         return None
 
     def _clean_time_string(self, time_str: str) -> str:
-        """Remove NATA/NATB indicators, #, $, ~, @, -, b, and p from time strings."""
         if not time_str:
             return time_str
         # Remove NATA/NATB indicators, #, $ (National B cut), ~, @ (National A cut), -, b, and p (other cut indicators)
@@ -129,7 +125,6 @@ class PDFParser(BaseParser):
         return cleaned.strip()
 
     def _parse_year_field(self, year_str: str) -> str:
-        """Parse year field robustly. Returns 'NONE' if no valid year found."""
         if not year_str or not year_str.strip():
             return 'NONE'
         year_str = year_str.strip()
@@ -139,14 +134,12 @@ class PDFParser(BaseParser):
         return 'NONE'
 
     def _merge_name_and_year(self, name: str, yr: str) -> Tuple[str, str]:
-        """If yr is not a valid year, merge it into the name."""
         if yr not in ['FR', 'SO', 'JR', 'SR']:
             merged = f"{name.strip()} {yr.strip()}".strip()
             return merged, 'NONE'
         return name.strip(), yr.strip()
 
     def _parse_individual_entry(self, line: str, current_section: str, is_exhibition: bool) -> Optional[Dict]:
-        """Parse a single swimmer entry line."""
         clean = line.strip()
         
         # Skip reaction time lines and other non-swimmer lines
@@ -372,7 +365,6 @@ class PDFParser(BaseParser):
         return None
 
     def _parse_entry(self, line: str, current_section: str, event_type: str, **kwargs) -> Optional[Dict]:
-        """Parse a single data entry line."""
         if not line.strip():
             return None
         # Skip separators and split-time lines
@@ -384,7 +376,6 @@ class PDFParser(BaseParser):
         return self._parse_individual_entry(line, current_section, is_exhibition)
 
     def parse_meet_text(self, text: str) -> List[Dict]:
-        """Parse meet text using two-pass approach like txt parser."""
         processed = self.preprocess_text(text)
         events: Dict[Tuple[str, str, int, str], Dict] = {}
         current_key = None
@@ -539,7 +530,6 @@ class PDFParser(BaseParser):
         return list(events.values())
 
     def parse_single_pdf(self, pdf_path: Path) -> Optional[List[Dict]]:
-        """Parse a single PDF file."""
         try:
             with pdfplumber.open(pdf_path) as pdf:
                 all_text = ""
