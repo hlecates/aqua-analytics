@@ -1,0 +1,398 @@
+NESCAC Swimming Predictions Report for 2025
+================================================================================
+
+PREDICTION SUMMARY
+----------------------------------------
+Target Year: 2025
+Data Available: {'combined_data': True, 'cutoff_features': True, 'winning_features': True, 'simple_models': True, 'advanced_models': True}
+Year Ranges: {'data': (np.int64(2002), np.int64(2025)), 'cutoff_features': (np.int64(2006), np.int64(2025)), 'winning_features': (np.int64(2002), np.int64(2025))}
+
+DETAILED PREDICTIONS
+----------------------------------------
+
+Men 50 Freestyle
+================
+Winning Time:
+  Actual:           19.81
+  Simple Model:     19.05 (Δ-0.76s, -3.8%)
+  Advanced Model:   20.22 (Δ+0.41s, +2.1%)
+
+A Final Cutoff:
+  Actual:           20.71
+  Simple Model:     20.06 (Δ-0.65s, -3.1%)
+  Advanced Model:   20.89 (Δ+0.18s, +0.9%)
+
+B Final Cutoff:
+  Actual:           21.10
+  Simple Model:     20.27 (Δ-0.83s, -3.9%)
+  Advanced Model:   21.11 (Δ+0.01s, +0.1%)
+
+C Final Cutoff:
+  Actual:           21.25
+  Simple Model:     20.72 (Δ-0.53s, -2.5%)
+  Advanced Model:   21.33 (Δ+0.08s, +0.4%)
+
+------------------------------------------------------------
+
+Men 100 Freestyle
+=================
+Winning Time:
+  Actual:           43.55
+  Simple Model:     44.03 (Δ+0.48s, +1.1%)
+  Advanced Model:   44.51 (Δ+0.96s, +2.2%)
+
+A Final Cutoff:
+  Actual:           45.75
+  Simple Model:     46.07 (Δ+0.32s, +0.7%)
+  Advanced Model:   45.97 (Δ+0.22s, +0.5%)
+
+B Final Cutoff:
+  Actual:           46.00
+  Simple Model:     46.50 (Δ+0.50s, +1.1%)
+  Advanced Model:   46.67 (Δ+0.67s, +1.5%)
+
+C Final Cutoff:
+  Actual:           46.29
+  Simple Model:     47.00 (Δ+0.71s, +1.5%)
+  Advanced Model:   47.09 (Δ+0.80s, +1.7%)
+
+------------------------------------------------------------
+
+Men 200 Freestyle
+=================
+Winning Time:
+  Actual:           1:35.72
+  Simple Model:     1:39.29 (Δ+3.57s, +3.7%)
+  Advanced Model:   1:37.68 (Δ+1.96s, +2.0%)
+
+A Final Cutoff:
+  Actual:           1:40.37
+  Simple Model:     1:43.78 (Δ+3.41s, +3.4%)
+  Advanced Model:   1:41.07 (Δ+0.70s, +0.7%)
+
+B Final Cutoff:
+  Actual:           1:42.44
+  Simple Model:     1:45.24 (Δ+2.80s, +2.7%)
+  Advanced Model:   1:42.83 (Δ+0.39s, +0.4%)
+
+C Final Cutoff:
+  Actual:           1:43.96
+  Simple Model:     1:46.72 (Δ+2.76s, +2.7%)
+  Advanced Model:   1:44.55 (Δ+0.59s, +0.6%)
+
+------------------------------------------------------------
+
+Men 500 Freestyle
+=================
+Winning Time:
+  Actual:           4:23.18
+  Simple Model:     4:25.95 (Δ+2.77s, +1.1%)
+  Advanced Model:   4:26.01 (Δ+2.83s, +1.1%)
+
+A Final Cutoff:
+  Actual:           4:31.74
+  Simple Model:     4:34.61 (Δ+2.87s, +1.1%)
+  Advanced Model:   4:34.34 (Δ+2.60s, +1.0%)
+
+B Final Cutoff:
+  Actual:           4:38.67
+  Simple Model:     4:38.50 (Δ-0.17s, -0.1%)
+  Advanced Model:   4:40.37 (Δ+1.70s, +0.6%)
+
+C Final Cutoff:
+  Actual:           4:42.71
+  Simple Model:     4:41.27 (Δ-1.44s, -0.5%)
+  Advanced Model:   4:43.74 (Δ+1.03s, +0.4%)
+
+------------------------------------------------------------
+
+Men 50 Backstroke
+=================
+Winning Time:
+  Actual:           22.36
+  Simple Model:     21.59 (Δ-0.77s, -3.4%)
+  Advanced Model:   22.44 (Δ+0.08s, +0.4%)
+
+A Final Cutoff:
+  Actual:           23.28
+  Simple Model:     22.71 (Δ-0.57s, -2.5%)
+  Advanced Model:   23.14 (Δ-0.14s, -0.6%)
+
+B Final Cutoff:
+  Actual:           24.11
+  Simple Model:     23.44 (Δ-0.67s, -2.8%)
+  Advanced Model:   23.77 (Δ-0.34s, -1.4%)
+
+C Final Cutoff:
+  Actual:           24.61
+  Simple Model:     24.53 (Δ-0.08s, -0.3%)
+  Advanced Model:   24.39 (Δ-0.22s, -0.9%)
+
+------------------------------------------------------------
+
+Men 100 Backstroke
+==================
+Winning Time:
+  Actual:           47.54
+  Simple Model:     47.59 (Δ+0.05s, +0.1%)
+  Advanced Model:   48.59 (Δ+1.05s, +2.2%)
+
+A Final Cutoff:
+  Actual:           49.93
+  Simple Model:     50.97 (Δ+1.04s, +2.1%)
+  Advanced Model:   50.06 (Δ+0.13s, +0.3%)
+
+B Final Cutoff:
+  Actual:           51.06
+  Simple Model:     52.17 (Δ+1.11s, +2.2%)
+  Advanced Model:   51.46 (Δ+0.40s, +0.8%)
+
+C Final Cutoff:
+  Actual:           52.57
+  Simple Model:     53.42 (Δ+0.85s, +1.6%)
+  Advanced Model:   53.13 (Δ+0.56s, +1.1%)
+
+------------------------------------------------------------
+
+Men 200 Backstroke
+==================
+Winning Time:
+  Actual:           1:44.10
+  Simple Model:     1:45.27 (Δ+1.17s, +1.1%)
+  Advanced Model:   1:46.20 (Δ+2.10s, +2.0%)
+
+A Final Cutoff:
+  Actual:           1:49.73
+  Simple Model:     1:50.99 (Δ+1.26s, +1.1%)
+  Advanced Model:   1:50.14 (Δ+0.41s, +0.4%)
+
+B Final Cutoff:
+  Actual:           1:53.50
+  Simple Model:     1:53.67 (Δ+0.17s, +0.1%)
+  Advanced Model:   1:53.77 (Δ+0.27s, +0.2%)
+
+C Final Cutoff:
+  Actual:           1:55.66
+  Simple Model:     1:56.68 (Δ+1.02s, +0.9%)
+  Advanced Model:   1:55.79 (Δ+0.13s, +0.1%)
+
+------------------------------------------------------------
+
+Men 50 Breaststroke
+===================
+Winning Time:
+  Actual:           24.91
+  Simple Model:     24.67 (Δ-0.24s, -1.0%)
+  Advanced Model:   25.32 (Δ+0.41s, +1.6%)
+
+A Final Cutoff:
+  Actual:           25.49
+  Simple Model:     26.40 (Δ+0.91s, +3.6%)
+  Advanced Model:   25.56 (Δ+0.07s, +0.3%)
+
+B Final Cutoff:
+  Actual:           25.97
+  Simple Model:     26.73 (Δ+0.76s, +2.9%)
+  Advanced Model:   26.05 (Δ+0.08s, +0.3%)
+
+C Final Cutoff:
+  Actual:           26.48
+  Simple Model:     27.10 (Δ+0.62s, +2.4%)
+  Advanced Model:   26.55 (Δ+0.07s, +0.2%)
+
+------------------------------------------------------------
+
+Men 100 Breaststroke
+====================
+Winning Time:
+  Actual:           54.14
+  Simple Model:     53.74 (Δ-0.40s, -0.7%)
+  Advanced Model:   54.31 (Δ+0.17s, +0.3%)
+
+A Final Cutoff:
+  Actual:           55.41
+  Simple Model:     56.76 (Δ+1.35s, +2.4%)
+  Advanced Model:   56.22 (Δ+0.81s, +1.5%)
+
+B Final Cutoff:
+  Actual:           56.25
+  Simple Model:     57.58 (Δ+1.33s, +2.4%)
+  Advanced Model:   57.48 (Δ+1.23s, +2.2%)
+
+C Final Cutoff:
+  Actual:           57.32
+  Simple Model:     58.00 (Δ+0.68s, +1.2%)
+  Advanced Model:   58.94 (Δ+1.62s, +2.8%)
+
+------------------------------------------------------------
+
+Men 200 Breaststroke
+====================
+Winning Time:
+  Actual:           2:00.13
+  Simple Model:     1:57.11 (Δ-3.02s, -2.5%)
+  Advanced Model:   1:58.09 (Δ-2.04s, -1.7%)
+
+A Final Cutoff:
+  Actual:           2:02.69
+  Simple Model:     2:04.87 (Δ+2.18s, +1.8%)
+  Advanced Model:   2:04.90 (Δ+2.21s, +1.8%)
+
+B Final Cutoff:
+  Actual:           2:05.31
+  Simple Model:     2:06.66 (Δ+1.35s, +1.1%)
+  Advanced Model:   2:07.12 (Δ+1.81s, +1.4%)
+
+C Final Cutoff:
+  Actual:           2:06.42
+  Simple Model:     2:08.32 (Δ+1.90s, +1.5%)
+  Advanced Model:   2:08.93 (Δ+2.51s, +2.0%)
+
+------------------------------------------------------------
+
+Men 50 Butterfly
+================
+Winning Time:
+  Actual:           21.67
+  Simple Model:     21.87 (Δ+0.20s, +0.9%)
+  Advanced Model:   21.74 (Δ+0.07s, +0.3%)
+
+A Final Cutoff:
+  Actual:           22.51
+  Simple Model:     22.72 (Δ+0.21s, +0.9%)
+  Advanced Model:   22.56 (Δ+0.05s, +0.2%)
+
+B Final Cutoff:
+  Actual:           22.89
+  Simple Model:     23.14 (Δ+0.25s, +1.1%)
+  Advanced Model:   22.91 (Δ+0.02s, +0.1%)
+
+C Final Cutoff:
+  Actual:           23.34
+  Simple Model:     23.74 (Δ+0.40s, +1.7%)
+  Advanced Model:   23.27 (Δ-0.07s, -0.3%)
+
+------------------------------------------------------------
+
+Men 100 Butterfly
+=================
+Winning Time:
+  Actual:           46.49
+  Simple Model:     47.81 (Δ+1.32s, +2.8%)
+  Advanced Model:   47.25 (Δ+0.76s, +1.6%)
+
+A Final Cutoff:
+  Actual:           49.10
+  Simple Model:     49.98 (Δ+0.88s, +1.8%)
+  Advanced Model:   49.96 (Δ+0.86s, +1.7%)
+
+B Final Cutoff:
+  Actual:           50.23
+  Simple Model:     50.89 (Δ+0.66s, +1.3%)
+  Advanced Model:   50.81 (Δ+0.58s, +1.2%)
+
+C Final Cutoff:
+  Actual:           50.94
+  Simple Model:     51.54 (Δ+0.60s, +1.2%)
+  Advanced Model:   51.57 (Δ+0.63s, +1.2%)
+
+------------------------------------------------------------
+
+Men 200 Butterfly
+=================
+Winning Time:
+  Actual:           1:44.76
+  Simple Model:     1:46.46 (Δ+1.70s, +1.6%)
+  Advanced Model:   1:46.94 (Δ+2.18s, +2.1%)
+
+A Final Cutoff:
+  Actual:           1:50.33
+  Simple Model:     1:52.23 (Δ+1.90s, +1.7%)
+  Advanced Model:   1:51.45 (Δ+1.12s, +1.0%)
+
+B Final Cutoff:
+  Actual:           1:52.77
+  Simple Model:     1:54.12 (Δ+1.35s, +1.2%)
+  Advanced Model:   1:54.13 (Δ+1.36s, +1.2%)
+
+C Final Cutoff:
+  Actual:           1:57.21
+  Simple Model:     1:56.00 (Δ-1.21s, -1.0%)
+  Advanced Model:   1:56.14 (Δ-1.07s, -0.9%)
+
+------------------------------------------------------------
+
+Men 200 IM
+==========
+Winning Time:
+  Actual:           1:47.98
+  Simple Model:     1:48.32 (Δ+0.34s, +0.3%)
+  Advanced Model:   1:47.88 (Δ-0.10s, -0.1%)
+
+A Final Cutoff:
+  Actual:           1:51.35
+  Simple Model:     1:52.55 (Δ+1.20s, +1.1%)
+  Advanced Model:   1:52.93 (Δ+1.58s, +1.4%)
+
+B Final Cutoff:
+  Actual:           1:52.86
+  Simple Model:     1:53.62 (Δ+0.76s, +0.7%)
+  Advanced Model:   1:54.30 (Δ+1.44s, +1.3%)
+
+C Final Cutoff:
+  Actual:           1:55.04
+  Simple Model:     1:55.24 (Δ+0.20s, +0.2%)
+  Advanced Model:   1:55.98 (Δ+0.94s, +0.8%)
+
+------------------------------------------------------------
+
+Men 400 IM
+==========
+Winning Time:
+  Actual:           3:56.35
+  Simple Model:     3:57.44 (Δ+1.09s, +0.5%)
+  Advanced Model:   3:57.02 (Δ+0.67s, +0.3%)
+
+A Final Cutoff:
+  Actual:           4:01.62
+  Simple Model:     4:02.08 (Δ+0.46s, +0.2%)
+  Advanced Model:   4:03.77 (Δ+2.15s, +0.9%)
+
+B Final Cutoff:
+  Actual:           4:06.06
+  Simple Model:     4:08.03 (Δ+1.97s, +0.8%)
+  Advanced Model:   4:07.04 (Δ+0.98s, +0.4%)
+
+C Final Cutoff:
+  Actual:           4:09.72
+  Simple Model:     4:15.79 (Δ+6.07s, +2.4%)
+  Advanced Model:   4:15.51 (Δ+5.79s, +2.3%)
+
+------------------------------------------------------------
+
+PREDICTION ACCURACY SUMMARY
+----------------------------------------
+Simple Model - Winning Times (n=15):
+  Mean Absolute Error: 1.65%
+  Median Absolute Error: 1.11%
+  Max Absolute Error: 3.84%
+
+Advanced Model - Winning Times (n=15):
+  Mean Absolute Error: 1.34%
+  Median Absolute Error: 1.65%
+  Max Absolute Error: 2.21%
+
+Simple Model - Cutoff Times (n=45):
+  Mean Absolute Error: 1.63%
+  Median Absolute Error: 1.51%
+  Max Absolute Error: 3.92%
+
+Advanced Model - Cutoff Times (n=45):
+  Mean Absolute Error: 0.93%
+  Median Absolute Error: 0.87%
+  Max Absolute Error: 2.83%
+
+
+Report generated successfully!
+Total events predicted: 15
+Timestamp: 2025-07-15 20:31:30

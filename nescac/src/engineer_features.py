@@ -4,6 +4,9 @@ from pathlib import Path
 import ast
 from typing import List, Dict, Tuple, Optional
 from scipy import stats
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.feature_selection import mutual_info_regression
+from sklearn.ensemble import RandomForestRegressor
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -295,11 +298,321 @@ class WinningTimeAnalyzer:
         }
     
 
+class ImprovedFeatureEngineer:
+    def __init__(self):
+        self.scalers = {}
+        
+    def create_distance_normalized_features(self, X: pd.DataFrame) -> pd.DataFrame:
+        """Create distance-normalized features to avoid polynomial explosion"""
+        X_new = X.copy()
+        
+        if 'distance' in X.columns:
+            # Normalize distance by common swimming distances
+            common_distances = [50, 100, 200, 500, 1000, 1650]
+            for dist in common_distances:
+                X_new[f'distance_ratio_{dist}'] = X['distance'] / dist
+                X_new[f'distance_diff_{dist}'] = abs(X['distance'] - dist) / dist  # Normalized difference
+            
+            # Log-scale distance features to reduce magnitude
+            X_new['distance_log'] = np.log(X['distance'])
+            X_new['distance_sqrt'] = np.sqrt(X['distance'])
+            
+            # Distance categories for different competitive dynamics
+            X_new['is_sprint'] = (X['distance'] <= 100).astype(int)
+            X_new['is_middle'] = ((X['distance'] > 100) & (X['distance'] <= 400)).astype(int)
+            X_new['is_distance'] = (X['distance'] > 400).astype(int)
+        
+        return X_new
+    
+    def create_stroke_distance_interactions(self, X: pd.DataFrame) -> pd.DataFrame:
+        """Create stroke-distance interactions with normalized values"""
+        X_new = X.copy()
+        
+        if 'stroke_encoded' in X.columns and 'distance' in X.columns:
+            # Use normalized distance for interactions
+            distance_normalized = X['distance'] / 500  # Normalize to 500m scale
+            X_new['stroke_distance_interaction'] = X['stroke_encoded'] * distance_normalized
+            
+            # Stroke-specific distance features (normalized)
+            stroke_names = ['free', 'back', 'breast', 'fly', 'im']
+            for i, stroke in enumerate(stroke_names):
+                stroke_mask = (X['stroke_encoded'] == i).astype(int)
+                X_new[f'{stroke}_distance_norm'] = distance_normalized * stroke_mask
+                X_new[f'{stroke}_distance_log'] = np.log(X['distance'] + 1) * stroke_mask
+                
+                # Distance-specific competitive features
+                if i == 0:  # Freestyle
+                    X_new[f'{stroke}_is_distance_event'] = (X['distance'] > 400).astype(int) * stroke_mask
+                    X_new[f'{stroke}_is_sprint_event'] = (X['distance'] <= 100).astype(int) * stroke_mask
+        
+        # Year-stroke interactions (normalized)
+        if 'year' in X.columns and 'stroke_encoded' in X.columns:
+            year_normalized = (X['year'] - 2000) / 25  # Normalize year to 0-1 scale
+            X_new['year_stroke_interaction'] = year_normalized * X['stroke_encoded']
+            
+        # Final type interactions (for cutoff task)
+        if 'final_type_encoded' in X.columns:
+            if 'distance' in X.columns:
+                distance_normalized = X['distance'] / 500
+                X_new['final_distance_interaction'] = X['final_type_encoded'] * distance_normalized
+            if 'stroke_encoded' in X.columns:
+                X_new['final_stroke_interaction'] = X['final_type_encoded'] * X['stroke_encoded']
+            if 'year' in X.columns:
+                year_normalized = (X['year'] - 2000) / 25
+                X_new['final_year_interaction'] = X['final_type_encoded'] * year_normalized
+        
+        return X_new
+        
+    def create_selective_polynomial_features(self, X: pd.DataFrame, task: str) -> pd.DataFrame:
+        """Create polynomial features selectively to avoid explosion"""
+        X_new = X.copy()
+        
+        # Only use key features for polynomials, with normalized values
+        key_features = ['year', 'distance', 'stroke_encoded']
+        if task == 'cutoff':
+            key_features.append('final_type_encoded')
+        
+        key_features = [f for f in key_features if f in X.columns]
+        if key_features:
+            X_key = X[key_features].copy()
+            
+            # Normalize features before polynomial expansion
+            if 'year' in X_key.columns:
+                X_key['year_norm'] = (X_key['year'] - 2000) / 25
+                X_key = X_key.drop('year', axis=1)
+            
+            if 'distance' in X_key.columns:
+                X_key['distance_norm'] = X_key['distance'] / 500
+                X_key = X_key.drop('distance', axis=1)
+            
+            # Create polynomial features with degree 2, interaction only
+            poly = PolynomialFeatures(
+                degree=2, 
+                interaction_only=True,
+                include_bias=False
+            )
+            
+            # Fill NaN values before polynomial features
+            X_key_clean = X_key.fillna(X_key.median())
+            
+            X_poly = poly.fit_transform(X_key_clean)
+            poly_feature_names = poly.get_feature_names_out(X_key_clean.columns)
+            
+            # Add only the new polynomial features
+            for i, name in enumerate(poly_feature_names):
+                if name not in X_new.columns:
+                    X_new[name] = X_poly[:, i]
+        
+        return X_new
+    
+    def create_distance_specific_features(self, X: pd.DataFrame) -> pd.DataFrame:
+        """Create features specific to distance events like 500 Free"""
+        X_new = X.copy()
+        
+        if 'distance' in X.columns:
+            # Distance-specific competitive dynamics
+            X_new['is_500_free'] = ((X['distance'] == 500) & 
+                                   (X['stroke_encoded'] == 0)).astype(int)  # 0 = freestyle
+            
+            # Distance event categories
+            X_new['is_sprint'] = (X['distance'] <= 100).astype(int)
+            X_new['is_middle'] = ((X['distance'] > 100) & (X['distance'] <= 400)).astype(int)
+            X_new['is_distance'] = (X['distance'] > 400).astype(int)
+            
+            # Distance-specific pacing features
+            X_new['distance_pacing_factor'] = np.log(X['distance'] + 1) / np.log(500 + 1)
+            
+            # Competitive bandwidth features for distance events
+            if 'field_size' in X.columns:
+                X_new['distance_competition_density'] = X['field_size'] / X['distance'] * 100
+        
+        return X_new
+    
+    def create_ratio_features(self, X: pd.DataFrame, task: str) -> pd.DataFrame:
+        """Create ratio features with better normalization"""
+        X_new = X.copy()
+        
+        # Distance-based ratios (normalized)
+        if 'distance' in X.columns:
+            common_distances = [50, 100, 200, 500, 1000, 1650]
+            for dist in common_distances:
+                X_new[f'distance_ratio_{dist}'] = X['distance'] / dist
+                X_new[f'distance_diff_{dist}'] = abs(X['distance'] - dist) / dist
+        
+        # Year-based features (normalized)
+        if 'year' in X.columns:
+            current_year = X['year'].max()
+            X_new['years_since_latest'] = (current_year - X['year']) / 25  # Normalized
+            X_new['year_progression'] = (X['year'] - X['year'].min()) / (X['year'].max() - X['year'].min())
+        
+        return X_new
+    
+    def engineer_features(self, X: pd.DataFrame, task: str) -> pd.DataFrame:
+        """Engineer features with improved handling for distance events"""
+        print(f"Starting improved feature engineering for {task}...")
+        print(f"Initial features: {X.shape[1]}")
+        
+        # Step 1: Distance-normalized features
+        X = self.create_distance_normalized_features(X)
+        print(f"After distance normalization: {X.shape[1]}")
+        
+        # Step 2: Stroke-distance interactions (normalized)
+        X = self.create_stroke_distance_interactions(X)
+        print(f"After stroke-distance interactions: {X.shape[1]}")
+        
+        # Step 3: Distance-specific features
+        X = self.create_distance_specific_features(X)
+        print(f"After distance-specific features: {X.shape[1]}")
+        
+        # Step 4: Ratio features
+        X = self.create_ratio_features(X, task)
+        print(f"After ratio features: {X.shape[1]}")
+        
+        # Step 5: Selective polynomial features
+        X = self.create_selective_polynomial_features(X, task)
+        print(f"After selective polynomial features: {X.shape[1]}")
+        
+        # Handle any remaining NaN values
+        X = X.fillna(X.median())
+        
+        return X
+
+
+class ImprovedOutlierHandler:
+    def __init__(self, method='iqr', threshold=3.0):
+        self.method = method
+        self.threshold = threshold
+        self.outlier_bounds = {}
+    
+    def fit(self, X: pd.DataFrame, y: pd.Series, task: str):
+        """Fit outlier detection with distance-specific handling"""
+        if self.method == 'iqr':
+            Q1 = y.quantile(0.25)
+            Q3 = y.quantile(0.75)
+            IQR = Q3 - Q1
+            lower_bound = Q1 - 1.5 * IQR
+            upper_bound = Q3 + 1.5 * IQR
+        elif self.method == 'zscore':
+            mean = y.mean()
+            std = y.std()
+            lower_bound = mean - self.threshold * std
+            upper_bound = mean + self.threshold * std
+        else:
+            # Use percentile method
+            lower_bound = y.quantile(0.01)
+            upper_bound = y.quantile(0.99)
+        
+        self.outlier_bounds[task] = (lower_bound, upper_bound)
+        return self
+    
+    def remove_outliers(self, X: pd.DataFrame, y: pd.Series, task: str):
+        """Remove outliers with distance-specific considerations"""
+        if task not in self.outlier_bounds:
+            self.fit(X, y, task)
+        
+        lower_bound, upper_bound = self.outlier_bounds[task]
+        
+        # More conservative outlier handling for distance events
+        if 'distance' in X.columns:
+            distance_mask = X['distance'] > 400
+            if distance_mask.any():
+                # Use wider bounds for distance events
+                distance_lower = lower_bound - (upper_bound - lower_bound) * 0.5
+                distance_upper = upper_bound + (upper_bound - lower_bound) * 0.5
+                
+                # Apply different bounds for distance vs non-distance events
+                outlier_mask = (
+                    ((y < lower_bound) | (y > upper_bound)) & ~distance_mask |
+                    ((y < distance_lower) | (y > distance_upper)) & distance_mask
+                )
+            else:
+                outlier_mask = (y < lower_bound) | (y > upper_bound)
+        else:
+            outlier_mask = (y < lower_bound) | (y > upper_bound)
+        
+        # Remove outliers
+        X_clean = X[~outlier_mask].copy()
+        y_clean = y[~outlier_mask].copy()
+        
+        print(f"Removed {outlier_mask.sum()} outliers from {task} data")
+        return X_clean, y_clean
+
+
+class ImprovedFeatureSelector:
+    def __init__(self):
+        self.selected_features = {}
+        self.feature_scores = {}
+        
+    def select_features(self, X: pd.DataFrame, y: pd.Series, task: str, 
+                       max_features: int = 50) -> pd.DataFrame:
+        
+        # Essential features that must be preserved
+        essential_features = {
+            'cutoff': ['final_type_encoded', 'distance', 'stroke_encoded', 'year'],
+            'winning': ['distance', 'stroke_encoded', 'year']
+        }
+        
+        essential = [f for f in essential_features.get(task, []) if f in X.columns]
+        
+        # Calculate feature scores using multiple methods
+        print(f"Selecting features for {task} task...")
+        print(f"Starting with {X.shape[1]} features")
+        
+        # Method 1: Mutual Information
+        mi_scores = mutual_info_regression(X, y, random_state=42)
+        mi_ranking = pd.Series(mi_scores, index=X.columns).sort_values(ascending=False)
+        
+        # Method 2: Correlation with target
+        corr_scores = X.corrwith(y).abs()
+        corr_ranking = corr_scores.sort_values(ascending=False)
+        
+        # Method 3: Random Forest feature importance
+        rf = RandomForestRegressor(n_estimators=100, random_state=42)
+        rf.fit(X, y)
+        rf_scores = pd.Series(rf.feature_importances_, index=X.columns).sort_values(ascending=False)
+        
+        # Combine rankings (average rank across methods)
+        combined_scores = {}
+        for feature in X.columns:
+            mi_rank = list(mi_ranking.index).index(feature) + 1
+            corr_rank = list(corr_ranking.index).index(feature) + 1 if feature in corr_ranking.index else len(X.columns)
+            rf_rank = list(rf_scores.index).index(feature) + 1
+            
+            combined_scores[feature] = (mi_rank + corr_rank + rf_rank) / 3
+        
+        # Sort by combined rank (lower is better)
+        ranked_features = sorted(combined_scores.keys(), key=lambda x: combined_scores[x])
+        
+        # Select top features, ensuring essential features are included
+        selected = essential.copy()
+        
+        for feature in ranked_features:
+            if feature not in selected:
+                selected.append(feature)
+                if len(selected) >= max_features:
+                    break
+        
+        self.selected_features[task] = selected
+        self.feature_scores[task] = {
+            'mutual_info': mi_ranking,
+            'correlation': corr_ranking,
+            'random_forest': rf_scores,
+            'combined_rank': combined_scores
+        }
+        
+        print(f"Selected {len(selected)} features")
+        print(f"Top 10 features: {selected[:10]}")
+        
+        return X[selected]
+
+
 class FeatureEngineer:
     def __init__(self):
         self.time_converter = TimeConverter()
         self.seed_time_analyzer = SeedTimeAnalyzer()
         self.winning_time_analyzer = WinningTimeAnalyzer()
+        self.advanced_engineer = ImprovedFeatureEngineer()
+        self.feature_selector = ImprovedFeatureSelector()
 
     
     def parse_entries(self, entries_str: str) -> List[Dict]:
@@ -392,13 +705,10 @@ class FeatureEngineer:
             event_features = self.create_cutoff_features(row)
             if event_features is not None:
                 feature_rows.append(event_features)
-
         features_df = pd.DataFrame(feature_rows)
-
-        if len(features_df) > 0:
+        if not features_df.empty:
             features_df = self._add_event_level_features(features_df)
-
-        return features_df
+        return features_df if isinstance(features_df, pd.DataFrame) else pd.DataFrame(features_df)
 
     
     def engineer_winning_features(self, df: pd.DataFrame) -> pd.DataFrame:
@@ -407,13 +717,10 @@ class FeatureEngineer:
             event_features = self.create_winning_features(row)
             if event_features is not None:
                 feature_rows.append(event_features)
-
         features_df = pd.DataFrame(feature_rows)
-
-        if len(features_df) > 0:
+        if not features_df.empty:
             features_df = self._add_event_level_features(features_df)
-
-        return features_df
+        return features_df if isinstance(features_df, pd.DataFrame) else pd.DataFrame(features_df)
 
     
     def _add_event_level_features(self, df: pd.DataFrame) -> pd.DataFrame:
@@ -432,6 +739,44 @@ class FeatureEngineer:
         df['stroke_category'] = df['stroke'].map(lambda x: stroke_map.get(x, x))
         
         return df
+
+
+    def handle_outliers(self, df, features=None, method='clip', z_thresh=2.0):
+        """
+        Clip or replace outlier features in the dataframe.
+        - features: list of feature names to process (default: all numeric columns)
+        - method: 'clip' (default) or 'mean' (replace outliers with mean)
+        - z_thresh: Z-score threshold for outlier detection
+        """
+        if features is None:
+            features = df.select_dtypes(include=[np.number]).columns.tolist()
+        for feat in features:
+            if feat not in df.columns:
+                continue
+            vals = df[feat]
+            mean = vals.mean()
+            std = vals.std()
+            if std == 0 or np.isnan(std):
+                continue
+            z = (vals - mean) / std
+            if method == 'clip':
+                df[feat] = np.where(z > z_thresh, mean + z_thresh * std,
+                                    np.where(z < -z_thresh, mean - z_thresh * std, vals))
+            elif method == 'mean':
+                df[feat] = np.where(np.abs(z) > z_thresh, mean, vals)
+        return df if isinstance(df, pd.DataFrame) else pd.DataFrame(df)
+
+    def engineer(self, df, event_type=None):
+        # After all other feature engineering steps, handle outliers:
+        outlier_features = [
+            'prelim_skewness', 'prelim_kurtosis', 'prelim_mean', 'prelim_std',
+            'seed_skewness', 'seed_kurtosis', 'seed_mean', 'seed_std',
+            'field_size', 'seed_cv', 'fastest_seed', 'slowest_seed', 'seed_range'
+        ]
+        features_to_clip = [f for f in outlier_features if f in df.columns]
+        if features_to_clip:
+            df = self.handle_outliers(df, features=features_to_clip, method='clip', z_thresh=2.0)
+        return df if isinstance(df, pd.DataFrame) else pd.DataFrame(df)
 
 
 def load_data() -> pd.DataFrame:

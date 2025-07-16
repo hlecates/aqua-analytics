@@ -8,6 +8,9 @@ from typing import List, Dict, Tuple, Optional
 from pdf_parser import PDFParser
 from txt_parser import TXTParser
 from data_formatter import DataFormatter
+from engineer_features import FeatureEngineer
+from feature_modeling import train_improved_models
+from simple_modeling import main as simple_modeling_main
 
 import utils
 
@@ -293,6 +296,143 @@ class MeetDataPipeline:
         
         return parsed_path, combined_path
 
+    def run_feature_engineering(self) -> Optional[Path]:
+        logging.info("Starting feature engineering pipeline")
+        
+        # Check if combined dataset exists
+        combined_path = self.clean_dir / "combined_individual_events.csv"
+        if not combined_path.exists():
+            logging.error(f"Combined dataset not found at {combined_path}")
+            logging.error("Run --combine first to generate the dataset.")
+            return None
+        
+        # Load combined dataset
+        df = pd.read_csv(combined_path)
+        logging.info(f"Loaded {len(df)} records from combined dataset")
+        
+        # Initialize feature engineer
+        feature_engineer = FeatureEngineer()
+        
+        # Engineer cutoff features
+        logging.info("Engineering cutoff features...")
+        cutoff_features_df = feature_engineer.engineer_cutoff_features(df)
+        
+        # Engineer winning features  
+        logging.info("Engineering winning features...")
+        winning_features_df = feature_engineer.engineer_winning_features(df)
+        
+        # Save features
+        features_dir = self.output_base / "processed" / "features"
+        features_dir.mkdir(parents=True, exist_ok=True)
+        
+        cutoff_output_path = features_dir / "cutoff_features.csv"
+        winning_output_path = features_dir / "winning_features.csv"
+        
+        cutoff_features_df.to_csv(cutoff_output_path, index=False)
+        winning_features_df.to_csv(winning_output_path, index=False)
+        
+        logging.info(f"Cutoff features saved to {cutoff_output_path}")
+        logging.info(f"Winning features saved to {winning_output_path}")
+        logging.info(f"Cutoff features shape: {cutoff_features_df.shape}")
+        logging.info(f"Winning features shape: {winning_features_df.shape}")
+        
+        print(f"Success: Generated feature datasets")
+        print(f"  Cutoff features: {cutoff_output_path} ({cutoff_features_df.shape[0]} records)")
+        print(f"  Winning features: {winning_output_path} ({winning_features_df.shape[0]} records)")
+        
+        return features_dir
+
+    def run_simple_modeling(self) -> Optional[Path]:
+        logging.info("Starting simple modeling pipeline")
+        
+        # Check if features exist
+        features_dir = self.output_base / "processed" / "features"
+        cutoff_features_file = features_dir / "cutoff_features.csv"
+        winning_features_file = features_dir / "winning_features.csv"
+        
+        if not cutoff_features_file.exists() or not winning_features_file.exists():
+            logging.error("Feature files not found. Run --features first.")
+            return None
+        
+        # Run simple modeling
+        logging.info("Running simple modeling...")
+        simple_modeling_main()
+        
+        models_dir = self.output_base / "models"
+        print(f"Success: Simple models trained and saved to {models_dir}")
+        return models_dir
+
+    def run_advanced_modeling(self, show_examples: bool = True) -> Optional[Path]:
+        logging.info("Starting advanced modeling pipeline")
+        
+        # Check if features exist
+        features_dir = self.output_base / "processed" / "features"
+        cutoff_features_file = features_dir / "cutoff_features.csv"
+        winning_features_file = features_dir / "winning_features.csv"
+        
+        if not cutoff_features_file.exists() or not winning_features_file.exists():
+            logging.error("Feature files not found. Run --features first.")
+            return None
+        
+        # Run advanced modeling
+        logging.info("Running advanced feature-based modeling...")
+        results = train_improved_models(cutoff_features_file, winning_features_file)
+        
+        advanced_model_path = Path(__file__).parent.parent / "output" / "advanced_model" / "enhanced_ultra_precise_models.pkl"
+        print(f"Success: Advanced models trained and saved to {advanced_model_path}")
+        return advanced_model_path
+
+    def run_full_pipeline(self, parse_pdfs: bool = True, parse_txts: bool = True, 
+                         simple_models: bool = False, advanced_models: bool = True,
+                         show_examples: bool = True) -> Dict[str, Optional[Path]]:
+        logging.info("Starting full end-to-end pipeline")
+        
+        results = {}
+        
+        # Step 1: Parse and combine data
+        logging.info("Step 1: Parsing and combining data...")
+        parsed_path, combined_path = self.run_pipeline(parse_pdfs, parse_txts)
+        results['parsed'] = parsed_path
+        results['combined'] = combined_path
+        
+        if not combined_path:
+            logging.error("Failed to create combined dataset. Stopping pipeline.")
+            return results
+        
+        # Step 2: Feature engineering
+        logging.info("Step 2: Feature engineering...")
+        features_path = self.run_feature_engineering()
+        results['features'] = features_path
+        
+        if not features_path:
+            logging.error("Failed to engineer features. Stopping pipeline.")
+            return results
+        
+        # Step 3: Simple modeling (optional)
+        if simple_models:
+            logging.info("Step 3a: Simple modeling...")
+            simple_models_path = self.run_simple_modeling()
+            results['simple_models'] = simple_models_path
+        
+        # Step 4: Advanced modeling
+        if advanced_models:
+            logging.info("Step 4: Advanced modeling...")
+            advanced_models_path = self.run_advanced_modeling(show_examples)
+            results['advanced_models'] = advanced_models_path
+        
+        logging.info("Full pipeline completed successfully!")
+        print("\n" + "="*80)
+        print("FULL PIPELINE COMPLETED SUCCESSFULLY!")
+        print("="*80)
+        
+        for step, path in results.items():
+            if path:
+                print(f"✅ {step.capitalize()}: {path}")
+            else:
+                print(f"❌ {step.capitalize()}: Failed")
+        
+        return results
+
 
 def main():
     base = Path(__file__).parent.parent
@@ -304,6 +444,7 @@ def main():
     # Parse command line arguments
     parse_pdfs = True
     parse_txts = True
+    show_examples = True
     
     if "--pdf" in args:
         parse_pdfs = True
@@ -312,17 +453,23 @@ def main():
         parse_pdfs = False
         parse_txts = True
     
-    # Remove the file type flags from args for command processing
-    args = [arg for arg in args if arg not in ["--pdf", "--txt"]]
+    if "--no-examples" in args:
+        show_examples = False
+    
+    # Remove flags from args for command processing
+    args = [arg for arg in args if arg not in ["--pdf", "--txt", "--no-examples"]]
     
     cmd = args[0].lower() if args else None
+    
     if cmd == "--parse":
         df = pipeline.parse_all_files(save_individual=True, parse_pdfs=parse_pdfs, parse_txts=parse_txts)
         path = pipeline.save_data(df, pipeline.clean_dir / "parsed_events.csv")
         print(f"Success: {path}" if path else "Failed to save parsed data.")
         print("Individual meet files have been saved to the clean/individual directory.")
+        
     elif cmd == "--clean":
         print("The --clean command has been deprecated. Use --combine to process individual files.")
+        
     elif cmd == "--combine":
         combined_path = pipeline.process_individual_files()
         if combined_path:
@@ -332,6 +479,44 @@ def main():
             pipeline.analyze_cutoffs(combined_df)
         else:
             print("Failed to generate combined dataset.")
+            
+    elif cmd == "--features":
+        features_path = pipeline.run_feature_engineering()
+        if not features_path:
+            print("Failed to engineer features.")
+            
+    elif cmd == "--simple-models":
+        models_path = pipeline.run_simple_modeling()
+        if not models_path:
+            print("Failed to train simple models.")
+            
+    elif cmd == "--advanced-models":
+        models_path = pipeline.run_advanced_modeling(show_examples)
+        if not models_path:
+            print("Failed to train advanced models.")
+            
+    elif cmd == "--models":
+        # Train both simple and advanced models
+        print("Training both simple and advanced models...")
+        simple_path = pipeline.run_simple_modeling()
+        advanced_path = pipeline.run_advanced_modeling(show_examples)
+        if simple_path and advanced_path:
+            print("Success: Both model types trained successfully.")
+        elif simple_path or advanced_path:
+            print("Partial success: One model type completed.")
+        else:
+            print("Failed to train models.")
+            
+    elif cmd == "--full":
+        # Run complete end-to-end pipeline
+        results = pipeline.run_full_pipeline(
+            parse_pdfs=parse_pdfs, 
+            parse_txts=parse_txts,
+            simple_models=True,  # Include simple models in full pipeline
+            advanced_models=True,
+            show_examples=show_examples
+        )
+        
     elif cmd == "--analyze":
         combined_path = pipeline.clean_dir / "combined_individual_events.csv"
         if combined_path.exists():
@@ -340,10 +525,48 @@ def main():
         else:
             print(f"Combined dataset not found at {combined_path}")
             print("Run --combine first to generate the dataset.")
+            
+    elif cmd == "--help":
+        print("\nNESCAC Swimming Pipeline Commands:")
+        print("=" * 50)
+        print("Data Processing:")
+        print("  --parse         Parse PDF/TXT files to CSV")
+        print("  --combine       Combine individual meet files")
+        print("  --features      Engineer features from combined data")
+        print()
+        print("Modeling:")
+        print("  --simple-models Train basic regression models")
+        print("  --advanced-models Train ultra-precise ensemble models")
+        print("  --models        Train both simple and advanced models")
+        print()
+        print("Full Pipeline:")
+        print("  --full          Run complete end-to-end pipeline")
+        print("  (default)       Run basic parsing and combining")
+        print()
+        print("Analysis:")
+        print("  --analyze       Analyze cutoff statistics")
+        print()
+        print("Options:")
+        print("  --pdf           Parse only PDF files")
+        print("  --txt           Parse only TXT files")
+        print("  --no-examples   Skip prediction examples display")
+        print("  --help          Show this help message")
+        print()
+        print("Examples:")
+        print("  python pipeline.py --full")
+        print("  python pipeline.py --features")
+        print("  python pipeline.py --advanced-models --no-examples")
+        print("  python pipeline.py --parse --pdf")
+        
     else:
+        # Default: run basic pipeline (parse + combine)
         parsed, combined = pipeline.run_pipeline(parse_pdfs=parse_pdfs, parse_txts=parse_txts)
         if parsed and combined:
             print(f"Success: Generated {parsed.name}, {combined.name}")
+            print("Next steps:")
+            print("  --features      Engineer features")
+            print("  --advanced-models  Train ultra-precise models")
+            print("  --full          Run complete pipeline")
         elif parsed:
             print(f"Partial success: Generated {parsed.name}")
         else:
