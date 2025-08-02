@@ -1,18 +1,4 @@
 #!/usr/bin/env python3
-"""
-NESCAC Swimming Prediction Script
-
-Usage: python predict.py <year>
-
-This script generates predictions for all NESCAC swimming events for a given year.
-It uses both simple and advanced models when possible, with automatic fallbacks.
-
-Features:
-- Automatic model training if models don't exist
-- Intelligent year range detection for advanced model usage
-- Comparison with actual times when available
-- Comprehensive output with error metrics
-"""
 
 import argparse
 import pandas as pd
@@ -82,7 +68,6 @@ class PredictionEngine:
         self.advanced_models = None
         
     def check_data_availability(self) -> Dict[str, bool]:
-        """Check what data and models are available."""
         return {
             'combined_data': self.combined_data_path.exists(),
             'cutoff_features': self.cutoff_features_path.exists(),
@@ -92,7 +77,6 @@ class PredictionEngine:
         }
     
     def get_year_ranges(self) -> Dict[str, Tuple[int, int]]:
-        """Get valid year ranges for different components."""
         ranges = {}
         
         # Combined data range
@@ -112,7 +96,6 @@ class PredictionEngine:
         return ranges
     
     def ensure_features_exist(self):
-        """Ensure feature files exist, create them if necessary."""
         if not (self.cutoff_features_path.exists() and self.winning_features_path.exists()):
             print("Feature files not found. Running feature engineering...")
             pipeline = MeetDataPipeline(self.data_path)
@@ -122,7 +105,6 @@ class PredictionEngine:
             print("✅ Features created successfully")
     
     def ensure_simple_models_exist(self):
-        """Ensure simple models exist, train them if necessary."""
         simple_model_file = self.simple_models_path / "nescac_models.pkl"
         if not simple_model_file.exists():
             print("Simple models not found. Training simple models...")
@@ -154,7 +136,6 @@ class PredictionEngine:
             print("✅ Simple models trained successfully")
     
     def retrain_advanced_models_excluding_year(self, exclude_year: int):
-        """Retrain advanced models excluding data from the specified year to prevent data leakage."""
         print(f"Retraining advanced models excluding {exclude_year} to prevent data leakage...")
         
         # Import the modeling modules
@@ -191,7 +172,6 @@ class PredictionEngine:
         print(f"Advanced models retrained successfully, excluding {exclude_year}")
     
     def ensure_advanced_models_exist(self):
-        """Ensure advanced models exist, train them if necessary."""
         if not self.advanced_models_path.exists():
             print("Advanced models not found. Training advanced models...")
             
@@ -204,7 +184,6 @@ class PredictionEngine:
             print("✅ Advanced models trained successfully")
     
     def load_simple_models(self):
-        """Load simple models and preprocessing objects."""
         if self.simple_models_loaded:
             return
             
@@ -223,7 +202,6 @@ class PredictionEngine:
         print("✅ Simple models loaded")
     
     def load_advanced_models(self):
-        """Load advanced models."""
         if self.advanced_models_loaded:
             return
             
@@ -236,7 +214,6 @@ class PredictionEngine:
         print("✅ Advanced models loaded")
     
     def predict_simple_cutoff(self, year: int, stroke: str, distance: int, final_type: str) -> float:
-        """Make cutoff prediction using simple model."""
         # Get best model for cutoff
         best_models = {}
         for model_name, model_data in self.simple_models_data['cutoff'].items():
@@ -264,7 +241,6 @@ class PredictionEngine:
         return prediction
     
     def predict_simple_winning(self, year: int, stroke: str, distance: int) -> float:
-        """Make winning time prediction using simple model."""
         # Get best model for winning
         best_models = {}
         for model_name, model_data in self.simple_models_data['winning'].items():
@@ -291,7 +267,6 @@ class PredictionEngine:
         return prediction
     
     def get_advanced_features_for_event(self, year: int, stroke: str, distance: int) -> Dict:
-        """Get advanced features for a specific event, with outlier handling."""
         # Load feature data
         winning_features = pd.read_csv('../data/processed/features/winning_features.csv')
         cutoff_features = pd.read_csv('../data/processed/features/cutoff_features.csv')
@@ -364,7 +339,6 @@ class PredictionEngine:
         }
     
     def predict_advanced_cutoff(self, year: int, stroke: str, distance: int, final_type: str) -> float:
-        """Make cutoff prediction using event-specific model manager."""
         try:
             # Use the event-specific model manager
             manager = self.advanced_models  # This should be the EventSpecificModelManager
@@ -379,7 +353,6 @@ class PredictionEngine:
             return self.predict_simple_cutoff(year, stroke, distance, final_type)
     
     def predict_advanced_winning(self, year: int, stroke: str, distance: int) -> float:
-        """Make winning time prediction using event-specific model manager."""
         try:
             # Use the event-specific model manager
             manager = self.advanced_models  # This should be the EventSpecificModelManager
@@ -394,7 +367,6 @@ class PredictionEngine:
             return self.predict_simple_winning(year, stroke, distance)
     
     def get_actual_times(self, year: int) -> Dict[str, Dict]:
-        """Get actual times for the specified year if available."""
         if not self.combined_data_path.exists():
             return {}
             
@@ -419,7 +391,6 @@ class PredictionEngine:
         return actual_times
     
     def format_time(self, seconds: float) -> str:
-        """Format time in seconds to MM:SS.SS format."""
         if pd.isna(seconds) or seconds is None:
             return "N/A"
         
@@ -432,7 +403,6 @@ class PredictionEngine:
             return f"{secs:.2f}"
     
     def calculate_error_metrics(self, predicted: float, actual: float) -> Tuple[float, float]:
-        """Calculate error metrics between predicted and actual times."""
         if pd.isna(actual) or actual is None or pd.isna(predicted) or predicted is None:
             return None, None
         
@@ -442,7 +412,6 @@ class PredictionEngine:
         return diff_seconds, percent_diff
     
     def generate_predictions(self, year: int, retrain_advanced: bool = False) -> Dict:
-        """Generate all predictions for the specified year."""
         print(f"\nGenerating predictions for {year}...")
         
         # Check what models we can use
@@ -532,7 +501,6 @@ class PredictionEngine:
         return predictions
     
     def write_predictions_report(self, year: int, predictions: Dict, output_file: str):
-        """Write comprehensive predictions report to file."""
         with open(output_file, 'w') as f:
             f.write(f"NESCAC Swimming Predictions Report for {year}\n")
             f.write("=" * 80 + "\n\n")
@@ -740,13 +708,13 @@ Examples:
         print(f"\nWriting predictions report to: {output_file}")
         engine.write_predictions_report(args.year, predictions, output_file)
         
-        print(f"\n✅ Predictions completed successfully!")
-        print(f"📄 Report saved to: {output_file}")
+        print(f"\nPredictions completed successfully!")
+        print(f"Report saved to: {output_file}")
         
         return 0
         
     except Exception as e:
-        print(f"\n❌ Error generating predictions: {e}")
+        print(f"\nError generating predictions: {e}")
         import traceback
         traceback.print_exc()
         return 1

@@ -18,7 +18,6 @@ def run_script(script_name):
         return False
 
 def main():
-    """Main function to run the manual entry pipeline"""
     print("Manual Entry Pipeline")
     
     # Step 1: Convert CSV files to txt files

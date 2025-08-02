@@ -15,7 +15,6 @@ from engineer_features import ImprovedFeatureEngineer, ImprovedFeatureSelector, 
 
 
 class LinearEnsemble:
-    """Simple, fast ensemble for sprint events."""
     
     def __init__(self):
         self.models = [
@@ -46,7 +45,6 @@ class LinearEnsemble:
 
 
 class DistanceSpecializedModel:
-    """Complex model for distance events with pacing considerations."""
     
     def __init__(self):
         self.model = GradientBoostingRegressor(
@@ -65,7 +63,6 @@ class DistanceSpecializedModel:
 
 
 class StandardEnsemble:
-    """Standard ensemble for medium-distance events."""
     
     def __init__(self):
         self.model = VotingRegressor([
@@ -144,7 +141,6 @@ class EventSpecificModelManager:
         return features_df
     
     def train_event_group_model(self, df: pd.DataFrame, event_group: str, task: str) -> Dict[str, Any]:
-        """Train a model specific to an event group."""
         print(f"Training {event_group} model for {task} prediction...")
         
         # Filter data for this event group

@@ -303,7 +303,6 @@ class ImprovedFeatureEngineer:
         self.scalers = {}
         
     def create_distance_normalized_features(self, X: pd.DataFrame) -> pd.DataFrame:
-        """Create distance-normalized features to avoid polynomial explosion"""
         X_new = X.copy()
         
         if 'distance' in X.columns:
@@ -325,7 +324,6 @@ class ImprovedFeatureEngineer:
         return X_new
     
     def create_stroke_distance_interactions(self, X: pd.DataFrame) -> pd.DataFrame:
-        """Create stroke-distance interactions with normalized values"""
         X_new = X.copy()
         
         if 'stroke_encoded' in X.columns and 'distance' in X.columns:
@@ -364,7 +362,6 @@ class ImprovedFeatureEngineer:
         return X_new
         
     def create_selective_polynomial_features(self, X: pd.DataFrame, task: str) -> pd.DataFrame:
-        """Create polynomial features selectively to avoid explosion"""
         X_new = X.copy()
         
         # Only use key features for polynomials, with normalized values
@@ -406,7 +403,6 @@ class ImprovedFeatureEngineer:
         return X_new
     
     def create_distance_specific_features(self, X: pd.DataFrame) -> pd.DataFrame:
-        """Create features specific to distance events like 500 Free"""
         X_new = X.copy()
         
         if 'distance' in X.columns:
@@ -429,7 +425,6 @@ class ImprovedFeatureEngineer:
         return X_new
     
     def create_ratio_features(self, X: pd.DataFrame, task: str) -> pd.DataFrame:
-        """Create ratio features with better normalization"""
         X_new = X.copy()
         
         # Distance-based ratios (normalized)
@@ -448,7 +443,6 @@ class ImprovedFeatureEngineer:
         return X_new
     
     def engineer_features(self, X: pd.DataFrame, task: str) -> pd.DataFrame:
-        """Engineer features with improved handling for distance events"""
         print(f"Starting improved feature engineering for {task}...")
         print(f"Initial features: {X.shape[1]}")
         
@@ -485,7 +479,6 @@ class ImprovedOutlierHandler:
         self.outlier_bounds = {}
     
     def fit(self, X: pd.DataFrame, y: pd.Series, task: str):
-        """Fit outlier detection with distance-specific handling"""
         if self.method == 'iqr':
             Q1 = y.quantile(0.25)
             Q3 = y.quantile(0.75)
@@ -506,7 +499,6 @@ class ImprovedOutlierHandler:
         return self
     
     def remove_outliers(self, X: pd.DataFrame, y: pd.Series, task: str):
-        """Remove outliers with distance-specific considerations"""
         if task not in self.outlier_bounds:
             self.fit(X, y, task)
         
@@ -742,12 +734,6 @@ class FeatureEngineer:
 
 
     def handle_outliers(self, df, features=None, method='clip', z_thresh=2.0):
-        """
-        Clip or replace outlier features in the dataframe.
-        - features: list of feature names to process (default: all numeric columns)
-        - method: 'clip' (default) or 'mean' (replace outliers with mean)
-        - z_thresh: Z-score threshold for outlier detection
-        """
         if features is None:
             features = df.select_dtypes(include=[np.number]).columns.tolist()
         for feat in features:

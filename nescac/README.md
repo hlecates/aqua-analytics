@@ -26,3 +26,29 @@ and others have
 
 
 Had to drop 2002, 2003, 2004, 2008, since no seed time were included, hence no featured would be able to be created for the targets
+
+Use a "case study"
+
+I am mid distance swimmer who swims fly and freestyle. The 100 fly and 200 free are on the saem day, hence need to choose one, and want ot make the biggest impact via scoring points for my team. My PR in 200 free is XX, season best was XX, same for 100 fly. Via the models predictions, both the simple and advancded model, would have predicted me missing the C final of the 200 free, and failing to make finals and hence score points, BUT make the B final of the 100 butterfly, allowinf for pints to be scored
+
+Using the 2024 predictions and related times, the advanced model would predict me to make the b final with my PB, and C final with season best. Since nescac is a championnship meet, it is most likely yhe season best time will be imporved upin hence, use the PB. Then for the 100 fly with PB it would predicit me to be make the A final, and season best would make the C final. This has a higher potential pint output, hence sswim the 100 fly at nescacs.
+
+2024
+200 FREE:
+    PB: 1:44.13
+    Season PB: 1:45.61
+
+100 FLY
+    PB: 49.81
+    Season PB: 51.01
+
+2025
+200 FREE:
+    PB: 1:43.06
+    Season PB: 1:46.16
+
+100 FLY
+    PB: 49.46 
+    Season PB: 51.15
+
+

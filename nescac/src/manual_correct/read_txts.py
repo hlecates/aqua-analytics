@@ -10,7 +10,6 @@ individual_dir = Path(__file__).parent.parent.parent / 'data' / 'processed' / 'p
 txts_dir = Path(__file__).parent / 'txts_to_update'
 
 def parse_txt_to_csv(txt_filepath):
-    """Parse a txt file back into CSV format"""
     events = []
     with open(txt_filepath, 'r') as f:
         content = f.read()
