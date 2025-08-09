@@ -51,3 +51,8 @@ logs/
 # Inprocess data
 finished/
 individual/
+
+nescac/webapp/frontend/node_modules/
+
+# Node
+node_modules/
