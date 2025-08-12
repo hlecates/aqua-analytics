@@ -5,14 +5,14 @@ import pdfplumber
 from pathlib import Path
 from typing import List, Dict, Tuple, Optional
 
-from pdf_parser import PDFParser
-from txt_parser import TXTParser
-from data_formatter import DataFormatter
-from engineer_features import FeatureEngineer
-from feature_modeling import train_improved_models
-from simple_modeling import main as simple_modeling_main
+from nescac_src.ingest.pdf_parser import PDFParser
+from nescac_src.ingest.txt_parser import TXTParser
+from nescac_src.transform.data_formatter import DataFormatter
+from nescac_src.transform.engineer_features import FeatureEngineer
+from nescac_src.modeling.feature_modeling import train_improved_models
+from nescac_src.modeling.simple_modeling import main as simple_modeling_main
 
-import utils
+from nescac_src.common import utils
 
 
 class MeetDataPipeline:

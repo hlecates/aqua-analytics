@@ -3,7 +3,7 @@ import re
 import pdfplumber
 from pathlib import Path
 from typing import List, Dict, Optional, Tuple
-from base_parser import BaseParser
+from nescac_src.ingest.base_parser import BaseParser
 
 
 class PDFParser(BaseParser):

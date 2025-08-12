@@ -11,7 +11,7 @@ project_root = Path(__file__).parent.parent.parent
 src_path = project_root / "src"
 sys.path.append(str(src_path))
 
-from predict import PredictionEngine
+from nescac_src.modeling.predict import PredictionEngine
 import pandas as pd
 import json
 

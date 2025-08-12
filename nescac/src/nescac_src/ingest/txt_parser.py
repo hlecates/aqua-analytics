@@ -1,7 +1,7 @@
 import logging
 import re
 from typing import List, Dict, Optional, Tuple
-from base_parser import BaseParser
+from nescac_src.ingest.base_parser import BaseParser
 
 
 class TXTParser(BaseParser):

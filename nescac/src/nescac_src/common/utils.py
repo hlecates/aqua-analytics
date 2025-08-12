@@ -5,7 +5,7 @@ import requests
 from typing import Optional, Dict
 from datetime import datetime
 
-import config
+from nescac_src.common import config
 
 def setup_logging(log_dir: str = "logs", log_filename: Optional[str] = None):
     # Create logs directory if it doesn't exist

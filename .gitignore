@@ -50,9 +50,9 @@ logs/
 
 # Inprocess data
 finished/
+txts_to_update/
 individual/
-
-nescac/webapp/frontend/node_modules/
-
 # Node
 node_modules/
+
+

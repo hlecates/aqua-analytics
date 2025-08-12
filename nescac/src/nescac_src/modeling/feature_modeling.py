@@ -11,7 +11,7 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder, RobustScaler
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor, VotingRegressor, ExtraTreesRegressor
 from sklearn.linear_model import LinearRegression, Ridge, Lasso, ElasticNet
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
-from engineer_features import ImprovedFeatureEngineer, ImprovedFeatureSelector, ImprovedOutlierHandler
+from nescac_src.transform.engineer_features import ImprovedFeatureEngineer, ImprovedFeatureSelector, ImprovedOutlierHandler
 
 
 class LinearEnsemble:

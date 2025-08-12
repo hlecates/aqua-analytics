@@ -10,16 +10,16 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # Local imports
-from simple_modeling import Preprocessor, ModelTrainer, ModelSaver
-from engineer_features import FeatureEngineer
-from feature_modeling import (
+from nescac_src.modeling.simple_modeling import Preprocessor, ModelTrainer, ModelSaver
+from nescac_src.transform.engineer_features import FeatureEngineer
+from nescac_src.modeling.feature_modeling import (
     train_improved_models, 
     EventSpecificModelManager,
     LinearEnsemble,
     DistanceSpecializedModel,
     StandardEnsemble
 )
-from pipeline import MeetDataPipeline
+from nescac_src.pipelines.pipeline import MeetDataPipeline
 
 
 class PredictionEngine:
@@ -139,7 +139,7 @@ class PredictionEngine:
         print(f"Retraining advanced models excluding {exclude_year} to prevent data leakage...")
         
         # Import the modeling modules
-        from feature_modeling import train_improved_models
+        from nescac_src.modeling.feature_modeling import train_improved_models
         
         # Create temporary feature files excluding the target year
         import tempfile
