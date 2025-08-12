@@ -39,7 +39,6 @@ venv.bak/
 # Jupyter Notebook
 .ipynb_checkpoints
 
-
 # OS
 .DS_Store
 Thumbs.db
@@ -52,7 +51,13 @@ logs/
 finished/
 txts_to_update/
 individual/
+nescac/data/raw/2-col-pdfs/
+nescac/data/raw/pdfs/
+nescac/data/raw/txts/
 # Node
 node_modules/
 
-
+nescac/app/backend/instance/*.sqlite*
+nescac/app/backend/instance/*.db
+*.sqlite-journal
+*.sqlite3-journal
