@@ -54,6 +54,7 @@ individual/
 nescac/data/raw/2-col-pdfs/
 nescac/data/raw/pdfs/
 nescac/data/raw/txts/
+nescac/data/raw
 # Node
 node_modules/
 

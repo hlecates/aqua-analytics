@@ -51,4 +51,9 @@ Using the 2024 predictions and related times, the advanced model would predict m
     PB: 49.46 
     Season PB: 51.15
 
+TODO
+convert the parsing and pipeling and modeling scripts to create and populate a db instance. --> this is really only necessary when more backend features need querying
+
+Allow for some way for app users to add more meet results
+
 
