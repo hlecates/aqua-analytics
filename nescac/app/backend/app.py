@@ -279,6 +279,227 @@ def get_historical_data(year):
             'status': 'error'
         }), 500
 
+# -------- History Endpoints (DB-backed) --------
+from sqlalchemy import select, func
+from nescac_src.db.session import get_session, init_db
+from nescac_src.db.models import Event, Meet, Athlete, ResultIndividual, School
+
+@app.route('/api/history/years', methods=['GET'])
+def history_years():
+    try:
+        init_db()
+        with get_session() as s:
+            years = s.execute(select(Meet.year).distinct().order_by(Meet.year.asc())).scalars().all()
+        return jsonify({'years': [int(y) for y in years]})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/history/events', methods=['GET'])
+def history_events():
+    try:
+        init_db()
+        year = request.args.get('year', type=int)
+        gender = request.args.get('gender')
+        include_relay = request.args.get('include_relay', default='false').lower() == 'true'
+        with get_session() as s:
+            if year is not None:
+                q = (
+                    select(Event.id, Event.gender, Event.distance, Event.stroke, Event.is_relay)
+                    .join(ResultIndividual, ResultIndividual.event_id == Event.id)
+                    .join(Meet, Meet.id == ResultIndividual.meet_id)
+                    .where(Meet.year == year)
+                )
+            else:
+                q = select(Event.id, Event.gender, Event.distance, Event.stroke, Event.is_relay)
+            if gender:
+                q = q.where(Event.gender == gender)
+            if not include_relay:
+                q = q.where(Event.is_relay == False)  # noqa: E712
+            q = q.distinct().order_by(Event.gender.asc(), Event.distance.asc(), Event.stroke.asc())
+            rows = s.execute(q).all()
+            events = []
+            for eid, g, d, st, rel in rows:
+                events.append({
+                    'id': int(eid),
+                    'gender': g,
+                    'distance': int(d),
+                    'stroke': st,
+                    'is_relay': bool(rel),
+                    'name': f"{g} {int(d)} {st}"
+                })
+        return jsonify({'events': events})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/history/event-years', methods=['GET'])
+def history_event_years():
+    try:
+        init_db()
+        event_id = request.args.get('event_id', type=int)
+        gender = request.args.get('gender')
+        distance = request.args.get('distance', type=int)
+        stroke = request.args.get('stroke')
+        if event_id is None and not (gender and distance is not None and stroke):
+            return jsonify({'error': 'Missing event specifier'}), 400
+        with get_session() as s:
+            if event_id is not None:
+                ev = s.get(Event, event_id)
+                if ev is None:
+                    return jsonify({'error': 'Event not found'}), 404
+                ev_id = ev.id
+            else:
+                ev = s.execute(
+                    select(Event).where(
+                        Event.gender == gender,
+                        Event.distance == distance,
+                        Event.stroke == stroke,
+                    )
+                ).scalar_one_or_none()
+                if ev is None:
+                    return jsonify({'error': 'Event not found'}), 404
+                ev_id = ev.id
+            years = s.execute(
+                select(Meet.year).distinct()
+                .join(ResultIndividual, ResultIndividual.meet_id == Meet.id)
+                .where(ResultIndividual.event_id == ev_id)
+                .order_by(Meet.year.asc())
+            ).scalars().all()
+        return jsonify({'event_id': int(ev_id), 'years': [int(y) for y in years]})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/history/results', methods=['GET'])
+def history_results():
+    try:
+        init_db()
+        year = request.args.get('year', type=int)
+        event_id = request.args.get('event_id', type=int)
+        gender = request.args.get('gender')
+        distance = request.args.get('distance', type=int)
+        stroke = request.args.get('stroke')
+        if year is None:
+            return jsonify({'error': 'Missing year'}), 400
+        with get_session() as s:
+            ev = None
+            if event_id is not None:
+                ev = s.get(Event, event_id)
+                if ev is None:
+                    return jsonify({'error': 'Event not found'}), 404
+            elif gender and distance is not None and stroke:
+                ev = s.execute(
+                    select(Event).where(
+                        Event.gender == gender,
+                        Event.distance == distance,
+                        Event.stroke == stroke,
+                    )
+                ).scalar_one_or_none()
+                if ev is None:
+                    return jsonify({'error': 'Event not found'}), 404
+            else:
+                return jsonify({'error': 'Missing event specifier'}), 400
+
+            base_q = (
+                select(
+                    ResultIndividual.id,
+                    ResultIndividual.athlete_name,
+                    ResultIndividual.school_name,
+                    ResultIndividual.round,
+                    ResultIndividual.place,
+                    ResultIndividual.time_seconds,
+                    ResultIndividual.time_raw,
+                )
+                .where(
+                    ResultIndividual.event_id == ev.id,
+                    ResultIndividual.meet_id == select(Meet.id).where(Meet.year == year).scalar_subquery(),
+                )
+            )
+            finals_q = base_q.where(ResultIndividual.round == 'Final').order_by(ResultIndividual.time_seconds.asc())
+            prelims_q = base_q.where(ResultIndividual.round == 'Prelim').order_by(ResultIndividual.time_seconds.asc())
+            with get_session() as s2:
+                finals = [
+                    {
+                        'id': int(r.id),
+                        'athlete_name': r.athlete_name,
+                        'school_name': r.school_name,
+                        'round': r.round,
+                        'place': int(r.place) if r.place is not None else None,
+                        'time_seconds': float(r.time_seconds) if r.time_seconds is not None else None,
+                        'time_raw': r.time_raw,
+                    }
+                    for r in s2.execute(finals_q).all()
+                ]
+                prelims = [
+                    {
+                        'id': int(r.id),
+                        'athlete_name': r.athlete_name,
+                        'school_name': r.school_name,
+                        'round': r.round,
+                        'place': int(r.place) if r.place is not None else None,
+                        'time_seconds': float(r.time_seconds) if r.time_seconds is not None else None,
+                        'time_raw': r.time_raw,
+                    }
+                    for r in s2.execute(prelims_q).all()
+                ]
+            event_info = {
+                'id': int(ev.id),
+                'gender': ev.gender,
+                'distance': int(ev.distance),
+                'stroke': ev.stroke,
+                'is_relay': bool(ev.is_relay),
+                'name': f"{ev.gender} {int(ev.distance)} {ev.stroke}",
+            }
+            return jsonify({'year': int(year), 'event': event_info, 'finals': finals, 'prelims': prelims})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/history/athlete', methods=['GET'])
+def history_athlete():
+    try:
+        init_db()
+        q = request.args.get('q', default='', type=str).strip()
+        if not q:
+            return jsonify({'results': []})
+        with get_session() as s:
+            # Find matching athletes (case-insensitive contains)
+            ath_ids = s.execute(
+                select(Athlete.id).where(func.lower(Athlete.name).like(f"%{q.lower()}%"))
+            ).scalars().all()
+            if not ath_ids:
+                return jsonify({'results': []})
+            rows = s.execute(
+                select(
+                    Athlete.name.label('athlete_name'),
+                    Meet.year.label('year'),
+                    Event.gender, Event.distance, Event.stroke,
+                    ResultIndividual.round, ResultIndividual.place,
+                    ResultIndividual.time_seconds, ResultIndividual.time_raw,
+                    ResultIndividual.school_name
+                )
+                .join(ResultIndividual, ResultIndividual.athlete_id == Athlete.id)
+                .join(Meet, Meet.id == ResultIndividual.meet_id)
+                .join(Event, Event.id == ResultIndividual.event_id)
+                .where(Athlete.id.in_(ath_ids))
+                .order_by(Meet.year.asc(), Event.gender.asc(), Event.distance.asc(), Event.stroke.asc(), ResultIndividual.round.desc(), ResultIndividual.time_seconds.asc())
+            ).all()
+            results = [
+                {
+                    'athlete_name': r.athlete_name,
+                    'year': int(r.year) if r.year is not None else None,
+                    'gender': r.gender,
+                    'distance': int(r.distance) if r.distance is not None else None,
+                    'stroke': r.stroke,
+                    'round': r.round,
+                    'place': int(r.place) if r.place is not None else None,
+                    'time_seconds': float(r.time_seconds) if r.time_seconds is not None else None,
+                    'time_raw': r.time_raw,
+                    'school_name': r.school_name,
+                }
+                for r in rows
+            ]
+        return jsonify({'results': results})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
 # -------- Stats Endpoints --------
 
 @app.route('/api/stats/overall', methods=['GET'])

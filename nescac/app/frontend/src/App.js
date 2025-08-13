@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Dashboard from './pages/Dashboard';
 import Predictions from './pages/Predictions';
 import PersonalAnalysis from './pages/PersonalAnalysis';
+import Historical from './pages/Historical';
 import './App.css';
  
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/predictions" element={<Predictions />} />
             <Route path="/personal-analysis" element={<PersonalAnalysis />} />
+            <Route path="/historical" element={<Historical />} />
           </Routes>
         </main>
       </div>

@@ -9,6 +9,7 @@ const Navbar = () => {
     { path: '/', label: 'Dashboard', icon: Trophy },
     { path: '/predictions', label: 'Predictions', icon: BarChart3 },
     { path: '/personal-analysis', label: 'Personal Analysis', icon: User },
+    { path: '/historical', label: 'Historical', icon: History },
   ];
 
   return (
