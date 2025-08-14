@@ -8,7 +8,6 @@ const Navbar = () => {
   const navItems = [
     { path: '/', label: 'Dashboard', icon: Trophy },
     { path: '/predict', label: 'Predict', icon: TrendingUp },
-
     { path: '/historical', label: 'Historical', icon: History },
   ];
 
