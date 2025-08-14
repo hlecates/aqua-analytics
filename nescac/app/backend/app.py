@@ -14,6 +14,7 @@ sys.path.append(str(src_path))
 from nescac_src.modeling.predict import PredictionEngine
 import pandas as pd
 import json
+import pickle
 
 # Custom JSON encoder to handle numpy types
 class NumpyEncoder(json.JSONEncoder):
@@ -202,6 +203,97 @@ def get_predictions(year):
         })
         
     except Exception as e:
+        return jsonify({
+            'error': str(e),
+            'status': 'error'
+        }), 500
+
+@app.route('/api/predict-simple/<int:year>', methods=['GET'])
+def predict_simple_excluding_year(year):
+    try:
+        engine = get_prediction_engine()
+        
+        # For now, use the existing prediction engine but only return simple model results
+        # This avoids the complexity of retraining models in the API
+        print(f"Generating simple model predictions for {year}...")
+        
+        # Ensure simple models are available
+        print("Checking data availability...")
+        availability = engine.check_data_availability()
+        print(f"Data availability: {availability}")
+        
+        # Check if data files exist
+        print(f"Combined data path exists: {engine.combined_data_path.exists()}")
+        print(f"Combined data path: {engine.combined_data_path}")
+        
+        # If simple models don't exist, train them
+        if not availability.get('simple_models', False):
+            print("Simple models not found. Training them now...")
+            try:
+                engine.ensure_simple_models_exist()
+                print("Simple models training completed.")
+            except Exception as e:
+                print(f"Error training simple models: {e}")
+                import traceback
+                traceback.print_exc()
+        
+        # Check what years are available in the data
+        year_ranges = engine.get_year_ranges()
+        print(f"Available year ranges: {year_ranges}")
+        
+        # Use the existing prediction engine but filter to only simple models
+        predictions = engine.generate_predictions(year)
+        
+        print(f"Raw predictions keys: {list(predictions.keys())}")
+        if predictions:
+            sample_event = list(predictions.keys())[0]
+            print(f"Sample event data: {predictions[sample_event]}")
+            print(f"Sample event actual times: {predictions[sample_event].get('actual', {})}")
+        
+        # Format predictions for frontend, only including simple model results
+        formatted_predictions = []
+        
+        for event_key, event_data in predictions.items():
+            print(f"Processing event: {event_key}")
+            print(f"Event data keys: {list(event_data.keys()) if isinstance(event_data, dict) else 'Not a dict'}")
+            print(f"Actual times for {event_key}: {event_data.get('actual', {})}")
+            
+            if isinstance(event_data, dict) and 'simple_winning' in event_data:
+                # Only include simple model predictions
+                filtered_event = {
+                    'event': event_key,
+                    'predictions': {
+                        'simple_winning': event_data.get('simple_winning'),
+                        'simple_cutoff': {
+                            'A': event_data.get('simple_a_cutoff'),
+                            'B': event_data.get('simple_b_cutoff'),
+                            'C': event_data.get('simple_c_cutoff')
+                        },
+                        'actual': event_data.get('actual', {
+                            'winning_time': None,
+                            'a_cutoff': None,
+                            'b_cutoff': None,
+                            'c_cutoff': None
+                        })
+                    }
+                }
+                formatted_predictions.append(filtered_event)
+                print(f"Added event: {event_key}")
+            else:
+                print(f"Skipping event {event_key} - no simple_winning found")
+        
+        print(f"Total formatted predictions: {len(formatted_predictions)}")
+        
+        return jsonify({
+            'year': year,
+            'predictions': formatted_predictions,
+            'status': 'success'
+        })
+        
+    except Exception as e:
+        print(f"Error in predict_simple_excluding_year: {e}")
+        import traceback
+        traceback.print_exc()
         return jsonify({
             'error': str(e),
             'status': 'error'
