@@ -148,11 +148,7 @@ The models achieve strong predictive performance:
    npm start
    ```
 
-4. **Access the application**
-   - Frontend: http://localhost:3000
-   - Backend API: http://localhost:5000
-
-## 📁 Project Structure
+## Project Structure
 
 ```
 nescac/
