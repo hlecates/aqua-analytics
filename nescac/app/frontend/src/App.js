@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Dashboard from './pages/Dashboard';
-import Predictions from './pages/Predictions';
-import PersonalAnalysis from './pages/PersonalAnalysis';
+import Predict from './pages/Predict';
+import Historical from './pages/Historical';
 import './App.css';
  
 function App() {
@@ -14,8 +14,8 @@ function App() {
         <main className="container mx-auto px-4 py-8">
           <Routes>
             <Route path="/" element={<Dashboard />} />
-            <Route path="/predictions" element={<Predictions />} />
-            <Route path="/personal-analysis" element={<PersonalAnalysis />} />
+            <Route path="/predict" element={<Predict />} />
+            <Route path="/historical" element={<Historical />} />
           </Routes>
         </main>
       </div>

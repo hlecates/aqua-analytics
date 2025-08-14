@@ -11,9 +11,10 @@ project_root = Path(__file__).parent.parent.parent
 src_path = project_root / "src"
 sys.path.append(str(src_path))
 
-from predict import PredictionEngine
+from nescac_src.modeling.predict import PredictionEngine
 import pandas as pd
 import json
+import pickle
 
 # Custom JSON encoder to handle numpy types
 class NumpyEncoder(json.JSONEncoder):
@@ -207,6 +208,97 @@ def get_predictions(year):
             'status': 'error'
         }), 500
 
+@app.route('/api/predict-simple/<int:year>', methods=['GET'])
+def predict_simple_excluding_year(year):
+    try:
+        engine = get_prediction_engine()
+        
+        # For now, use the existing prediction engine but only return simple model results
+        # This avoids the complexity of retraining models in the API
+        print(f"Generating simple model predictions for {year}...")
+        
+        # Ensure simple models are available
+        print("Checking data availability...")
+        availability = engine.check_data_availability()
+        print(f"Data availability: {availability}")
+        
+        # Check if data files exist
+        print(f"Combined data path exists: {engine.combined_data_path.exists()}")
+        print(f"Combined data path: {engine.combined_data_path}")
+        
+        # If simple models don't exist, train them
+        if not availability.get('simple_models', False):
+            print("Simple models not found. Training them now...")
+            try:
+                engine.ensure_simple_models_exist()
+                print("Simple models training completed.")
+            except Exception as e:
+                print(f"Error training simple models: {e}")
+                import traceback
+                traceback.print_exc()
+        
+        # Check what years are available in the data
+        year_ranges = engine.get_year_ranges()
+        print(f"Available year ranges: {year_ranges}")
+        
+        # Use the existing prediction engine but filter to only simple models
+        predictions = engine.generate_predictions(year)
+        
+        print(f"Raw predictions keys: {list(predictions.keys())}")
+        if predictions:
+            sample_event = list(predictions.keys())[0]
+            print(f"Sample event data: {predictions[sample_event]}")
+            print(f"Sample event actual times: {predictions[sample_event].get('actual', {})}")
+        
+        # Format predictions for frontend, only including simple model results
+        formatted_predictions = []
+        
+        for event_key, event_data in predictions.items():
+            print(f"Processing event: {event_key}")
+            print(f"Event data keys: {list(event_data.keys()) if isinstance(event_data, dict) else 'Not a dict'}")
+            print(f"Actual times for {event_key}: {event_data.get('actual', {})}")
+            
+            if isinstance(event_data, dict) and 'simple_winning' in event_data:
+                # Only include simple model predictions
+                filtered_event = {
+                    'event': event_key,
+                    'predictions': {
+                        'simple_winning': event_data.get('simple_winning'),
+                        'simple_cutoff': {
+                            'A': event_data.get('simple_a_cutoff'),
+                            'B': event_data.get('simple_b_cutoff'),
+                            'C': event_data.get('simple_c_cutoff')
+                        },
+                        'actual': event_data.get('actual', {
+                            'winning_time': None,
+                            'a_cutoff': None,
+                            'b_cutoff': None,
+                            'c_cutoff': None
+                        })
+                    }
+                }
+                formatted_predictions.append(filtered_event)
+                print(f"Added event: {event_key}")
+            else:
+                print(f"Skipping event {event_key} - no simple_winning found")
+        
+        print(f"Total formatted predictions: {len(formatted_predictions)}")
+        
+        return jsonify({
+            'year': year,
+            'predictions': formatted_predictions,
+            'status': 'success'
+        })
+        
+    except Exception as e:
+        print(f"Error in predict_simple_excluding_year: {e}")
+        import traceback
+        traceback.print_exc()
+        return jsonify({
+            'error': str(e),
+            'status': 'error'
+        }), 500
+
 @app.route('/api/personal-analysis', methods=['POST'])
 def personal_analysis():
     try:
@@ -278,6 +370,227 @@ def get_historical_data(year):
             'error': str(e),
             'status': 'error'
         }), 500
+
+# -------- History Endpoints (DB-backed) --------
+from sqlalchemy import select, func
+from nescac_src.db.session import get_session, init_db
+from nescac_src.db.models import Event, Meet, Athlete, ResultIndividual, School
+
+@app.route('/api/history/years', methods=['GET'])
+def history_years():
+    try:
+        init_db()
+        with get_session() as s:
+            years = s.execute(select(Meet.year).distinct().order_by(Meet.year.asc())).scalars().all()
+        return jsonify({'years': [int(y) for y in years]})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/history/events', methods=['GET'])
+def history_events():
+    try:
+        init_db()
+        year = request.args.get('year', type=int)
+        gender = request.args.get('gender')
+        include_relay = request.args.get('include_relay', default='false').lower() == 'true'
+        with get_session() as s:
+            if year is not None:
+                q = (
+                    select(Event.id, Event.gender, Event.distance, Event.stroke, Event.is_relay)
+                    .join(ResultIndividual, ResultIndividual.event_id == Event.id)
+                    .join(Meet, Meet.id == ResultIndividual.meet_id)
+                    .where(Meet.year == year)
+                )
+            else:
+                q = select(Event.id, Event.gender, Event.distance, Event.stroke, Event.is_relay)
+            if gender:
+                q = q.where(Event.gender == gender)
+            if not include_relay:
+                q = q.where(Event.is_relay == False)  # noqa: E712
+            q = q.distinct().order_by(Event.gender.asc(), Event.distance.asc(), Event.stroke.asc())
+            rows = s.execute(q).all()
+            events = []
+            for eid, g, d, st, rel in rows:
+                events.append({
+                    'id': int(eid),
+                    'gender': g,
+                    'distance': int(d),
+                    'stroke': st,
+                    'is_relay': bool(rel),
+                    'name': f"{g} {int(d)} {st}"
+                })
+        return jsonify({'events': events})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/history/event-years', methods=['GET'])
+def history_event_years():
+    try:
+        init_db()
+        event_id = request.args.get('event_id', type=int)
+        gender = request.args.get('gender')
+        distance = request.args.get('distance', type=int)
+        stroke = request.args.get('stroke')
+        if event_id is None and not (gender and distance is not None and stroke):
+            return jsonify({'error': 'Missing event specifier'}), 400
+        with get_session() as s:
+            if event_id is not None:
+                ev = s.get(Event, event_id)
+                if ev is None:
+                    return jsonify({'error': 'Event not found'}), 404
+                ev_id = ev.id
+            else:
+                ev = s.execute(
+                    select(Event).where(
+                        Event.gender == gender,
+                        Event.distance == distance,
+                        Event.stroke == stroke,
+                    )
+                ).scalar_one_or_none()
+                if ev is None:
+                    return jsonify({'error': 'Event not found'}), 404
+                ev_id = ev.id
+            years = s.execute(
+                select(Meet.year).distinct()
+                .join(ResultIndividual, ResultIndividual.meet_id == Meet.id)
+                .where(ResultIndividual.event_id == ev_id)
+                .order_by(Meet.year.asc())
+            ).scalars().all()
+        return jsonify({'event_id': int(ev_id), 'years': [int(y) for y in years]})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/history/results', methods=['GET'])
+def history_results():
+    try:
+        init_db()
+        year = request.args.get('year', type=int)
+        event_id = request.args.get('event_id', type=int)
+        gender = request.args.get('gender')
+        distance = request.args.get('distance', type=int)
+        stroke = request.args.get('stroke')
+        if year is None:
+            return jsonify({'error': 'Missing year'}), 400
+        with get_session() as s:
+            ev = None
+            if event_id is not None:
+                ev = s.get(Event, event_id)
+                if ev is None:
+                    return jsonify({'error': 'Event not found'}), 404
+            elif gender and distance is not None and stroke:
+                ev = s.execute(
+                    select(Event).where(
+                        Event.gender == gender,
+                        Event.distance == distance,
+                        Event.stroke == stroke,
+                    )
+                ).scalar_one_or_none()
+                if ev is None:
+                    return jsonify({'error': 'Event not found'}), 404
+            else:
+                return jsonify({'error': 'Missing event specifier'}), 400
+
+            base_q = (
+                select(
+                    ResultIndividual.id,
+                    ResultIndividual.athlete_name,
+                    ResultIndividual.school_name,
+                    ResultIndividual.round,
+                    ResultIndividual.place,
+                    ResultIndividual.time_seconds,
+                    ResultIndividual.time_raw,
+                )
+                .where(
+                    ResultIndividual.event_id == ev.id,
+                    ResultIndividual.meet_id == select(Meet.id).where(Meet.year == year).scalar_subquery(),
+                )
+            )
+            finals_q = base_q.where(ResultIndividual.round == 'Final').order_by(ResultIndividual.time_seconds.asc())
+            prelims_q = base_q.where(ResultIndividual.round == 'Prelim').order_by(ResultIndividual.time_seconds.asc())
+            with get_session() as s2:
+                finals = [
+                    {
+                        'id': int(r.id),
+                        'athlete_name': r.athlete_name,
+                        'school_name': r.school_name,
+                        'round': r.round,
+                        'place': int(r.place) if r.place is not None else None,
+                        'time_seconds': float(r.time_seconds) if r.time_seconds is not None else None,
+                        'time_raw': r.time_raw,
+                    }
+                    for r in s2.execute(finals_q).all()
+                ]
+                prelims = [
+                    {
+                        'id': int(r.id),
+                        'athlete_name': r.athlete_name,
+                        'school_name': r.school_name,
+                        'round': r.round,
+                        'place': int(r.place) if r.place is not None else None,
+                        'time_seconds': float(r.time_seconds) if r.time_seconds is not None else None,
+                        'time_raw': r.time_raw,
+                    }
+                    for r in s2.execute(prelims_q).all()
+                ]
+            event_info = {
+                'id': int(ev.id),
+                'gender': ev.gender,
+                'distance': int(ev.distance),
+                'stroke': ev.stroke,
+                'is_relay': bool(ev.is_relay),
+                'name': f"{ev.gender} {int(ev.distance)} {ev.stroke}",
+            }
+            return jsonify({'year': int(year), 'event': event_info, 'finals': finals, 'prelims': prelims})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/history/athlete', methods=['GET'])
+def history_athlete():
+    try:
+        init_db()
+        q = request.args.get('q', default='', type=str).strip()
+        if not q:
+            return jsonify({'results': []})
+        with get_session() as s:
+            # Find matching athletes (case-insensitive contains)
+            ath_ids = s.execute(
+                select(Athlete.id).where(func.lower(Athlete.name).like(f"%{q.lower()}%"))
+            ).scalars().all()
+            if not ath_ids:
+                return jsonify({'results': []})
+            rows = s.execute(
+                select(
+                    Athlete.name.label('athlete_name'),
+                    Meet.year.label('year'),
+                    Event.gender, Event.distance, Event.stroke,
+                    ResultIndividual.round, ResultIndividual.place,
+                    ResultIndividual.time_seconds, ResultIndividual.time_raw,
+                    ResultIndividual.school_name
+                )
+                .join(ResultIndividual, ResultIndividual.athlete_id == Athlete.id)
+                .join(Meet, Meet.id == ResultIndividual.meet_id)
+                .join(Event, Event.id == ResultIndividual.event_id)
+                .where(Athlete.id.in_(ath_ids))
+                .order_by(Meet.year.asc(), Event.gender.asc(), Event.distance.asc(), Event.stroke.asc(), ResultIndividual.round.desc(), ResultIndividual.time_seconds.asc())
+            ).all()
+            results = [
+                {
+                    'athlete_name': r.athlete_name,
+                    'year': int(r.year) if r.year is not None else None,
+                    'gender': r.gender,
+                    'distance': int(r.distance) if r.distance is not None else None,
+                    'stroke': r.stroke,
+                    'round': r.round,
+                    'place': int(r.place) if r.place is not None else None,
+                    'time_seconds': float(r.time_seconds) if r.time_seconds is not None else None,
+                    'time_raw': r.time_raw,
+                    'school_name': r.school_name,
+                }
+                for r in rows
+            ]
+        return jsonify({'results': results})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 # -------- Stats Endpoints --------
 

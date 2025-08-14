@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Trophy, BarChart3, User, History } from 'lucide-react';
+import { Trophy, BarChart3, User, History, TrendingUp } from 'lucide-react';
 
 const Navbar = () => {
   const location = useLocation();
 
   const navItems = [
     { path: '/', label: 'Dashboard', icon: Trophy },
-    { path: '/predictions', label: 'Predictions', icon: BarChart3 },
-    { path: '/personal-analysis', label: 'Personal Analysis', icon: User },
+    { path: '/predict', label: 'Predict', icon: TrendingUp },
+    { path: '/historical', label: 'Historical', icon: History },
   ];
 
   return (
